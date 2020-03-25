@@ -1,0 +1,24 @@
+.contact {
+  text-align: right;
+  }
+
+.contact__phone {
+  font-size: 25px;
+  font-weight: bold;
+  color: $brand-color;
+  line-height: 1.35;
+  }
+
+.contact__schedule {
+  color: #666;
+  font-size: 0.933333333rem;
+  }
+
+@media screen and (max-width: bp(bp660px)) {
+  .contact__schedule {
+    display: none;
+    }
+  .contact__phone {
+    font-size: 21px;
+    }
+  }

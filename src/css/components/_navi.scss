@@ -1,0 +1,41 @@
+
+.navi,
+.navi .valign-inner {
+  line-height: 1.4;
+  }
+
+.navi {
+  font-weight: 100;
+  }
+
+.navi__item_prev {
+  float: left;
+  }
+
+.navi__item_next {
+  float: right;
+  text-align: right;
+  }
+
+.navi__item {
+  max-width: 46%;
+  }
+
+.navi__arr-prev {
+  margin-right: 17px;
+  }
+
+.navi__arr-next {
+  margin-left: 17px;
+  }
+@media screen and (max-width: bp(bp660px)) {
+  .navi__item {
+    max-width: none;
+    }
+  .navi__item_prev {
+    clear: both;
+    }
+  .navi__item_next + .navi__item_prev {
+    margin-top: 30px;
+    }
+  }

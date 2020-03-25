@@ -1,0 +1,46 @@
+/* stylelint-disable no-descending-specificity  */
+
+.icon {
+  display: inline-block;
+  }
+.icon_pic {
+  width: 16px;
+  height: 12px;
+  background: url(assets/img/i31.png) 0 0 no-repeat at-2x;
+  }
+.icon_list {
+  width: 15px;
+  height: 12px;
+  margin-top: 1px;
+  background: url(assets/img/i30.png) 0 0 no-repeat at-2x;
+  }
+.icon_driveroute {
+  width: 17px;
+  height: 17px;
+  background: url(assets/img/i48.png) 0 0 no-repeat at-2x;
+  }
+.icon_walkroute {
+  width: 17px;
+  height: 17px;
+  background: url(assets/img/i47.png) 0 0 no-repeat at-2x;
+  }
+
+.celem_1a .icon,
+.ui-tabs-anchor .icon {
+  vertical-align: middle;
+  }
+
+.celem .icon {
+  background-position: 0 0;
+  }
+.celem__input:checked ~ .celem__label .icon,
+.ui-tabs-active .ui-tabs-anchor .icon {
+  background-position: 0 100%;
+  }
+
+
+.celem .icon_driveroute,
+.celem .icon_walkroute {
+  margin-right: 5px;
+  margin-bottom: -3px;
+  }

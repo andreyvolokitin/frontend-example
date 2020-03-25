@@ -1,0 +1,142 @@
+/* stylelint-disable no-descending-specificity  */
+
+.mitem {
+  position: relative;
+  }
+
+.mitem__handler {
+  padding-top: 20px;
+  padding-bottom: 22px;
+  position: relative;
+  z-index: 1;
+  }
+
+.mitem_0 .mitem__handler {
+  border-bottom: 1px solid #ececec;
+  }
+
+
+.mitem__icon,
+.mitem__brand {
+  margin-top: 4px;
+  margin-bottom: 4px;
+  }
+
+.mitem__icon {
+  margin-right: 30px;
+  }
+
+.mitem .mitem__brand,
+.mitem__brand {
+  font: normal 19px/1.2 $font-stack-custom-1;
+  color: #202427;
+  }
+
+.mitem__hicon {
+  min-height: 26px;
+  cursor: pointer;
+  line-height: 1.3;
+  z-index: 2;
+  position: relative;
+  }
+
+.mitem__hicon::before,
+.mitem__hicon::after {
+  content: '';
+  position: absolute;
+  }
+
+.mitem__hicon::after {
+  height: 1px;
+  background: #ececec;
+  left: 0;
+  right: 0;
+  top: 13px;
+  z-index: 0;
+  }
+
+.mitem__hicon::before {
+  content: '';
+  position: absolute;
+  background: url(assets/img/i50.png) 0 0 no-repeat at-2x;
+  width: 26px;
+  height: 26px;
+  z-index: 1;
+  }
+
+.mitem.is-active .mitem__hicon::before {
+  background-position: 100% 0;
+  }
+
+.mitem:hover .mitem__hicon::before,
+.mitem:focus .mitem__hicon::before,
+  /*.touchevents*/
+.mitem .mitem__hicon::before {
+  background-position: 0 100%;
+  }
+
+.mitem:hover.is-active .mitem__hicon::before,
+.mitem:focus.is-active .mitem__hicon::before {
+  background-position: 100% 100%;
+  }
+
+.mitem__hicon-label {
+  position: relative;
+  z-index: 3;
+  background: #fff;
+  display: inline-block;
+  font-weight: 100;
+  color: #2b6999;
+  margin-left: 26px;
+  margin-right: 26px;
+  padding-left: 12px;
+  padding-right: 4px;
+  visibility: hidden;
+  padding-top: 3px;
+  }
+
+.mitem:hover .mitem__hicon-label,
+.mitem:focus .mitem__hicon-label,
+  /*.touchevents*/
+.mitem .mitem__hicon-label {
+  visibility: visible;
+  }
+
+.mitem__hicon-label .txt-on,
+.mitem.is-active .mitem__hicon-label .txt-off,
+.manual__show-all .txt-on,
+.manual__show-all.is-toggled .txt-off {
+  display: none;
+  }
+
+.mitem.is-active .mitem__hicon-label .txt-on,
+.manual__show-all.is-toggled .txt-on {
+  display: inline;
+  }
+
+
+.mitem__content {
+  position: relative;
+  z-index: 2;
+  padding-bottom: 29px;
+  margin-top: 8px;
+  display: none;
+  }
+
+.mitem.is-active .mitem__content {
+  display: block;
+  }
+
+.is-found {
+  background: #5dc0f7;
+  }
+
+@media screen and (max-width: bp(bp660px)) {
+  .mitem .mitem__brand, .mitem__brand {
+    font-size: 17px;
+    }
+  .mitem__hicon-label {
+    font-size: .88em;
+    padding-top: 4px;
+    }
+  }

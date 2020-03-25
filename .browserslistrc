@@ -1,0 +1,13 @@
+# API:
+# https://github.com/ai/browserslist#queries
+# https://browserl.ist/
+
+# Stats:
+# https://top.mail.ru/browsers?id=250&period=2&date=2020-02-01&gender=0&agegroup=0&aggregation=sum&sids=mob,chrome,firefox,safari,opera&ytype=value&gtype=line
+# https://gs.statcounter.com/
+
+defaults
+IE 11
+Edge >= 12
+Android >= 4.4
+

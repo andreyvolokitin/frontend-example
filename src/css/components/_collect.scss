@@ -1,0 +1,33 @@
+.collect {
+  background-repeat: no-repeat;
+  background-position: 0 50%;
+  }
+.collect_basket {
+  padding-left: 30px;
+  background-image: url(assets/img/i1.png) at-2x;
+  }
+.collect_compare {
+  padding-left: 33px;
+  background-image: url(assets/img/i2.png) at-2x;
+  }
+.collect__size {
+  font-size: 0.933333333rem;
+  min-width: 1.714285714em;
+  height: 1.714285714em;
+  line-height: 1.714285714em;
+  padding: 1px 0.357142857em 0;
+  background-color: white;
+  border-radius: 1.714285714em;
+  color: $brand-color;
+  text-align: center;
+  box-sizing: border-box;
+  }
+
+@media screen and (max-width: bp(bp660px)) {
+  .collect_basket {
+    padding-left: 16px;
+    }
+  .collect_compare {
+    padding-left: 20px;
+    }
+  }

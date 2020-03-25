@@ -1,0 +1,24 @@
+.bread {
+  line-height: 1.3;
+  margin: 8px 0 12px;
+  }
+.bread__item {
+  display: inline;
+  }
+.bread__item::after {
+  content: '\a0\00bb';
+  }
+.bread__item:last-child::after {
+  display: none;
+  }
+.bread__txt,
+a.bread__txt:link, a.bread__txt:visited {
+  color: #727272;
+  font-size: 0.933333333rem;
+  }
+
+@media screen and (max-width: bp(bp660px)) {
+  .bread {
+    margin-bottom: 6px;
+    }
+  }

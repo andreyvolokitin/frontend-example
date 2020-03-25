@@ -1,0 +1,7 @@
+.filter-launcher {
+  display: none;
+
+  @media screen and (max-width: bp(bp840px)) {
+    display: block;
+    }
+  }

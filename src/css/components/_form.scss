@@ -1,0 +1,143 @@
+/* stylelint-disable no-descending-specificity  */
+
+.form {
+  table-layout: fixed;
+  }
+
+.form .form__cell {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  }
+
+.form > tbody > tr:first-child > .form__cell {
+  padding-top: 20px;
+  }
+
+.form > tbody > tr:last-child > .form__cell {
+  padding-bottom: 20px;
+  }
+
+.form > tbody:first-of-type tr:first-child > .form__cell {
+  padding-top: 0;
+  }
+
+.form > tbody:last-of-type tr:last-child > .form__cell {
+  padding-bottom: 0;
+  }
+
+.form .form__cell:first-child {
+  padding-right: 20px;
+  }
+
+.form__cell:first-child,
+.form__cell_label {
+  width: 145px;
+  }
+
+.form__cell:first-child label {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  padding-top: .7em;
+  }
+
+
+@media screen and (max-width: bp(bp660px)) {
+  .form.padding-align-primary > thead > tr > .form__cell,
+  .form.padding-align-primary > tbody > tr > .form__cell,
+  .form.padding-align-primary > tfoot > tr > .form__cell {
+    padding-left: $horizontal-pad-primary_lte-bp840px;
+    padding-right: $horizontal-pad-primary_lte-bp840px;
+    }
+  .form.padding-align-secondary > thead > tr > .form__cell,
+  .form.padding-align-secondary > tbody > tr > .form__cell,
+  .form.padding-align-secondary > tfoot > tr > .form__cell {
+    padding-left: $horizontal-pad-secondary_lte-bp840px;
+    padding-right: $horizontal-pad-secondary_lte-bp840px;
+    }
+
+  .form {
+    line-height: 1.4;
+    }
+
+  .form,
+  .form > tbody,
+  .form > tbody > tr,
+  .form__cell,
+  .form > tbody > tr > .form__cell,
+  .form > tbody > tr:first-child > .form__cell,
+  .form > tbody > tr:last-child > .form__cell,
+  .form > tbody > tr > .form__cell:first-child,
+  .form__cell:first-child label {
+    padding: 0;
+    }
+
+  .form,
+  .form > tbody,
+  .form > tbody > tr,
+  .form__cell,
+  .form > tbody > tr > .form__cell,
+  .form > tbody > tr > .form__cell:first-child {
+    display: block;
+    }
+
+  .lt-ie10 .form,
+  .lt-ie10 .form > tbody,
+  .lt-ie10 .form > tbody > tr,
+  .lt-ie10 .form__cell,
+  .lt-ie10 .form > tbody > tr > .form__cell,
+  .lt-ie10 .form > tbody > tr > .form__cell:first-child,
+  .lt-ie10 .card__table,
+  .lt-ie10 .card__table > tbody,
+  .lt-ie10 .card__table > tbody > tr,
+  .lt-ie10 .card__table > tbody > tr > td {
+    float: left;
+    width: 100%;
+    box-sizing: border-box;
+    }
+
+  body table.form,
+  .form > tbody > tr {
+    margin-bottom: 0;
+    }
+
+  .form > tbody > tr > td.form__cell:last-child {
+    padding-bottom: 15px;
+    }
+
+  .form > tbody > tr:first-child > td.form__cell:first-child {
+    padding-top: 20px;
+    }
+
+  .form > tbody > tr:last-child > td.form__cell:last-child {
+    padding-bottom: 20px;
+    }
+
+  .form > tbody:first-of-type > tr:first-child > td.form__cell:first-child {
+    padding-top: 0;
+    }
+
+  .form > tbody:last-of-type > tr:last-child > td.form__cell:last-child {
+    padding-bottom: 0;
+    }
+
+  .form__cell:first-child,
+  .form__cell_label {
+    width: auto;
+    }
+
+  .form__cell:first-child label,
+  .form__cell_label label {
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    padding-top: 0;
+    margin-bottom: 15px;
+    }
+
+  .form > tbody > tr > .form__cell:first-child .item_element,
+  .form > tbody > tr > .form__cell_label .item_element {
+    margin-top: 0;
+    margin-bottom: 0;
+    }
+  }

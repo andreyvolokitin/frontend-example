@@ -1,0 +1,14 @@
+.subscribe__trigger {
+  margin-bottom: 15px;
+  display: none;
+  }
+
+@media screen and (max-width: bp(bp600px)) {
+  .subscribe__content {
+    display: none;
+    }
+  .subscribe__trigger,
+  .subscribe_toggled .subscribe__content {
+    display: block;
+    }
+  }

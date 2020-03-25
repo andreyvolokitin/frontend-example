@@ -1,0 +1,16 @@
+.olist__price,
+.olist__num {
+  font-size: 1rem;
+  }
+.olist__count {
+  display: none;
+  }
+
+@media screen and (max-width: bp(bp660px)) {
+  .olist__list {
+    display: none;
+    }
+  .olist__count {
+    display: inline;
+    }
+  }

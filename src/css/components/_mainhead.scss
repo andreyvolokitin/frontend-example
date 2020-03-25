@@ -1,0 +1,7 @@
+.mainhead {
+  margin-bottom: 26px;
+
+  @media screen and (max-width: bp(bp660px)) {
+    margin-bottom: 20px;
+    }
+  }

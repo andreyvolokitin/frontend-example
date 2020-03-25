@@ -1,0 +1,552 @@
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass mixins.
+// -----------------------------------------------------------------------------
+// stylelint-disable media-feature-name-no-unknown, no-descending-specificity
+
+@import '~sassdash';
+
+/// Include styles for screens with high pixel density
+@mixin at2x {
+  @media (-webkit-min-device-pixel-ratio: 1.5),
+  (min--moz-device-pixel-ratio: 1.5),
+  (-o-min-device-pixel-ratio: 3/2),
+  (min-resolution: 1.5dppx) {
+    & {
+      @content;
+      }
+    }
+  }
+
+@mixin only-ff($selector, $map){
+	@-moz-document url-prefix() {
+		#{$selector} {
+			@each $property, $value in ($map) {
+				#{$property}: $value;
+			}
+		}
+	}
+}
+
+// Support for rtl text, explicit support for Arabic and Hebrew
+@mixin rtl($selector, $map, $prepend-selector-hack:'') {
+  $rtl-mods: (
+    '*[dir="rtl"]',
+    ':root:lang(ar)',
+    ':root:lang(iw)'
+  );
+  $selector-list: _split($selector, ',');
+  $rtl-selectors: ();
+  $final-selector: '';
+
+
+  @each $selector in $selector-list {
+      @each $mod in $rtl-mods {
+        $rtl-selectors: append($rtl-selectors, $mod + ' ' + $selector);
+      }
+  }
+  $final-selector: _join($rtl-selectors, ', ');
+
+  #{if(str-length($prepend-selector-hack) > 0, $prepend-selector-hack + ' ', '') + $final-selector} {
+    @each $property, $value in ($map) {
+      #{$property}: $value;
+    }
+  }
+}
+
+/// Normalize select left spacing/gap across browsers
+@mixin patch-select-left-gap($gaps-map, $skin-selector:'') {
+  /* edge 12-18 */
+  @supports (-ms-ime-align:auto) {
+    #{if(str-length($skin-selector) > 0, $skin-selector, null)} .select__select {
+      padding-left: get-select-gap-x($gaps-map, 'edge');
+      }
+    }
+
+  /* ie10-11 */
+  _:-ms-input-placeholder, :root #{if(str-length($skin-selector) > 0, $skin-selector, null)} .select__select {
+    padding-left: get-select-gap-x($gaps-map, 'ie');
+    }
+
+  /* Chrome 37+ (and Opera 24+) */
+  @supports (-webkit-appearance:none) and (shape-outside:none) {
+    #{if(str-length($skin-selector) > 0, $skin-selector, null)} .select__select {
+      padding-left: get-select-gap-x($gaps-map, 'default');
+      }
+    }
+
+  /* Safari 6.2,7.1+ */
+  _::-webkit-full-page-media, _:future, :root #{if(str-length($skin-selector) > 0, $skin-selector, null)} .select__select {
+    padding-left: get-select-gap-x($gaps-map, 'default');
+    }
+
+  /* Firefox */
+  @-moz-document url-prefix() {
+    #{if(str-length($skin-selector) > 0, $skin-selector, null)} .select__select {
+      padding-left: get-select-gap-x($gaps-map, 'ff');
+      }
+    }
+}
+/// Normalize select left spacing/gap across browsers
+@mixin patch-select-left-gap-rtl($gaps-map, $skin-selector:'') {
+  $final-selector: '#{if(str-length($skin-selector) > 0, $skin-selector, null)} .select__select';
+
+  /* edge 12-18 */
+  @supports (-ms-ime-align:auto) {
+    @include rtl($final-selector, (
+      padding-right: get-select-gap-x($gaps-map, 'edge')
+      ));
+    }
+
+  /* ie10-11 */
+  @include rtl($final-selector, (
+    padding-right: get-select-gap-x($gaps-map, 'ie')
+    ), '_:-ms-input-placeholder, :root');
+
+  /* Chrome 37+ (and Opera 24+) */
+  @supports (-webkit-appearance:none) and (shape-outside:none) {
+    @include rtl($final-selector, (
+      padding-right: get-select-gap-x($gaps-map, 'default')
+      ));
+    }
+
+  /* Safari 6.2,7.1+ */
+  @include rtl($final-selector, (
+    padding-right: get-select-gap-x($gaps-map, 'default')
+    ), '_::-webkit-full-page-media, _:future, :root');
+
+  /* Firefox */
+  @-moz-document url-prefix() {
+    @include rtl($final-selector, (
+      padding-right: get-select-gap-x($gaps-map, 'ff')
+      //padding-top: 0.25px
+      ));
+    }
+}
+
+/// Patch select text vertical alignment for Android 4.4, Safari and iOS
+@mixin patch-select-vertical-gaps($gap, $skin-selector:''){
+  /* Safari 5.1+, Chrome 11, 15+ (and Opera 14+), Android Browser 4+, Android OS 4.0+, iOS Blocker! */
+  _:-webkit-full-screen, _:in-range:not(*:root), #{if(str-length($skin-selector) > 0, $skin-selector, null)} .select__select {
+    /* Align text in Android 4.4 and Safari */
+    padding-top: $gap;
+    padding-bottom: $gap;
+    }
+  /* Safari 6.2,7.1+ */
+  _::-webkit-full-page-media, _:future, :root #{if(str-length($skin-selector) > 0, $skin-selector, null)} .select__select {
+    /* Align text in iOS */
+    padding-top: $gap;
+    padding-bottom: $gap;
+    }
+}
+
+/// Patch select focus styles for Firefox and Internet Explorer
+@mixin patch-select-focus-color($color, $skin-selector:''){
+  #{if(str-length($skin-selector) > 0, $skin-selector, null)} .select__select:-moz-focusring {
+  text-shadow: 0 0 0 $color;
+  }
+  #{if(str-length($skin-selector) > 0, $skin-selector, null)} .select__select:focus::-ms-value {
+    color: $color;
+    }
+}
+
+
+// Component-related shared styles
+
+/// Add transparent borders to align element with a sibling field which has the same borders
+@mixin borderize($border-width:0) {
+  border-color: transparent;
+  border-style: solid;
+  border-width: $border-width;
+  }
+
+/**
+ * Unified form field
+ */
+$_field-height: 2.4em;
+$_field-gap-x: 0.69231em;
+$_field-gap-y: 0.69em;
+$_field-border-width: 1px;
+$_field-placeholder-color: #949494;
+$_field-font-size: 1rem;
+$_field-bg-color: #fff;
+
+@mixin field {
+  border-color: #ccc;
+  border-style: solid;
+  border-width: $_field-border-width;
+  background-color: $_field-bg-color;
+  transition: box-shadow .2s;
+  }
+@mixin field_focused {
+  box-shadow: 0 0 6px #38c;
+  }
+@mixin field_validatable {
+  position: relative;
+  }
+@mixin field_invalid {
+  border-color: $error-color;
+  }
+@mixin field__field($add-border:false) {
+  font-size: $_field-font-size;
+  padding-left: $_field-gap-x;
+  padding-right: $_field-gap-x;
+  height: get-field-height($_field-height, $add-border, get-vertical-borders($_field-border-width));
+  }
+@mixin field__content_invalid {
+  opacity: 0;
+  }
+@mixin field__content_invalid-with-bubble-error {
+  opacity: 1;
+  }
+@mixin field__label {
+  position: absolute;
+  //padding-left: $_field-gap-x;
+  //padding-right: $_field-gap-x;
+  left: $_field-gap-x;
+  right: $_field-gap-x;
+  top: 0;
+  bottom: 0;
+  z-index: 1;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+  }
+@mixin field__label_borderized {
+  @include borderize($_field-border-width);
+  }
+@mixin field__error {
+  color: $error-color;
+  }
+@mixin field__error_bubble {
+  max-width: 300px;
+  background-color: $brand-color;
+  height: 100%;
+  width: auto;
+  top: auto;
+  right: auto;
+  left: 0;
+  padding-left: $_field-gap-x;
+  padding-right: $_field-gap-x;
+  border-radius: 2px;
+  z-index: 9;
+  color: #fff;
+  overflow: visible;
+  }
+@mixin field__error_bubble-arrow {
+  content: '';
+  position: absolute;
+  z-index: 10;
+  width: 0;
+  height: 0;
+  color: $brand-color;
+  }
+@mixin field__error_bubble-light {
+  background-color: #0571a8;
+  }
+@mixin field__error_bubble-light-arrow {
+  color: #0571a8;
+  }
+@mixin field__error_bubble-horizontal {
+  top: 0;
+  }
+@mixin field__error_bubble-horizontal-arrow {
+  top: 50%;
+  margin-top: -8px;
+  border-width: 9px;
+  border-style: solid;
+  border-color: transparent;
+  }
+@mixin field__error_bubble-right {
+  left: 100%;
+  right: auto;
+  margin-left: 16px;
+  }
+@mixin field__error_bubble-right-arrow {
+  right: 100%;
+  margin-right: -1px;
+  border-right-color: currentColor;
+  }
+@mixin field__error_bubble-left {
+  right: 100%;
+  left: auto;
+  margin-right: 16px;
+  }
+@mixin field__error_bubble-left-arrow {
+  left: 100%;
+  margin-left: -1px;
+  border-left-color: currentColor;
+  }
+@mixin field__error_bubble-vertical-arrow {
+  left: 8px;
+  border-width: 9px;
+  border-style: solid;
+  border-color: transparent;
+  }
+@mixin field__error_bubble-top {
+  bottom: 100%;
+  margin-bottom: 16px;
+  }
+@mixin field__error_bubble-top-arrow {
+  top: 100%;
+  margin-top: -1px;
+  border-top-color: currentColor;
+  }
+@mixin field__error_bubble-bottom {
+  top: 100%;
+  margin-top: 16px;
+  }
+@mixin field__error_bubble-bottom-arrow {
+  bottom: 100%;
+  margin-bottom: -1px;
+  border-bottom-color: currentColor;
+  }
+
+$_field-gap-y_skin0: 0.85em;
+$_field-border-width_skin0: 0 0 1px;
+$_field-label-font-size_skin0: 0.866666667rem;
+@mixin field_skin0 {
+  border-color: #d1d1d1;
+  border-width: $_field-border-width_skin0;
+  }
+@mixin field__field_skin0($add-border:false) {
+  height: get-field-height($_field-height, $add-border, get-vertical-borders($_field-border-width_skin0));
+  }
+@mixin field__label_skin0 {
+  font-size: $_field-label-font-size_skin0;
+  left: $_field-gap-x * ($_field-font-size / $_field-label-font-size_skin0);
+  right: $_field-gap-x * ($_field-font-size / $_field-label-font-size_skin0);
+  }
+@mixin field__label_borderized_skin0 {
+  @include borderize($_field-border-width_skin0);
+  }
+
+$_field-height_skin1: 2em;
+$_field-gap-y_skin1: 0.47em;
+$_field-border-width_skin1: 0 0 1px;
+$_field-placeholder-color_skin1: $text-color;
+@mixin field_skin1 {
+  border-color: #ccc;
+  border-width: $_field-border-width_skin1;
+  }
+@mixin field__field_skin1($add-border:false) {
+  height: get-field-height($_field-height_skin1, $add-border, get-vertical-borders($_field-border-width_skin1));
+  }
+@mixin field__label_borderized_skin1 {
+  @include borderize($_field-border-width_skin1);
+  }
+
+$_field-height_skin2: 3em;
+$_field-gap-x_skin2: 1.2em;
+$_field-gap-y_skin2: 1.22em;
+$_field-border-width_skin2: 0 0 0 0;
+$_field-label-font-size_skin2: 0.866666667rem;
+@mixin field_skin2 {
+  border-width: $_field-border-width_skin2;
+  box-shadow: 0 0 4px rgba(35, 31, 32, 0.16);
+  }
+@mixin field_focused_skin2 {
+  box-shadow: 0 0 6px #38c;
+  }
+@mixin field__field_skin2 {
+  height: 3em;
+  padding-left: $_field-gap-x_skin2;
+  padding-right: $_field-gap-x_skin2;
+  }
+@mixin field__label_skin2 {
+  font-size: $_field-label-font-size_skin2;
+  left: $_field-gap-x_skin2 * ($_field-font-size / $_field-label-font-size_skin2);
+  right: $_field-gap-x_skin2 * ($_field-font-size / $_field-label-font-size_skin2);
+  }
+@mixin field__label_borderized_skin2 {
+  @include borderize($_field-border-width_skin2);
+  }
+
+$_field-height_skin4: 2em;
+$_field-gap-y_skin4: 0.47em;
+@mixin field_skin4 {
+  border-color: $brand-color;
+  background: none;
+  }
+@mixin field__content_skin4($add-border:false) {
+  font-weight: 100;
+  }
+@mixin field__field_skin4($add-border:false) {
+  height: get-field-height($_field-height_skin4, $add-border, get-vertical-borders($_field-border-width));
+  }
+
+$_field-height_skin5: 2.210526316em;
+$_field-gap-y_skin5: 0.44em;
+$_field-color_skin5: #000;
+$_field-placeholder-color_skin5: $text-color;
+
+@mixin field_skin5 {
+  border: none;
+  }
+@mixin field__content_skin5 {
+  font: normal 19px $font-stack-custom-1;
+  font-size: 1.266666667rem;
+  }
+@mixin field__field_skin5 {
+  height: $_field-height_skin5;
+  color: $_field-color_skin5;
+  }
+
+@mixin field_skin6 {
+  border-color: $brand-color;
+  }
+
+
+/*
+  Common gallery parts
+*/
+
+@mixin gallery__frame_bullet {
+  width: auto;
+  height: auto;
+  border: none;
+  margin: 0 1px 0 0;
+  }
+@mixin gallery__frame_bullet_last {
+  margin-right: 0;
+  }
+@mixin gallery__frame_active {
+  cursor: default;
+  }
+@mixin gallery__frame-dot {
+  border: none;
+  width: 10px;
+  height: 10px;
+  background-color: #a3a3a3 /*d5d5d5*/;
+  margin: 6px;
+  top: auto;
+  left: auto;
+
+  @media screen and (max-width: bp(bp600px)) {
+    width: 13px;
+    height: 13px;
+    margin: 13px;
+    }
+  }
+@mixin gallery__frame-dot_activated {
+  background-color: $brand-color;
+  }
+
+@mixin gallery__item_utilized {
+  display: none;
+  }
+
+
+/*
+  Basic styles for a grid-like structure
+*/
+
+@mixin grid {
+  overflow: hidden;
+  }
+
+@mixin grid_legacy {
+  position: relative;
+  }
+@mixin grid__i {
+  margin-right: -1px;
+  margin-bottom: -1px;
+  }
+@mixin grid__item {
+  box-sizing: border-box;
+  border-right: 1px solid transparent;
+  border-bottom: 1px solid transparent;
+  }
+
+/*
+  Nice background
+*/
+
+@mixin bg1 {
+  background-color: #1f6498;
+  background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDI1NSAxNDMiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjxsaW5lYXJHcmFkaWVudCBpZD0iaGF0MCIgZ3JhZGllbnRVbml0cz0ib2JqZWN0Qm91bmRpbmdCb3giIHgxPSI5Ny4yNDk4MzU4MDI1MTU1JSIgeTE9IjEwMi40NzYyNTg5NjU4OTglIiB4Mj0iMi43NTAxNjQxOTc0ODQ1JSIgeTI9Ii0yLjQ3NjI1ODk2NTg5ODE3JSI+CjxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiMwYTQ1NzMiIHN0b3Atb3BhY2l0eT0iMSIvPgo8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMyZDc5YjQiIHN0b3Atb3BhY2l0eT0iMSIvPgogICA8L2xpbmVhckdyYWRpZW50PgoKPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjI1NSIgaGVpZ2h0PSIxNDMiIGZpbGw9InVybCgjaGF0MCkiIC8+Cjwvc3ZnPg==);
+  background-image: linear-gradient(318deg, #0a4573 0%, #2d79b4 100%);
+  }
+
+/*
+  Common carousel parts
+*/
+
+@mixin carousel__item {
+  outline: none;
+  }
+@mixin carousel__arrow {
+  width: 42px;
+  height: 42px;
+  z-index: 1;
+  }
+@mixin carousel__arrow_prev {
+  left: 0;
+  }
+@mixin carousel__arrow_next {
+  right: 0;
+  }
+@mixin carousel__arrow-pseudo {
+  content: '';
+  background: url(assets/img/i10.png) 0 0 no-repeat at-2x;
+  width: 8px;
+  height: 14px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  }
+@mixin carousel__arrow-pseudo_next {
+  background-position: 100% 0;
+  }
+
+/*
+  Handler button pill
+*/
+
+@mixin pill__pseudo {
+  content: '';
+  position: absolute;
+  width: 8px;
+  height: 14px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  }
+@mixin pill__pseudo_prev {
+  background-image: url(assets/img/i25.png) at-2x;
+  }
+@mixin pill__pseudo_next {
+  background-image: url(assets/img/i26.png) at-2x;
+  }
+@mixin pill__pseudo_hovered {
+  background-position: 0 100%;
+  }
+
+
+/*
+  Shareable checkbox styles
+*/
+
+@mixin check {
+  background: #fff;
+  color: $brand-color;
+  }
+@mixin check_checked {
+  background: #9e9e9e;
+  color: #fff;
+  }
+
+@mixin check_1a {
+  padding: 0.6em;
+  width: 2.6em;
+  height: 2.6em;
+  line-height: 1.4em;
+  text-align: center;
+  box-sizing: border-box;
+  }
+
+
+

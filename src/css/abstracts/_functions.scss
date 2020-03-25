@@ -1,0 +1,119 @@
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass functions.
+// -----------------------------------------------------------------------------
+
+/// Returns list of values each of which is prepended with a "minus" sign
+/// @param {Arglist} $values - arbitrary space-separated list of values
+/// @return {List} $inverted - each element of the list gets prepended with "-"
+@function minusify($values) {
+  $inverted: ();
+
+  @each $val in $values {
+    $inverted: append($inverted, -$val);
+    }
+
+  @return $inverted;
+  }
+
+/// Returns a map of vertical border-width values
+/// @param {Arglist} $values - space-separated list of values for `border-width` property
+/// @return {Map} - map of vertical values for `border-width` property
+@function get-vertical-borders($values) {
+  @return (top: nth($values, 1), bottom: nth($values, if(length($values) < 3, 1, 3)));
+  }
+
+/// Returns a value for `height` property for a `field` mixin
+/// @param {CSS value} $height - a value for `height` property
+/// @param {Boolean} $add-borders - a flag to signify if vertical borders should be added to height. If true, `$border-map` should be provided
+/// @param {Map} $border-map - a map of `top` and `bottom` values for `border-width` property
+/// @return {CSS value} - final value for `height` property
+@function get-field-height($height, $add-borders:false, $border-map:()) {
+  @if $add-borders == true and type-of($border-map) == 'map' {
+    $top-border: map-get($border-map, 'top');
+    $bottom-border: map-get($border-map, 'bottom');
+    $top-value: if($top-border == 0, '0px', $top-border);
+    $bottom-value: if($bottom-border == 0, '0px', $bottom-border);
+
+    @return calc(#{$height} + #{$top-value} + #{$bottom-value});
+    } @else {
+      @return $height;
+      }
+  }
+
+/// Map deep get
+/// @author Hugo Giraudel
+/// @access public
+/// @param {Map} $map - Map
+/// @param {Arglist} $keys - Key chain
+/// @return {*} - Desired value
+@function map-deep-get($map, $keys...) {
+  @each $key in $keys {
+    $map: map-get($map, $key);
+    }
+  @return $map;
+  }
+
+/// Get breakpoint value
+/// @access public
+/// @param {Arglist} $keys - Key chain
+/// @return {*} - Desired value
+@function bp($bp) {
+  @return map-get($breakpoints, $bp);
+  }
+
+/// Get left x gap for a select by browser name
+/// @access public
+/// @param {Map} $gaps - a map for all possible gaps by browser
+/// @param {String} $browser - browser name, or `default`
+/// @return {*} - value for left x gap by browser
+@function get-select-gap-x($map, $browser) {
+  @return map-get($map, $browser);
+}
+
+/// Remove the unit of a length
+/// @param {Number} $number - Number to remove unit from
+/// @return {Number} - Unitless number
+@function strip-unit($number) {
+  @if type-of($number) == 'number' and not unitless($number) {
+    @return $number / ($number * 0 + 1);
+  }
+
+  @return $number;
+}
+
+/// Get em-based value
+/// @access public
+/// @param {Number} $pixels - a start pixel-based value
+/// @param {Number} $context - a value for calculating em-based output
+/// @return {String} - a final em-based value
+@function em($pixels, $context: strip-unit($font-size-primary)) {
+  @return ($pixels / $context) * 1em;
+}
+
+
+/// Native `url(..)` function wrapper
+/// @param {String} $base - base URL for the asset
+/// @param {String} $type - asset type folder (e.g. `fonts/`)
+/// @param {String} $path - asset path
+/// @return {Url}
+@function asset($base, $type, $path) {
+  @return url($base + $type + $path);
+  }
+
+/// Returns URL to an image based on its path
+/// @param {String} $path - image path
+/// @param {String} $base [$base-url] - base URL
+/// @return {Url}
+/// @require $base-url
+@function image($path, $base: $base-url) {
+  @return asset($base, 'images/', $path);
+  }
+
+/// Returns URL to a font based on its path
+/// @param {String} $path - font path
+/// @param {String} $base [$base-url] - base URL
+/// @return {Url}
+/// @require $base-url
+@function font($path, $base: $base-url) {
+  @return asset($base, 'fonts/', $path);
+  }

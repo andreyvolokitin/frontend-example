@@ -1,0 +1,48 @@
+
+.branches {
+  line-height: 1.4;
+  }
+
+.branches_contact .branches__map {
+  margin-bottom: 45px;
+  }
+
+.modal_fullscreen .branches__map {
+  margin: 0;
+  position: relative;
+  }
+
+.modal_fullscreen .branches-map-holder,
+.modal_fullscreen .branches__map {
+  height: 100%;
+  }
+
+.branches__dealerlist {
+  margin-bottom: 40px;
+  }
+
+.branches__choose {
+  margin-bottom: 58px;
+  padding-bottom: 32px;
+  border-bottom: 1px solid #e1e1e1;
+  }
+
+@media screen and (max-width: bp(bp925px)) {
+  .branches__choose {
+    margin-bottom: 30px;
+    }
+  }
+
+@media screen and (max-width: bp(bp660px)) {
+  .branches .map__map {
+    margin-left: -$horizontal-pad-primary_lte-bp840px;
+    margin-right: -$horizontal-pad-primary_lte-bp840px;
+    }
+  .branches,
+  .branches .branches__mainbranch {
+    margin-bottom: 30px;
+    }
+  .branches .branches__mainbranch {
+    border-bottom: 1px solid #e1e1e1;
+    }
+  }

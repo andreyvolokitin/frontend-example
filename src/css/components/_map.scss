@@ -1,0 +1,91 @@
+.map {
+  position: relative;
+  z-index: 0;
+  }
+
+.map__map {
+  z-index: -1;
+  min-height: 360px;
+  min-width: 100%;
+  }
+
+.map__router {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 10px;
+  z-index: 1;
+  background: #fff;
+  padding: 8px 13px;
+  color: #2d2d2d;
+  font-weight: 100;
+  text-align: center;
+  font-size: 0.933333333rem;
+  }
+
+.map__routelabel,
+.map__routes {
+  display: inline-block;
+  }
+
+.map__routelabel {
+  margin-right: 9px;
+  }
+
+.map__routes {
+  margin: -8px -13px -8px 0;
+  }
+
+.map__route {
+  margin-right: -4px;
+  }
+
+.map__route:last-child {
+  margin-right: 0;
+  }
+
+.modal_fullscreen .map__map {
+  position: absolute !important;
+  bottom: 0;
+  top: 41px;
+  left: 0;
+  right: 0;
+  height: auto !important;
+  min-height: 0;
+  }
+
+@media screen and (max-width: bp(bp660px)) {
+  .map__router {
+    position: static;
+    top: auto;
+    right: auto;
+    margin: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    text-align: left;
+    z-index: 1;
+    height: 41px;
+    }
+  .modal_fullscreen .map__router {
+    padding-right: 41px;
+    }
+  .map__routes {
+    margin: 0;
+    }
+  .map__routelabel {
+    margin-right: 5px;
+    }
+  .branches .map__map {
+    margin-left: -$horizontal-pad-primary_lte-bp840px;
+    margin-right: -$horizontal-pad-primary_lte-bp840px;
+    }
+  }
+
+@media screen and (max-width: bp(bp300px)) {
+  .map__router {
+    padding: 0;
+    }
+  .map__routelabel {
+    display: none;
+    }
+  }

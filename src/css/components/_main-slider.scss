@@ -1,0 +1,12 @@
+.main-slider {
+  opacity: 0;
+  }
+.main-slider.fotorama {
+  opacity: 1;
+  padding-bottom: 0 !important;
+  }
+.main-slider_adapt {
+  @media screen and (max-width: bp(bp600px)) {
+    margin-bottom: 27px;
+    }
+  }

@@ -1,0 +1,23 @@
+.range__slider-w {
+  /* padding: 0 0 9px; */
+  }
+
+.range .range__input {
+  width: 74px;
+  }
+
+.range .ui-slider-labels {
+  /* display: none; */
+  }
+
+.range__tooltip {
+  position: absolute;
+  left: 50%;
+  width: 60px;
+  margin-left: -30px;
+  text-align: center;
+  font-size: 0.933333333rem;
+  color: #2d2d2d;
+  top: -1.6em;
+  display: none;
+  }

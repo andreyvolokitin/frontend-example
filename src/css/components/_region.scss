@@ -1,0 +1,31 @@
+.region,
+a.region {
+  padding-left: 27px;
+  background: url(assets/img/i5.png) 0 0 no-repeat at-2x;
+  min-height: 26px;
+  font-size: 16px;
+  color: #313435;
+  text-align: left;
+  line-height: normal;
+  text-decoration: none;
+
+  @media screen and (max-width: bp(bp1250px)) {
+    font-size: 14px;
+    }
+  @media screen and (max-width: bp(bp660px)) {
+    padding-left: 20px;
+    min-height: 18px;
+    background-size: 12px 18px !important; // https://github.com/simonsmith/postcss-at2x/issues/17
+  }
+  }
+.region__val {
+  color: #2b6999;
+  }
+@media screen and (max-width: bp(bp660px)) {
+  .region__label {
+    display: none;
+    }
+  .header-region .region {
+    display: block;
+    }
+  }

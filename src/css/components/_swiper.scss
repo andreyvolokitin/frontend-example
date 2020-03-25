@@ -1,0 +1,74 @@
+/* stylelint-disable no-descending-specificity  */
+
+.swiper:not(.fotorama) {
+  position: relative;
+  }
+.swiper:not(.fotorama) .swiper__item {
+  position: relative;
+  z-index: 1;
+  }
+.swiper:not(.fotorama) .swiper__item ~ .swiper__item {
+  position: absolute;
+  z-index: 0;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  visibility: hidden;
+  }
+
+.padding-align-primary .swiper .fotorama__nav-wrap {
+  padding-left: $horizontal-pad-primary;
+  padding-right: $horizontal-pad-primary;
+  }
+.padding-align-secondary .swiper .fotorama__nav-wrap {
+  padding-left: $horizontal-pad-secondary;
+  padding-right: $horizontal-pad-secondary;
+  }
+
+@media screen and (max-width: bp(bp840px)) {
+  .padding-align-primary .swiper .fotorama__nav-wrap {
+    padding-left: $horizontal-pad-primary_lte-bp840px;
+    padding-right: $horizontal-pad-primary_lte-bp840px;
+    }
+  .padding-align-secondary .swiper .fotorama__nav-wrap {
+    padding-left: $horizontal-pad-secondary_lte-bp840px;
+    padding-right: $horizontal-pad-secondary_lte-bp840px;
+    }
+  }
+
+.swiper .fotorama__arr {
+  display: none !important;
+  }
+.swiper .fotorama__nav-wrap {
+  margin-top: 20px;
+  }
+.swiper.prod-tabs__swiper .fotorama__nav-wrap {
+  margin-top: 13px;
+  }
+.swiper_0 .fotorama__nav__shaft {
+  display: block;
+  }
+
+.swiper .fotorama__nav--dots .fotorama__nav__frame {
+  @include gallery__frame_bullet;
+  }
+.swiper .fotorama__nav--dots .fotorama__nav__frame:last-child {
+  @include gallery__frame_bullet_last;
+  }
+.swiper .fotorama__nav__frame.fotorama__active {
+  @include gallery__frame_active;
+  }
+.swiper .fotorama__nav__frame.fotorama__active .fotorama__dot,
+.swiper .fotorama__dot {
+  @include gallery__frame-dot;
+  }
+.swiper .fotorama__nav__frame:hover .fotorama__dot,
+.swiper .fotorama__nav__frame.fotorama__active .fotorama__dot {
+  @include gallery__frame-dot_activated;
+  }
+.swiper .is-utilized .swiper__item:last-of-type {
+  @include gallery__item_utilized;
+  }
+
+
+

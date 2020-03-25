@@ -1,0 +1,31 @@
+.filter__header {
+  background: $brand-color;
+  padding-top: 11px;
+  padding-bottom: 10px;
+  margin-bottom: 14px;
+  }
+
+.filter__content {
+  margin-bottom: 28px;
+  }
+
+.filter__elem.celem_notxt {
+  margin-right: .4em;
+  top: -.18em;
+  position: relative;
+  }
+.filter__label {
+  border-bottom: 1px dashed #575757;
+  font-weight: bold;
+  }
+
+.filter__label.collapsed {
+  font-weight: normal;
+  }
+
+@media screen and (max-width: bp(bp660px)) {
+  .filter_standalone {
+    margin-left: -$horizontal-pad-primary_lte-bp840px;
+    margin-right: -$horizontal-pad-primary_lte-bp840px;
+    }
+  }

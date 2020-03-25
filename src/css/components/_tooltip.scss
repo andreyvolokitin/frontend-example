@@ -1,0 +1,83 @@
+/*
+  Tooltips
+*/
+
+// Reset lib styles
+.tippy-tooltip {
+  color: inherit;
+  border-radius: 0;
+  font-size: inherit;
+  line-height: inherit;
+  background-color: transparent;
+  }
+.tippy-content {
+  padding: 0;
+  }
+.tippy-tooltip[data-placement^="top"] > .tippy-arrow {
+  border-top-color: #fff;
+  }
+.tippy-tooltip[data-placement^="bottom"] > .tippy-arrow {
+  border-bottom-color: #fff;
+  }
+.tippy-tooltip[data-placement^="left"] > .tippy-arrow {
+  border-left-color: #fff;
+  }
+.tippy-tooltip[data-placement^="right"] > .tippy-arrow {
+  border-right-color: #fff;
+  }
+
+// generic close handler
+.tippy-close {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 42px;
+  height: 42px;
+  background: url(assets/img/i24.png) 50% 50% no-repeat at-2x;
+  border-radius: 100%;
+  }
+
+// themed tooltips
+
+.adjuster-theme {
+  width: 140px;
+  padding: 20px;
+  background: #fff;
+  box-shadow: 0 1px 46px rgba(35, 31, 32, 0.35);
+  line-height: 1.3;
+  box-sizing: border-box;
+  }
+
+
+
+
+.unlock-popup {
+  width: 243px;
+  }
+.unlock-popup .qtip-content {
+  padding: 16px 20px 20px;
+  background-color: white;
+  box-shadow: 0 1px 46px rgba(35, 31, 32, 0.35);
+  color: #686868;
+  line-height: 1.3;
+  }
+.unlock-popup .qtip-tip {
+  border-color: #fff;
+  }
+
+
+.sample-tooltip .qtip-content {
+  padding: 32px 32px 0;
+  background-color: #12628f;
+  box-shadow: 0 1px 13px rgba(35, 31, 32, 0.35);
+  line-height: 1.3;
+  z-index: 0;
+  -webkit-transform: translateZ(0);
+  }
+.sample-tooltip .qtip-tip {
+  border-color: #12628f;
+  z-index: 1;
+  }
+.sample-tooltip img {
+  display: block;
+  }

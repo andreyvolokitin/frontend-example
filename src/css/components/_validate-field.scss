@@ -1,0 +1,129 @@
+/* stylelint-disable no-descending-specificity */
+
+/**
+ * Validatable field
+ */
+
+.validate-field {
+  @include field_validatable;
+  }
+.validate-field_inline {
+  display: inline-block;
+  max-width: 100%;
+  }
+.validate-field .error {
+  @include field__label;
+  @include field__error;
+  }
+
+
+.validate-field_skin_0 .error {
+  @include field__label_skin0;
+  }
+.validate-field_skin_2 .error {
+  @include field__label_skin2;
+  }
+.validate-field_skin_4 .error {
+  @include field__content_skin4;
+  }
+.validate-field_skin_5 .error {
+  @include field__content_skin5;
+  }
+
+
+.validate-field > .hint_bubble,
+.validate-field_er_t .error,
+.validate-field_er_r .error,
+.validate-field_er_l .error,
+.validate-field_er_b .error {
+  @include field__error_bubble;
+  }
+
+.validate-field > .hint_bubble::before,
+.validate-field_er_t .error::before,
+.validate-field_er_r .error::before,
+.validate-field_er_l .error::before,
+.validate-field_er_b .error::before {
+  @include field__error_bubble-arrow;
+  }
+
+
+.is-darkbg.validate-field > .hint_bubble,
+.is-darkbg.validate-field_er_t .error,
+.is-darkbg.validate-field_er_r .error,
+.is-darkbg.validate-field_er_l .error,
+.is-darkbg.validate-field_er_b .error {
+  @include field__error_bubble-light;
+  }
+
+.is-darkbg.validate-field > .hint_bubble::before,
+.is-darkbg.validate-field_er_t .error::before,
+.is-darkbg.validate-field_er_r .error::before,
+.is-darkbg.validate-field_er_l .error::before,
+.is-darkbg.validate-field_er_b .error::before {
+  @include field__error_bubble-light-arrow;
+  }
+
+
+.validate-field_er_r .error,
+.validate-field_er_l .error,
+.validate-field_er_r .hint_bubble,
+.validate-field_er_l .hint_bubble {
+  @include field__error_bubble-horizontal;
+  }
+
+.validate-field_er_r .error::before,
+.validate-field_er_l .error::before,
+.validate-field_er_r .hint_bubble::before,
+.validate-field_er_l .hint_bubble::before {
+  @include field__error_bubble-horizontal-arrow;
+  }
+
+.validate-field_er_r .error,
+.validate-field_er_r .hint_bubble {
+  @include field__error_bubble-right;
+  }
+
+.validate-field_er_r .error::before,
+.validate-field_er_r .hint_bubble::before {
+  @include field__error_bubble-right-arrow;
+  }
+
+.validate-field_er_l .error,
+.validate-field_er_l .hint_bubble {
+  @include field__error_bubble-left;
+  }
+
+.validate-field_er_l .error::before,
+.validate-field_er_l .hint_bubble::before {
+  @include field__error_bubble-left-arrow;
+  }
+
+
+.validate-field_er_t .error,
+.validate-field_er_t .hint_bubble {
+  @include field__error_bubble-top;
+  }
+
+.validate-field_er_t .error::before,
+.validate-field_er_b .error::before,
+.validate-field_er_t .hint_bubble::before,
+.validate-field_er_b .hint_bubble::before {
+  @include field__error_bubble-vertical-arrow;
+  }
+
+.validate-field_er_t .error::before,
+.validate-field_er_t .hint_bubble::before {
+  @include field__error_bubble-top-arrow;
+  }
+
+
+.validate-field_er_b .error,
+.validate-field_er_b .hint_bubble {
+  @include field__error_bubble-bottom;
+  }
+
+.validate-field_er_b .error::before,
+.validate-field_er_b .hint_bubble::before {
+  @include field__error_bubble-bottom-arrow;
+  }

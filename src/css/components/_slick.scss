@@ -1,0 +1,33 @@
+/*
+  Common styles for slick.js slider: http://kenwheeler.github.io/slick/
+*/
+
+.slick-dots li,
+.slick-dots li button {
+  @include gallery__frame_bullet;
+  }
+.slick-dots li:last-child {
+  @include gallery__frame_bullet_last;
+  }
+.slick-dots li button {
+  @include gallery__frame-dot;
+
+  padding: 0;
+  border-radius: 100%;
+  }
+.slick-dots li button::before {
+  display: none;
+  }
+.slick-dots .slick-active button {
+  @include gallery__frame-dot_activated;
+  }
+.slick-slider,
+.slick-dotted.slick-slider {
+  margin-bottom: 0;
+  }
+.slick-dots {
+  position: relative;
+  bottom: auto;
+  margin: 0 0 10px;
+  }
+

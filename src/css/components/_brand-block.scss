@@ -1,0 +1,8 @@
+
+.brand-block {
+  margin-bottom: 26px;
+
+  @media screen and (max-width: bp(bp414px)) {
+    margin-bottom: 14px;
+    }
+  }

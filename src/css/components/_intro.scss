@@ -1,0 +1,21 @@
+.intro {
+  text-align: center;
+  width: 84%;
+  margin: 0 auto 35px;
+  }
+
+.intro__head {
+  position: relative;
+  padding-bottom: 12px;
+  }
+
+.intro__head::before {
+  content: '';
+  position: absolute;
+  width: 36px;
+  height: 3px;
+  background-color: #ec2813;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+  }

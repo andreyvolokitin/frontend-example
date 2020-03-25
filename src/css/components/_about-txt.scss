@@ -1,0 +1,7 @@
+.about-txt {
+  margin-left: 16px;
+
+  @media screen and (max-width: bp(bp1150px)) {
+    margin-left: 0;
+    }
+  }

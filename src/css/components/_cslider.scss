@@ -1,0 +1,122 @@
+/* stylelint-disable no-descending-specificity  */
+
+.cslider .fotorama__nav--dots .fotorama__nav__frame {
+  @include gallery__frame_bullet;
+  }
+.cslider .fotorama__nav--dots .fotorama__nav__frame:last-child {
+  @include gallery__frame_bullet_last;
+  }
+.cslider .fotorama__nav__frame.fotorama__active {
+  @include gallery__frame_active;
+  }
+.cslider .fotorama__nav__frame.fotorama__active .fotorama__dot,
+.cslider .fotorama__dot {
+  @include gallery__frame-dot;
+  }
+.cslider .fotorama__nav__frame:hover .fotorama__dot,
+.cslider .fotorama__nav__frame.fotorama__active .fotorama__dot {
+  @include gallery__frame-dot_activated;
+  }
+.cslider .is-utilized .swiper__item:last-of-type {
+  @include gallery__item_utilized;
+  }
+
+.js .cslider:not(.fotorama--fullscreen).fotorama .fotorama__wrap .fotorama__stage .fotorama__arr,
+.js .cslider:not(.fotorama--fullscreen).fotorama .fotorama__wrap .fotorama__stage .fotorama__fullscreen-icon {
+  transform: none;
+  opacity: 1;
+  display: block;
+  top: auto;
+  bottom: 0;
+  width: 42px;
+  height: 42px;
+  background: #ececec;
+  margin-top: 0;
+  }
+
+.js .cslider:not(.fotorama--fullscreen).fotorama .fotorama__wrap .fotorama__stage .fotorama__arr:not(.fotorama__arr--disabled):hover,
+.js .cslider:not(.fotorama--fullscreen).fotorama .fotorama__wrap .fotorama__stage .fotorama__arr:not(.fotorama__arr--disabled):focus,
+.js .cslider:not(.fotorama--fullscreen).fotorama .fotorama__wrap .fotorama__stage .fotorama__fullscreen-icon:hover,
+.js .cslider:not(.fotorama--fullscreen).fotorama .fotorama__wrap .fotorama__stage .fotorama__fullscreen-icon:focus {
+  background: $brand-color;
+  }
+
+.js .cslider:not(.fotorama--fullscreen).fotorama .fotorama__wrap .fotorama__stage .fotorama__arr--disabled {
+  opacity: .7;
+  }
+
+.js .cslider:not(.fotorama--fullscreen).fotorama .fotorama__wrap .fotorama__stage .fotorama__arr--prev {
+  left: 0;
+  }
+
+.js .cslider:not(.fotorama--fullscreen).fotorama .fotorama__wrap .fotorama__stage .fotorama__arr--next {
+  left: 42px;
+  right: auto;
+  }
+
+.js .cslider:not(.fotorama--fullscreen).fotorama--fullscreen .fotorama__wrap .fotorama__stage .fotorama__arr {
+  bottom: auto;
+  top: 0;
+  }
+
+.cslider:not(.fotorama--fullscreen) .fotorama__arr::before,
+.cslider:not(.fotorama--fullscreen) .fotorama__fullscreen-icon::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  }
+
+.cslider:not(.fotorama--fullscreen) .fotorama__arr::before {
+  width: 8px;
+  height: 14px;
+  }
+
+.cslider:not(.fotorama--fullscreen) .fotorama__fullscreen-icon::before {
+  width: 20px;
+  height: 24px;
+  background-image: url(assets/img/i38.png) at-2x;
+  }
+
+.cslider:not(.fotorama--fullscreen) .fotorama__arr--prev::before {
+  background-image: url(assets/img/i39.png) at-2x;
+  }
+
+.cslider:not(.fotorama--fullscreen) .fotorama__arr--next::before {
+  background-image: url(assets/img/i40.png) at-2x;
+  }
+
+.cslider:not(.fotorama--fullscreen) .fotorama__arr--prev:not(.fotorama__arr--disabled):hover::before,
+.cslider:not(.fotorama--fullscreen) .fotorama__arr--prev:not(.fotorama__arr--disabled):focus::before,
+.cslider:not(.fotorama--fullscreen) .fotorama__arr--next:not(.fotorama__arr--disabled):hover::before,
+.cslider:not(.fotorama--fullscreen) .fotorama__arr--next:not(.fotorama__arr--disabled):focus::before,
+.cslider:not(.fotorama--fullscreen) .fotorama__fullscreen-icon:hover::before,
+.cslider:not(.fotorama--fullscreen) .fotorama__fullscreen-icon:focus::before {
+  background-position: 0 100%;
+  }
+
+.cslider .fotorama__caption {
+  display: none;
+  font-family: $text-font-stack-custom;
+  font-size: 1em;
+  color: inherit;
+  }
+
+.cslider.fotorama--fullscreen .fotorama__caption {
+  display: block;
+  }
+
+.js .cslider:not(.fotorama--fullscreen).fotorama .fotorama__wrap .fotorama__stage .fotorama__fullscreen-icon {
+  right: 0;
+  }
+
+.cslider .fotorama__nav-wrap {
+  margin-top: 12px;
+  }
+
+.cslider.fotorama--fullscreen .fotorama__nav-wrap {
+  display: none;
+  }

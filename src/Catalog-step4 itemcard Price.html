@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>
+<html class="no-js lt-ie10 lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>
+<html class="no-js lt-ie10 lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>
+<html class="no-js lt-ie10 lt-ie9"> <![endif]-->
+<!--[if IE 9]>
+<html class="no-js lt-ie10"> <![endif]-->
+<!--[if gt IE 9]><!-->
+<html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="format-detection" content="telephone=no"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+    </head>
+    <body data-module="page">
+        <script>
+		    if (Function('/*@cc_on return document.documentMode===10@*/')()){
+			    document.documentElement.className+=' ie10';
+		    }
+		    if (window.opera && window.opera.buildNumber){
+			    document.documentElement.className+=' opera';
+		    }
+		    if (Object.prototype.toString.call(window.operamini) === "[object OperaMini]"){
+			    document.documentElement.className+=' operamini';
+		    }
+            if ('WebkitAppearance' in document.documentElement.style){
+                document.documentElement.className+=' webkit';
+            }
+            if (Function('/*@cc_on return document.documentMode===9@*/')()){
+                document.documentElement.className+=' ie9';
+            }
+	    </script>
+        <!--[if lt IE 9]>
+            <p class="browsehappy">Вы используете <strong>устаревший</strong> браузер. Пожалуйста, <a href="http://browsehappy.com/">обновите его</a>.</p>
+        <![endif]-->
+        <div class="scroll-keeper"></div>
+        <div class="wrapper page">
+            <div class="page__content">
+                <scope loggedIn="true">
+                  <include src="partials/includes/header.html"></include>
+                </scope>
+                <div class="content" role="main">
+                    <div class="cat-holder"></div>
+                    <div class="inner clearfix">
+                        <aside class="sidebar">
+                            <nav data-module="catalog-menu" class="gap-gen cat_adapt cat_0 cat padding-align-primary block1">
+                                <div class="cat__header row_m aligned-row">
+                                    <div class="cat__head item">
+                                        <h3 class="cat__head-hd hd_0">Каталог</h3>
+                                        <button type="button" class="js-catalog-menu__trigger cat__content-trg button_7c button_7b button_7 button_toggle button">
+                                            <span class="button__icon_cat-nav button__icon"></span>
+                                            <span class="button__text">
+                                                <span class="button__text-off">Каталог продукции</span>
+                                                <span class="button__text-on">Скрыть каталог</span>
+                                            </span>
+                                        </button>
+                                    </div>
+                                    <div class="cat__search item">
+                                        <form data-module="search" data-search="catalog" action="#" class="js-validate-form">
+                                          <div class="searchbox_0 searchbox input_skin_0 input input_hinted">
+                                            <div class="hint">Название товара, марка, бренд</div>
+                                            <input required type="search"
+                                                   class="js-catalog-menu__searchfield js-search__field searchbox__val"/>
+                                            <button type="submit" class="js-search__button needsclick searchbox__btn btn">
+                                              Искать
+                                            </button>
+                                          </div>
+                                        </form>
+                                    </div>
+                                </div>
+                                <div class="cat__content-wrap">
+                                    <div class="padding-align-primary__undo cat__content clearfix">
+                                        <ul class="cat__list list">
+                                            <li class="cat__item dontsplit"><a href="#" class="cat__txt">Спецпредложения</a></li>
+                                            <li class="cat__item dontsplit"><a href="#" class="cat__txt">Защелки</a></li>
+                                            <li class="cat__item dontsplit"><a href="#" class="cat__txt">Задвижки</a></li>
+                                            <li class="cat__item dontsplit"><a href="#" class="cat__txt">Врезные замки</a></li>
+                                            <li class="cat__item dontsplit"><a href="#" class="cat__txt">Цилиндровые механизмы</a></li>
+                                            <li class="cat__item dontsplit"><a href="#" class="cat__txt">Петли дверные</a></li>
+                                            <li class="cat__item dontsplit"><a href="#" class="cat__txt">Ограничители дверные</a></li>
+                                            <li class="cat__item_active cat__item_parent cat__item">
+                                                <a href="#" class="cat__txt">Ригели</a>
+                                                <ul class="cat__level1 cat__level list">
+                                                    <li class="dontsplit cat__item_active cat__item"><span class="cat__txt">Для легких дверей</span></li>
+                                                    <li class="dontsplit cat__item"><a href="#" class="cat__txt">Для межкомнатных дверей</a></li>
+                                                    <li class="dontsplit cat__item"><a href="#" class="cat__txt">Для металлических дверй</a></li>
+                                                    <li class="dontsplit cat__item"><a href="#" class="cat__txt">Для противоположных дверей</a></li>
+                                                    <li class="dontsplit cat__item"><a href="#" class="cat__txt">Для профильных дверей</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="cat__item dontsplit"><a href="#" class="cat__txt">Фурнитура для раздвижных дверей</a></li>
+                                            <li class="cat__item dontsplit"><a href="#" class="cat__txt">Цилиндровые механизмы</a></li>
+                                            <li class="cat__item dontsplit"><a href="#" class="cat__txt">Замки накладные</a></li>
+                                            <li class="cat__item dontsplit"><a href="#" class="cat__txt">Замки эл-мех./аксессуары</a></li>
+                                            <li class="cat__item dontsplit"><a href="#" class="cat__txt">Заготовки ключей, ключи</a></li>
+                                            <li class="cat__item dontsplit"><a href="#" class="cat__txt">Мех-мы секретности</a></li>
+                                            <li class="cat__item dontsplit"><a href="#" class="cat__txt">Ручки дверные</a></li>
+                                            <li class="cat__item dontsplit"><a href="#" class="cat__txt">Броненакладки и пластины</a></li>
+                                            <li class="cat__item dontsplit"><a href="#" class="cat__txt">Ручки защелки (KNOB)</a></li>
+                                            <li class="cat__item dontsplit"><a href="#" class="cat__txt">Накладки/WC-комплекты</a></li>
+                                            <li class="cat__item dontsplit"><a href="#" class="cat__txt">Петли</a></li>
+                                            <li class="cat__item dontsplit"><a href="#" class="cat__txt">Глазки дверные</a></li>
+                                            <li class="cat__item dontsplit"><a href="#" class="cat__txt">Доводчики дверные</a></li>
+                                            <li class="cat__item dontsplit"><a href="#" class="cat__txt">Фурнитура</a></li>
+                                            <li class="cat__item dontsplit"><a href="#" class="cat__txt">Инструменты</a></li>
+                                            <li class="cat__item dontsplit"><a href="#" class="cat__txt">Прочее</a></li>
+                                            <li class="cat__item dontsplit"><a href="#" class="cat__txt">Раздвижные системы</a></li>
+                                        </ul>
+                                    </div>
+
+                                </div>
+                            </nav>
+                        </aside>
+                        <div class="maincol">
+                            <div class="maincol__i">
+                                <ul class="bread list">
+                                    <li class="bread__item"><a href="#" class="bread__txt">Главная</a></li>
+                                    <li class="bread__item"><span class="bread__txt">Рекламные материалы</span></li>
+                                </ul>
+                                <h1 class="mainhead hd_0">Набор для раздвижных двеaрей SH011-BK GP-2 Золото <span class="product-id">ID товара: 234345</span></h1>
+
+                              <div data-module="product-card">
+                                <div class="gap-gen padding-align-secondary block2 clearfix">
+                                  <div class="block2__fshift">
+                                    <div data-id="4" class="card clearfix js-prod">
+                                      <table class="card__table table">
+                                        <tr>
+                                          <td class="card__gal">
+                                            <div class="card__labels">
+                                              <div class="prod__spec_new prod__spec">
+                                                <div class="prod__spec-i">Новинка</div>
+                                              </div>
+                                              <div class="prod__spec_sale prod__spec">
+                                                <div class="prod__spec-i">Sale</div>
+                                              </div>
+                                            </div>
+                                            <div class="card__cell">
+                                              <div class="pgal">
+                                                <div class="pgal__thumbs">
+                                                  <div class="js-product-card__thumbs prod-thumbs">
+                                                    <div class="prod-thumbs__item">
+                                                      <div class="prod-thumbs__thumb">
+                                                        <img data-lazy="assets/img/15t.jpg" alt="" width="35"
+                                                             height="75"/>
+                                                      </div>
+                                                      <i class="prod-thumbs__dec"></i>
+                                                    </div>
+                                                    <div class="prod-thumbs__item">
+                                                      <div class="prod-thumbs__thumb">
+                                                        <img data-lazy="assets/img/16t.jpg" alt="" width="75"
+                                                             height="35"/>
+                                                      </div>
+                                                      <i class="prod-thumbs__dec"></i>
+                                                    </div>
+                                                    <div class="prod-thumbs__item">
+                                                      <div class="prod-thumbs__thumb">
+                                                        <img data-lazy="assets/img/15t.jpg" alt="" width="35"
+                                                             height="75"/>
+                                                      </div>
+                                                      <i class="prod-thumbs__dec"></i>
+                                                    </div>
+                                                    <div class="prod-thumbs__item">
+                                                      <div class="prod-thumbs__thumb">
+                                                        <img data-lazy="assets/img/16t.jpg" alt="" width="75"
+                                                             height="35"/>
+                                                      </div>
+                                                      <i class="prod-thumbs__dec"></i>
+                                                    </div>
+                                                    <div class="prod-thumbs__item">
+                                                      <div class="prod-thumbs__thumb">
+                                                        <img data-lazy="assets/img/15t.jpg" alt="" width="35"
+                                                             height="75"/>
+                                                      </div>
+                                                      <i class="prod-thumbs__dec"></i>
+                                                    </div>
+                                                    <div class="prod-thumbs__item">
+                                                      <div class="prod-thumbs__thumb">
+                                                        <img data-lazy="assets/img/16t.jpg" alt="" width="75"
+                                                             height="35"/>
+                                                      </div>
+                                                      <i class="prod-thumbs__dec"></i>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                                <div class="pgal__gal">
+                                                  <div class="js-product-card__gallery prod-gal">
+                                                    <a href="assets/img/15.jpg" data-title="Текст 1" data-alt="Текст 1"
+                                                       data-full="assets/img/15b.jpg"></a>
+                                                    <a href="assets/img/16.jpg" data-title="Текст 2" data-alt="Текст 2"
+                                                       data-full="assets/img/16b.jpg"></a>
+                                                    <a href="assets/img/15.jpg" data-title="Текст 3" data-alt="Текст 3"
+                                                       data-full="assets/img/15b.jpg"></a>
+                                                    <a href="assets/img/16.jpg" data-title="Текст 4" data-alt="Текст 4"
+                                                       data-full="assets/img/16b.jpg"></a>
+                                                    <a href="assets/img/15.jpg" data-title="Текст 5" data-alt="Текст 5"
+                                                       data-full="assets/img/15b.jpg"></a>
+                                                    <a href="assets/img/16.jpg" data-title="Текст 6" data-alt="Текст 6"
+                                                       data-full="assets/img/16b.jpg"></a>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </td>
+                                          <td class="card__control_noprice card__control">
+                                            <div class="card__cell">
+                                              <div class="card__price">
+                                                <div class="card__priceval">
+                                                  <!--пробел в цене через &nbsp;-->
+                                                  Цена – <span class="price rub">3&nbsp;434</span>
+                                                </div>
+                                                <div class="card__pricedef">за 1 шт. В упаковке 24 шт.</div>
+                                              </div>
+                                              <div class="card__buy">
+                                                <div class="card__counter numspin_block numspin">
+                                                  <div
+                                                    class="numspin__input-w is-darkbg input_num input_msg_t input_hinted input_skin_5 input">
+                                                    <div class="hint_bubble hint_custom-trigger hint">Введите число
+                                                    </div>
+                                                    <button type="button" title="уменьшить"
+                                                            class="btn numspin__control numspin__control_dec"></button>
+                                                    <input data-min="1" title="введите количество товара" value="3"
+                                                           autocomplete="off" type="text"
+                                                           class="tac js-prod__precounter numeric numspin__input">
+                                                    <button type="button" title="увеличить"
+                                                            class="btn numspin__control numspin__control_inc"></button>
+                                                  </div>
+                                                </div>
+                                                <form class="card__buy-btn js-prod__buy" action="#">
+                                                  <button data-quantity="3" title="Купить"
+                                                          class="js-prod__buy-btn button_feedback button_block button_5 button"
+                                                          type="submit">
+                                                    <i class="button__icon_buy button__icon"></i>
+                                                    <span class="button__text">
+                                                                          <span class="button__text-off">Купить</span>
+                                                                          <span class="button__text-on">В корзине</span>
+                                                                      </span>
+                                                  </button>
+                                                </form>
+                                                <div class="card__sum">
+                                                  Сумма – <span class="price rub js-prod__presum">10 302</span>
+                                                </div>
+                                              </div>
+                                            </div>
+                                            <div class="card__compare">
+                                              <form class="prod__comp js-prod__comp" action="#">
+                                                <button title="Добавить в список сравнения"
+                                                        data-title-toggled="Убрать из списка сравнения"
+                                                        class="js-prod__comp-btn button_2c button_toggle button"
+                                                        type="submit">
+                                                  <i class="button__icon_comp1 button__icon"></i>
+                                                  <span class="button__text">
+                                                                      <span class="button__text-on">В списке</span>
+                                                                      <span class="button__text-off">Сравнить</span>
+                                                                  </span>
+                                                </button>
+                                              </form>
+                                            </div>
+                                          </td>
+                                          <td class="card__info">
+                                            <div class="card__cell">
+                                              <div class="clearfix">
+                                                <table class="card__char table">
+                                                  <tr>
+                                                    <th>Производитель</th>
+                                                    <td>Китай</td>
+                                                  </tr>
+                                                  <tr>
+                                                    <th>Бренд</th>
+                                                    <td>Browel Browel Browel</td>
+                                                  </tr>
+                                                  <tr>
+                                                    <th>Серия</th>
+                                                    <td>Nbielvence</td>
+                                                  </tr>
+                                                </table>
+                                              </div>
+                                              <ul class="list_5 list">
+                                                <li>
+                                                  <a href="#" class="block-link file_pdf file">
+                                                    <div class="block-link__pseudolink file__desc">Листовка
+                                                      акции AllLock’s
+                                                    </div>
+                                                    <div class="file__info">1 Мб</div>
+                                                  </a>
+                                                </li>
+                                                <li>
+                                                  <a href="#" class="block-link file_pdf file">
+                                                    <div class="block-link__pseudolink file__desc">Листовка
+                                                      акции AllLock’s
+                                                    </div>
+                                                    <div class="file__info">1 Мб</div>
+                                                  </a>
+                                                </li>
+                                              </ul>
+                                            </div>
+                                          </td>
+                                        </tr>
+                                      </table>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="js-product-card__specs gap14 tabs_auto tabs_1 tabs">
+                                  <ul>
+                                    <li class="longtab">
+                                      <a href="#tab_1">
+                                        <span class="longver">Технические характеристики</span>
+                                        <span class="shortver">Тех. характеристики</span>
+                                      </a>
+                                    </li>
+                                    <li><a href="ajax/itemcard-desc.html">Описание</a></li>
+                                  </ul>
+                                  <div class="gap-gen padding-align-secondary block2 clearfix">
+                                    <div id="tab_1">
+                                      <div class="shift_element aligned-row">
+                                        <div class="char-item limited item_element item">
+                                          <table class="char table_1 table">
+                                            <tr>
+                                              <th>Тип механизма</th>
+                                              <td>цилиндровый</td>
+                                            </tr>
+                                            <tr>
+                                              <th>Тип замка</th>
+                                              <td>с защелкой под ручки</td>
+                                            </tr>
+                                            <tr>
+                                              <th>Тип ригеля</th>
+                                              <td>плоский</td>
+                                            </tr>
+                                            <tr>
+                                              <th>Количество ригелей</th>
+                                              <td>1</td>
+                                            </tr>
+                                            <tr>
+                                              <th>Удаление ключевого отверстия</th>
+                                              <td>45 мм</td>
+                                            </tr>
+                                            <tr>
+                                              <th>Тип механизма</th>
+                                              <td>цилиндровый</td>
+                                            </tr>
+                                            <tr>
+                                              <th>Тип замка</th>
+                                              <td>с защелкой под ручки</td>
+                                            </tr>
+                                            <tr>
+                                              <th>Тип ригеля</th>
+                                              <td>плоский</td>
+                                            </tr>
+                                            <tr>
+                                              <th>Количество ригелей ригелей ригелей ригелей ригелей</th>
+                                              <td>1 ключевого отверстия ключевого отверстия</td>
+                                            </tr>
+                                            <tr>
+                                              <th>Удаление ключевого отверстия</th>
+                                              <td>45 мм</td>
+                                            </tr>
+                                            <tr>
+                                              <th>Тип механизма</th>
+                                              <td>цилиндровый</td>
+                                            </tr>
+                                            <tr>
+                                              <th>Тип замка</th>
+                                              <td>с защелкой под ручки</td>
+                                            </tr>
+                                            <tr>
+                                              <th>Тип ригеля</th>
+                                              <td>плоский</td>
+                                            </tr>
+                                            <tr>
+                                              <th>Количество ригелей</th>
+                                              <td>1</td>
+                                            </tr>
+                                            <tr>
+                                              <th>Удаление ключевого отверстия</th>
+                                              <td>45 мм</td>
+                                            </tr>
+                                            <tr>
+                                              <th>Тип механизма</th>
+                                              <td>цилиндровый</td>
+                                            </tr>
+                                            <tr>
+                                              <th>Тип замка</th>
+                                              <td>с защелкой под ручки</td>
+                                            </tr>
+                                            <tr>
+                                              <th>Тип ригеля</th>
+                                              <td>плоский</td>
+                                            </tr>
+                                            <tr>
+                                              <th>Количество ригелей</th>
+                                              <td>1</td>
+                                            </tr>
+                                            <tr>
+                                              <th>Удаление ключевого отверстия</th>
+                                              <td>45 мм</td>
+                                            </tr>
+                                          </table>
+                                        </div>
+                                        <div class="char-item limited item_element item">
+                                          <table class="char table_1 table">
+                                            <tr>
+                                              <th>Тип механизма</th>
+                                              <td>цилиндровый</td>
+                                            </tr>
+                                            <tr>
+                                              <th>Тип замка</th>
+                                              <td>с защелкой под ручки</td>
+                                            </tr>
+                                            <tr>
+                                              <th>Тип ригеля</th>
+                                              <td>плоский</td>
+                                            </tr>
+                                            <tr>
+                                              <th>Количество ригелей</th>
+                                              <td>1</td>
+                                            </tr>
+                                            <tr>
+                                              <th>Удаление ключевого отверстия</th>
+                                              <td>45 мм</td>
+                                            </tr>
+                                            <tr>
+                                              <th>Тип механизма</th>
+                                              <td>цилиндровый</td>
+                                            </tr>
+                                            <tr>
+                                              <th>Тип замка</th>
+                                              <td>с защелкой под ручки</td>
+                                            </tr>
+                                            <tr>
+                                              <th>Тип ригеля</th>
+                                              <td>плоский</td>
+                                            </tr>
+                                            <tr>
+                                              <th>Количество ригелей</th>
+                                              <td>1</td>
+                                            </tr>
+                                            <tr>
+                                              <th>Удаление ключевого отверстия</th>
+                                              <td>45 мм</td>
+                                            </tr>
+                                            <tr>
+                                              <th>Тип механизма</th>
+                                              <td>цилиндровый</td>
+                                            </tr>
+                                            <tr>
+                                              <th>Тип замка</th>
+                                              <td>с защелкой под ручки</td>
+                                            </tr>
+                                            <tr>
+                                              <th>Тип ригеля</th>
+                                              <td>плоский</td>
+                                            </tr>
+                                            <tr>
+                                              <th>Количество ригелей</th>
+                                              <td>1</td>
+                                            </tr>
+                                            <tr>
+                                              <th>Удаление ключевого отверстия</th>
+                                              <td>45 мм</td>
+                                            </tr>
+                                            <tr>
+                                              <th>Тип механизма</th>
+                                              <td>цилиндровый</td>
+                                            </tr>
+                                            <tr>
+                                              <th>Тип замка</th>
+                                              <td>с защелкой под ручки</td>
+                                            </tr>
+                                            <tr>
+                                              <th>Тип ригеля</th>
+                                              <td>плоский</td>
+                                            </tr>
+                                            <tr>
+                                              <th>Количество ригелей</th>
+                                              <td>1</td>
+                                            </tr>
+                                            <tr>
+                                              <th>Удаление ключевого отверстия</th>
+                                              <td>45 мм</td>
+                                            </tr>
+                                          </table>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div data-module="related" class="related-block tabs_auto tabs_1 tabs">
+                                <ul>
+                                  <li class="longtab">
+                                    <a href="#tab_3">
+                                      <span class="longver">Сопутствующие товары</span>
+                                      <span class="shortver">Сопутствующие</span>
+                                    </a>
+                                  </li>
+                                  <li class="longtab">
+                                    <a href="ajax/related-analogs.html">
+                                      <span class="longver">Аналоги товаров</span>
+                                      <span class="shortver">Аналоги</span>
+                                    </a>
+                                  </li>
+                                </ul>
+                                <div class="gap-gen padding-align-secondary block2 clearfix">
+                                  <div class="block2__fshift">
+                                    <div id="tab_3">
+                                      <div class="js-related__carousel related">
+                                        <div class="related__item">
+                                          <a href="#" class="ritem padding-align-secondary block-link clearfix">
+                                            <div class="ritem__pic bl-side">
+                                              <img src="assets/img/14.jpg" alt="" width="90" height="78"/>
+                                            </div>
+                                            <div class="bl-main">
+                                              <div class="ritem__name block-link__pseudolink">1Замок врезной ЗВ 5015
+                                                длинный ключ (4 кл.)
+                                              </div>
+                                              <div class="ritem__price price rub">1 099</div>
+                                            </div>
+                                          </a>
+                                        </div>
+                                        <div class="related__item">
+                                          <a href="#" class="ritem padding-align-secondary block-link clearfix">
+                                            <div class="ritem__pic bl-side">
+                                              <img src="assets/img/17.jpg" alt="" width="92" height="33"/>
+                                            </div>
+                                            <div class="bl-main">
+                                              <div class="ritem__name block-link__pseudolink">2Замок</div>
+                                              <div class="ritem__price price rub">1 099</div>
+                                            </div>
+                                          </a>
+                                        </div>
+                                        <div class="related__item">
+                                          <a href="#" class="ritem padding-align-secondary block-link clearfix">
+                                            <div class="ritem__pic bl-side">
+                                              <img src="assets/img/14.jpg" alt="" width="90" height="78"/>
+                                            </div>
+                                            <div class="bl-main">
+                                              <div class="ritem__name block-link__pseudolink">3Замок врезной ЗВ 5015
+                                                длинный ключ врезной ЗВ 5015 длинный ключ врезной ЗВ 5015 длинный ключ
+                                                (4 кл.) врезной ЗВ 5015 длинный ключ (4 кл.)
+                                              </div>
+                                              <div class="ritem__price price rub">1 099</div>
+                                            </div>
+                                          </a>
+                                        </div>
+                                        <div class="related__item">
+                                          <a href="#" class="ritem padding-align-secondary block-link clearfix">
+                                            <div class="ritem__pic bl-side">
+                                              <img src="assets/img/14.jpg" alt="" width="90" height="78"/>
+                                            </div>
+                                            <div class="bl-main">
+                                              <div class="ritem__name block-link__pseudolink">4Замок врезной ЗВ 5015
+                                                длинный ключ (4 кл.)
+                                              </div>
+                                              <div class="ritem__price price rub">1 099</div>
+                                            </div>
+                                          </a>
+                                        </div>
+                                        <div class="related__item">
+                                          <a href="#" class="ritem padding-align-secondary block-link clearfix">
+                                            <div class="ritem__pic bl-side">
+                                              <img src="assets/img/14.jpg" alt="" width="90" height="78"/>
+                                            </div>
+                                            <div class="bl-main">
+                                              <div class="ritem__name block-link__pseudolink">5Замок врезной ЗВ 5015
+                                                длинный ключ (4 кл.)
+                                              </div>
+                                              <div class="ritem__price price rub">1 099</div>
+                                            </div>
+                                          </a>
+                                        </div>
+                                        <div class="related__item">
+                                          <a href="#" class="ritem padding-align-secondary block-link clearfix">
+                                            <div class="ritem__pic bl-side">
+                                              <img src="assets/img/14.jpg" alt="" width="90" height="78"/>
+                                            </div>
+                                            <div class="bl-main">
+                                              <div class="ritem__name block-link__pseudolink">6Замок врезной ЗВ 5015
+                                                длинный ключ (4 кл.)
+                                              </div>
+                                              <div class="ritem__price price rub">1 099</div>
+                                            </div>
+                                          </a>
+                                        </div>
+                                        <div class="related__item">
+                                          <a href="#" class="ritem padding-align-secondary block-link clearfix">
+                                            <div class="ritem__pic bl-side">
+                                              <img src="assets/img/14.jpg" alt="" width="90" height="78"/>
+                                            </div>
+                                            <div class="bl-main">
+                                              <div class="ritem__name block-link__pseudolink">7Замок врезной ЗВ 5015
+                                                длинный ключ (4 кл.)
+                                              </div>
+                                              <div class="ritem__price price rub">1 099</div>
+                                            </div>
+                                          </a>
+                                        </div>
+                                        <div class="related__item">
+                                          <a href="#" class="ritem padding-align-secondary block-link clearfix">
+                                            <div class="ritem__pic bl-side">
+                                              <img src="assets/img/14.jpg" alt="" width="90" height="78"/>
+                                            </div>
+                                            <div class="bl-main">
+                                              <div class="ritem__name block-link__pseudolink">8Замок врезной ЗВ 5015
+                                                длинный ключ (4 кл.)
+                                              </div>
+                                              <div class="ritem__price price rub">1 099</div>
+                                            </div>
+                                          </a>
+                                        </div>
+                                        <div class="related__item">
+                                          <a href="#" class="ritem padding-align-secondary block-link clearfix">
+                                            <div class="ritem__pic bl-side">
+                                              <img src="assets/img/14.jpg" alt="" width="90" height="78"/>
+                                            </div>
+                                            <div class="bl-main">
+                                              <div class="ritem__name block-link__pseudolink">9Замок врезной ЗВ 5015
+                                                длинный ключ (4 кл.)
+                                              </div>
+                                              <div class="ritem__price price rub">1 099</div>
+                                            </div>
+                                          </a>
+                                        </div>
+                                        <div class="related__item">
+                                          <a href="#" class="ritem padding-align-secondary block-link clearfix">
+                                            <div class="ritem__pic bl-side">
+                                              <img src="assets/img/14.jpg" alt="" width="90" height="78"/>
+                                            </div>
+                                            <div class="bl-main">
+                                              <div class="ritem__name block-link__pseudolink">10Замок врезной ЗВ 5015
+                                                длинный ключ (4 кл.)
+                                              </div>
+                                              <div class="ritem__price price rub">1 099</div>
+                                            </div>
+                                          </a>
+                                        </div>
+                                        <div class="related__item">
+                                          <a href="#" class="ritem padding-align-secondary block-link clearfix">
+                                            <div class="ritem__pic bl-side">
+                                              <img src="assets/img/14.jpg" alt="" width="90" height="78"/>
+                                            </div>
+                                            <div class="bl-main">
+                                              <div class="ritem__name block-link__pseudolink">11Замок врезной ЗВ 5015
+                                                длинный ключ (4 кл.)
+                                              </div>
+                                              <div class="ritem__price price rub">1 099</div>
+                                            </div>
+                                          </a>
+                                        </div>
+                                        <div class="related__item">
+                                          <a href="#" class="ritem padding-align-secondary block-link clearfix">
+                                            <div class="ritem__pic bl-side">
+                                              <img src="assets/img/14.jpg" alt="" width="90" height="78"/>
+                                            </div>
+                                            <div class="bl-main">
+                                              <div class="ritem__name block-link__pseudolink">12Замок врезной ЗВ 5015
+                                                длинный ключ (4 кл.)
+                                              </div>
+                                              <div class="ritem__price price rub">1 099</div>
+                                            </div>
+                                          </a>
+                                        </div>
+
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <footer data-module="footer" class="footer">
+                    <div class="footer__top">
+                        <div class="inner clearfix">
+                            <div class="footer__top-slot_1 footer__top-slot">
+                                <nav class="fnav clearfix">
+                                    <div class="fnav__row aligned-row">
+                                        <div class="fnav__row-item item">
+                                            <ul class="fnav__list list">
+                                                <li class="fnav__item dontsplit"><a href="#" class="fnav__txt"><span class="fnav__txt-i">Бренды</span></a></li>
+                                                <li class="fnav__item dontsplit"><a href="#" class="fnav__txt"><span class="fnav__txt-i">Инструкции</span></a></li>
+                                                <li class="is-active fnav__item dontsplit"><span class="fnav__txt"><span class="fnav__txt-i">Сертификаты</span></span></li>
+                                                <li class="fnav__item dontsplit"><a href="#" class="fnav__txt"><span class="fnav__txt-i">Рекламные материалы</span></a></li>
+                                                <li class="fnav__item dontsplit"><a href="#" class="fnav__txt"><span class="fnav__txt-i">Выставки и конференции</span></a></li>
+                                                <li class="fnav__item dontsplit"><a href="#" class="fnav__txt"><span class="fnav__txt-i">О компании</span></a></li>
+                                                <li class="fnav__item dontsplit"><a href="#" class="fnav__txt"><span class="fnav__txt-i">Контакты</span></a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="fnav__row-item item">
+                                            <ul class="fnav__list list">
+                                                <li class="fnav__item dontsplit"><a href="#" class="fnav__txt_dealer fnav__txt"><span class="fnav__txt-i">Для дилеров</span></a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </nav>
+                            </div>
+                            <div class="footer__top-slot_2 footer__top-slot">
+                                <nav class="fcat_columnized fcat clearfix">
+                                    <ul class="fcat__list list">
+                                        <li class="fcat__item dontsplit"><a href="#" class="fcat__txt"><span class="fcat__txt-i">Замк эл-мех./аксессуары эл-мех./аксессуары</span></a></li>
+                                        <li class="fcat__item dontsplit"><a href="#" class="fcat__txt"><span class="fcat__txt-i">Заготовки ключей, ключи</span></a></li>
+                                        <li class="fcat__item dontsplit"><a href="#" class="fcat__txt"><span class="fcat__txt-i">Мех-мы секретности</span></a></li>
+                                        <li class="fcat__item dontsplit"><a href="#" class="fcat__txt"><span class="fcat__txt-i">Ручки дверные</span></a></li>
+                                        <li class="fcat__item dontsplit"><a href="#" class="fcat__txt"><span class="fcat__txt-i">Броненакладки и пластины</span></a></li>
+                                        <li class="fcat__item dontsplit"><a href="#" class="fcat__txt"><span class="fcat__txt-i">Замк эл-мех./аксессуары эл-мех./аксессуары</span></a></li>
+                                        <li class="fcat__item dontsplit"><a href="#" class="fcat__txt"><span class="fcat__txt-i">Заготовки ключей, ключи</span></a></li>
+                                        <li class="is-active fcat__item dontsplit"><span class="fcat__txt"><span class="fcat__txt-i">Мех-мы секретности</span></span></li>
+                                        <li class="fcat__item dontsplit"><a href="#" class="fcat__txt"><span class="fcat__txt-i">Ручки дверные</span></a></li>
+                                        <li class="fcat__item dontsplit"><a href="#" class="fcat__txt"><span class="fcat__txt-i">Броненакладки и пластины</span></a></li>
+                                        <li class="fcat__item dontsplit"><a href="#" class="fcat__txt"><span class="fcat__txt-i">Замк эл-мех./аксессуары эл-мех./аксессуары</span></a></li>
+                                        <li class="fcat__item dontsplit"><a href="#" class="fcat__txt"><span class="fcat__txt-i">Заготовки ключей, ключи</span></a></li>
+                                        <li class="fcat__item dontsplit"><a href="#" class="fcat__txt"><span class="fcat__txt-i">Мех-мы секретности</span></a></li>
+                                        <li class="fcat__item dontsplit"><a href="#" class="fcat__txt"><span class="fcat__txt-i">Ручки дверные</span></a></li>
+                                        <li class="fcat__item dontsplit"><a href="#" class="fcat__txt"><span class="fcat__txt-i">Броненакладки и пластины</span></a></li>
+                                        <li class="fcat__item dontsplit"><a href="#" class="fcat__txt"><span class="fcat__txt-i">Замк эл-мех./аксессуары эл-мех./аксессуары</span></a></li>
+                                        <li class="fcat__item dontsplit"><a href="#" class="fcat__txt"><span class="fcat__txt-i">Заготовки ключей, ключи</span></a></li>
+                                        <li class="fcat__item dontsplit"><a href="#" class="fcat__txt"><span class="fcat__txt-i">Мех-мы секретности</span></a></li>
+                                        <li class="fcat__item dontsplit"><a href="#" class="fcat__txt"><span class="fcat__txt-i">Ручки дверные</span></a></li>
+                                        <li class="fcat__item dontsplit"><a href="#" class="fcat__txt"><span class="fcat__txt-i">Броненакладки и пластины</span></a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer__bot">
+                        <div class="inner clearfix">
+                            <div class="aligned-row">
+                                <div class="footer__bot-slot_1 footer__bot-slot item">
+                                    <div class="copy">© 2008-2015 «TradeLock». Все права защищены.</div>
+                                </div>
+                                <div class="footer__bot-slot_2 footer__bot-slot item">
+                                    <a href="#" class="design">
+                                        <div class="design__txt">Разработка сайта – студия «Восхождение»</div>
+                                        <img src="assets/img/design.png" alt="" width="34" height="19" class="design__logo"/>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+            </div
+            ><div class="page__nav">
+                <button title="Закрыть" type="button" class="js-navigation__close page__nav-close btn"><span class="page__nav-close__i">Закрыть</span></button>
+                <div class="nav-holder"></div>
+            </div>
+        </div>
+
+        <include src="partials/includes/modals_common.html"></include>
+        <include src="partials/templates/buyed_msg.html"></include>
+        <include src="partials/templates/prod_adjuster.html"></include>
+
+
+    </body>
+</html>

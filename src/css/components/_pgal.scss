@@ -1,0 +1,32 @@
+.pgal__thumbs,
+.pgal__gal {
+  vertical-align: bottom;
+  }
+.pgal,
+.pgal__gal {
+  position: relative;
+  }
+.pgal__thumbs {
+  width: 83px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  }
+.pgal__gal {
+  padding-left: 94px;
+  z-index: 0;
+  }
+
+.prod-thumbs:not(.slick-initialized) {
+  visibility: hidden;
+  }
+
+@media screen and (max-width: bp(bp1015px)) {
+  .pgal__thumbs {
+    display: none;
+    }
+  .pgal__gal {
+    padding-left: 0;
+    }
+  }

@@ -1,0 +1,75 @@
+/* stylelint-disable no-descending-specificity  */
+
+.prod .plist__pic {
+  text-align: center;
+  }
+
+.plist__price {
+  font-weight: normal;
+  white-space: nowrap;
+  }
+
+.plist__name {
+  width: 40%;
+  }
+
+.prod .plist__name .table__cell {
+  font-size: 15px;
+  font-size: 1rem;
+  }
+
+.prod .plist__brand .table__cell {
+  margin-top: 2px;
+  }
+
+.plist__buy,
+.plist__compare {
+  width: 1%;
+  }
+
+.plist__buy .table__cell,
+.plist__compare .table__cell {
+  margin-top: -.6em;
+  margin-bottom: -.6em;
+  }
+
+
+.plist__sorter {
+  margin-left: -0.466666667em;
+  }
+
+@media screen and (max-width: bp(bp980px)) {
+  .plist__pic {
+    display: none;
+    }
+
+  .plist.table_0 > thead > tr > th:nth-child(2),
+  .plist.table_0 > thead > tr > td:nth-child(2),
+  .plist.table_0 > tbody > tr > td:nth-child(2),
+  .plist.table_0 > tfoot > tr > td:nth-child(2) {
+    padding-left: 17px;
+    }
+  }
+@media screen and (max-width: bp(bp840px)) {
+  .plist__pic {
+    display: table-cell;
+    }
+
+  .plist.table_0 > thead > tr > th:nth-child(2),
+  .plist.table_0 > thead > tr > td:nth-child(2),
+  .plist.table_0 > tbody > tr > td:nth-child(2),
+  .plist.table_0 > tfoot > tr > td:nth-child(2) {
+    padding-left: 11px;
+    }
+  }
+@media screen and (max-width: bp(bp540px)) {
+  .plist__compare {
+    display: none;
+    }
+  .plist.table_0 > thead > tr > th:nth-last-child(2),
+  .plist.table_0 > thead > tr > td:nth-last-child(2),
+  .plist.table_0 > tbody > tr > td:nth-last-child(2) {
+    padding-right: 14px;
+    }
+
+  }

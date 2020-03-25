@@ -1,0 +1,8 @@
+.personal-dist {
+  font-size: 0.866666667rem;
+  margin-top: 8px;
+
+  @media screen and (max-width: bp(bp660px)) {
+    margin-top: 0;
+    }
+  }

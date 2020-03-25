@@ -1,0 +1,8 @@
+.blist__row {
+  padding-bottom: 28px;
+
+  @media screen and (max-width: bp(bp660px)) {
+    padding-bottom: 0;
+    }
+  }
+

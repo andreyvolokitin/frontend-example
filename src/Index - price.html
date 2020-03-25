@@ -1,0 +1,916 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>
+<html class="no-js lt-ie10 lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>
+<html class="no-js lt-ie10 lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>
+<html class="no-js lt-ie10 lt-ie9"> <![endif]-->
+<!--[if IE 9]>
+<html class="no-js lt-ie10"> <![endif]-->
+<!--[if gt IE 9]><!-->
+<html class="no-js"> <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <body data-module="page">
+    <script>
+      if (Function('/*@cc_on return document.documentMode===10@*/')()) {
+        document.documentElement.className += ' ie10';
+      }
+      if (window.opera && window.opera.buildNumber) {
+        document.documentElement.className += ' opera';
+      }
+      if (Object.prototype.toString.call(window.operamini) === "[object OperaMini]") {
+        document.documentElement.className += ' operamini';
+      }
+      if ('WebkitAppearance' in document.documentElement.style) {
+        document.documentElement.className += ' webkit';
+      }
+      if (Function('/*@cc_on return document.documentMode===9@*/')()) {
+        document.documentElement.className += ' ie9';
+      }
+    </script>
+    <!--[if lt IE 9]>
+    <p class="browsehappy">Вы используете <strong>устаревший</strong> браузер. Пожалуйста,
+      <a href="http://browsehappy.com/">обновите его</a>.</p>
+    <![endif]-->
+    <div class="scroll-keeper"></div>
+    <div class="wrapper page">
+      <div class="page__content">
+        <scope loggedIn="false">
+          <include src="partials/includes/header.html"></include>
+        </scope>
+        <div class="content" role="main">
+          <div class="inner clearfix">
+            <aside class="sidebar">
+              <nav data-module="catalog-menu" class="gap-gen cat_adapt cat padding-align-primary block1">
+                <div class="cat__header row_m aligned-row">
+                  <div class="cat__head item">
+                    <h3 class="cat__head-hd hd_0">Каталог</h3>
+                  </div>
+                  <div class="cat__search item">
+                    <form data-module="search" data-search="catalog" action="#" class="js-validate-form">
+                      <div class="searchbox_0 searchbox input_skin_0 input input_hinted">
+                        <div class="hint">Название товара, марка, бренд</div>
+                        <input required type="search" class="js-catalog-menu__searchfield js-search__field searchbox__val"/>
+                        <button type="submit" class="js-search__button needsclick searchbox__btn btn">Искать</button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+                <div class="cat__content-wrap">
+                  <div class="padding-align-primary__undo cat__content clearfix">
+                    <ul class="cat__list list">
+                      <li class="cat__item dontsplit"><a href="#" class="cat__txt">Спецпредложения</a></li>
+                      <li class="cat__item dontsplit"><a href="#" class="cat__txt">Защелки</a></li>
+                      <li class="cat__item dontsplit"><a href="#" class="cat__txt">Задвижки</a></li>
+                      <li class="cat__item dontsplit"><a href="#" class="cat__txt">Врезные замки</a></li>
+                      <li class="cat__item dontsplit"><a href="#" class="cat__txt">Цилиндровые механизмы</a></li>
+                      <li class="cat__item dontsplit"><a href="#" class="cat__txt">Петли дверные</a></li>
+                      <li class="cat__item dontsplit"><a href="#" class="cat__txt">Ограничители дверные</a></li>
+                      <li class="cat__item">
+                        <a href="#" class="cat__txt">Ригели</a>
+                      </li>
+                      <li class="cat__item dontsplit"><a href="#" class="cat__txt">Фурнитура для раздвижных дверей</a>
+                      </li>
+                      <li class="cat__item dontsplit"><a href="#" class="cat__txt">Цилиндровые механизмы</a></li>
+                      <li class="cat__item dontsplit"><a href="#" class="cat__txt">Замки накладные</a></li>
+                      <li class="cat__item dontsplit"><a href="#" class="cat__txt">Замки эл-мех./аксессуары</a></li>
+                      <li class="cat__item dontsplit"><a href="#" class="cat__txt">Заготовки ключей, ключи</a></li>
+                      <li class="cat__item dontsplit"><a href="#" class="cat__txt">Мех-мы секретности</a></li>
+                      <li class="cat__item dontsplit"><a href="#" class="cat__txt">Ручки дверные</a></li>
+                      <li class="cat__item dontsplit"><a href="#" class="cat__txt">Броненакладки и пластины</a></li>
+                      <li class="cat__item dontsplit"><a href="#" class="cat__txt">Ручки защелки (KNOB)</a></li>
+                      <li class="cat__item dontsplit"><a href="#" class="cat__txt">Накладки/WC-комплекты</a></li>
+                      <li class="cat__item dontsplit"><a href="#" class="cat__txt">Петли</a></li>
+                      <li class="cat__item dontsplit"><a href="#" class="cat__txt">Глазки дверные</a></li>
+                      <li class="cat__item dontsplit"><a href="#" class="cat__txt">Доводчики дверные</a></li>
+                      <li class="cat__item dontsplit"><a href="#" class="cat__txt">Фурнитура</a></li>
+                      <li class="cat__item dontsplit"><a href="#" class="cat__txt">Инструменты</a></li>
+                      <li class="cat__item dontsplit"><a href="#" class="cat__txt">Прочее</a></li>
+                      <li class="cat__item dontsplit"><a href="#" class="cat__txt">Раздвижные системы</a></li>
+                    </ul>
+                  </div>
+
+                </div>
+              </nav>
+              <a data-module="banner" href="#" class="gap-gen banner_adapt banner padding-align-primary clearfix link2 block-link">
+                <h3 class="banner__head hd_0">Не видите цен?</h3>
+                <div class="banner__txt">Каталог с ценами доступен всем партнерам</div>
+                <div class="banner__more">
+                  <span class="block-link__pseudolink">Подробнее о партнерстве</span>
+                </div>
+              </a>
+              <div data-module="office" class="gap-gen link3 office_adapt office">
+                <h3 class="hd_0">Офис в Москве</h3>
+                <figure class="gap5">
+                  <a href="#">
+                    <img class="gap6" src="assets/img/1.jpg" alt="" width="251" height="125"/>
+                  </a>
+                  <figcaption>
+                    г. Москва, Окружной пр-д, д. 8 +7 495 845 98 45
+                  </figcaption>
+                </figure>
+                <a href="mailto:info@tlock.ru">info@tlock.ru</a>
+              </div>
+            </aside>
+            <div class="maincol">
+              <div class="maincol__i">
+                <div class="clearfix">
+                  <aside class="sidecol">
+                    <div data-module="news" class="gap-gen news_adapt news padding-align-primary block1 clearfix">
+                      <div class="news__item">
+                        <h3 class="hd_0">Новости</h3>
+                        <div class="padding-align-primary__undo">
+                          <div data-module="swiper" data-swiper-height="tallest" class="swiper_0 swiper">
+                            <div class="swiper__item">
+                              <!-- padding-bottom = (image height / image width) * 100
+                                  max-width = image width
+                              -->
+                              <div style="max-width: 256px;padding-bottom: 60.9375%;" class="news__pic rpic">
+                                <img class="rpic__img" src="assets/img/2.jpg" alt=""/>
+                              </div>
+                              <div class="padding-align-primary">
+                                <ul class="link0 list_2 list">
+                                  <li><a href="#">25 сентября конференция в ГК "Измайлово"</a></li>
+                                  <li><a href="#">25 сентября конференция в ГК "Измайлово"</a></li>
+                                  <li><a href="#">25 сентября конференция в ГК "Измайлово"</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                            <div class="swiper__item">
+                              <!-- padding-bottom = (image height / image width) * 100
+                                 max-width = image width
+                             -->
+                              <div style="max-width: 256px;padding-bottom: 60.9375%;" class="news__pic rpic">
+                                <img class="rpic__img" src="assets/img/2.jpg" alt=""/>
+                              </div>
+                              <div class="padding-align-primary">
+                                <ul class="link0 list_2 list">
+                                  <li><a href="#">25 сентября конференция в ГК "Измайлово" конференция в ГК "Измайлово"
+                                    конференция в ГК "Измайлово"</a></li>
+                                  <li><a href="#">25 сентября конференция в ГК "Измайлово"</a></li>
+                                  <li><a href="#">25 сентября конференция в ГК "Измайлово"</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                            <div class="swiper__item">
+                              <!-- padding-bottom = (image height / image width) * 100
+                                 max-width = image width
+                             -->
+                              <div style="max-width: 256px;padding-bottom: 60.9375%;" class="news__pic rpic">
+                                <img class="rpic__img" src="assets/img/2.jpg" alt=""/>
+                              </div>
+                              <div class="padding-align-primary">
+                                <ul class="link0 list_2 list">
+                                  <li><a href="#">25 сентября конференция в ГК "Измайлово"</a></li>
+                                  <li><a href="#">25 сентября</a></li>
+                                  <li><a href="#">25 сентября конференция</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                            <div class="swiper__item">
+                              <!-- padding-bottom = (image height / image width) * 100
+                                 max-width = image width
+                             -->
+                              <div style="max-width: 256px;padding-bottom: 60.9375%;" class="news__pic rpic">
+                                <img class="rpic__img" src="assets/img/2.jpg" alt=""/>
+                              </div>
+                              <div class="padding-align-primary">
+                                <ul class="link0 list_2 list">
+                                  <li><a href="#">25 сентября конференция в ГК "Измайлово"</a></li>
+                                  <li><a href="#">25 сентября конференция в ГК "Измайлово"</a></li>
+                                  <li><a href="#">25 сентября конференция в ГК "Измайлово"</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                      </div>
+                      <div class="padding-align-primary__undo padding-align-primary news__item">
+                        <form data-module="subscribe" class="subscribe ajax-form js-validate-form" action="#">
+                          <div class="subscribe__trigger">
+                            <button type="button" class="js-subscribe__trg button_1 button_toggle button">
+                                <span class="button__text">
+                                    <span class="button__text-off">Подписаться на рассылку</span>
+                                    <span class="button__text-on">Скрыть форму подписки</span>
+                                </span>
+                            </button>
+                          </div>
+                          <div class="subscribe__content">
+                            <div class="ajax-form__content ajax-form__content_1">
+                              <h3 class="hd_0">Подписка</h3>
+                              <div class="gap12">
+                                <p>Будьте всегда в курсе наших спецпредложений и программ лояльности</p>
+                              </div>
+                              <div class="gap7">
+                                <div class="gap3">
+                                  <label for="em1">Ваш email</label>
+                                </div>
+                                <div class="input_hinted input">
+                                  <div class="hint">Email</div>
+                                  <input class="js-subscribe__field" required name="em1" id="em1" type="email"/>
+                                </div>
+                              </div>
+                              <button type="submit" class="button_block button">
+                                <span class="button__text">Подписаться</span>
+                              </button>
+                            </div>
+                            <div class="ajax-form__content ajax-form__content_2">
+                              <h3 class="hd_0">Спасибо! Вы подписаны</h3>
+                              <div class="gap12">
+                                <p>Будьте всегда в курсе наших спецпредложений и программ лояльности</p>
+                              </div>
+                            </div>
+                          </div>
+                        </form>
+
+                      </div>
+                    </div>
+                  </aside>
+                  <div class="centercol">
+                    <div class="centercol__i">
+                      <!-- padding-bottom is 390/659*100% -->
+                      <div data-module="slider" data-ratio="659/390" style="padding-bottom: 59.1805766%;" class="gap-gen main-slider_adapt main-slider slider">
+                        <div data-img="assets/img/3.jpg" class="slider__html">
+                          <a class="slider__link link4 block-link" href="#">
+                            <div class="slider__desc">
+                              Защелка межкомнатная врезная в комплекте с ручкой SET F3015 GP
+                              <span class="slider__more block-link__pseudolink">Подробнее о товаре</span>
+                            </div>
+                          </a>
+                        </div>
+                        <div data-img="assets/img/3a.jpg" class="slider__html">
+                          <a class="slider__link link4 block-link" href="#">
+                            <div class="slider__desc">
+                              Защелка межкомнатная врезная в комплекте с ручкой SET F3015 GP
+                              Защелка межкомнатная врезная в комплекте с ручкой SET F3015 GP
+                              <span class="slider__more block-link__pseudolink">Подробнее о товаре</span>
+                            </div>
+                          </a>
+                        </div>
+                        <div data-img="assets/img/3.jpg" class="slider__html">
+                          <a class="slider__link link4 block-link" href="#">
+                            <div class="slider__desc">
+                              Защелка межкомнатная
+                              <span class="slider__more block-link__pseudolink">Подробнее о товаре</span>
+                            </div>
+                          </a>
+                        </div>
+                      </div>
+                      <div class="cat-holder"></div>
+                      <div class="main-slider-holder"></div>
+                      <div class="news-holder"></div>
+                      <div data-module="product-tabs" class="gap-gen tabs_0 tabs prod-tabs">
+                        <ul class="prod-tabs__tabs list">
+                          <li class="prod-tabs__tab"><a href="#tab_1">Новинки</a></li>
+                          <li class="prod-tabs__tab"><a href="#tab_2">Спецпредложения</a></li>
+                        </ul>
+                        <div class="padding-align-secondary block2 prod-tabs__panels clearfix">
+                          <div class="padding-align-secondary prod-tabs__panel" id="tab_1">
+                            <h3 class="gap2 prod-tabs__hd hd_0">Новинки</h3>
+                            <div class="link5"><a href="#">Показать все <span class="prod-tabs__all-add">новинки</span></a>
+                            </div>
+                            <div data-module="swiper" data-swiper-height="tallest" class="padding-align-secondary__undo prod-tabs__swiper swiper">
+                              <div class="swiper__item">
+                                <div data-id="1" class="prod_0 prod js-prod">
+                                  <a href="#" class="prod__link block-link clearfix">
+                                    <div class="prod__pic">
+                                      <img class="prod__img" src="assets/img/p0.jpg" alt=""/>
+                                    </div>
+                                    <div class="prod__name">
+                                      Ручка раздельная Silvia 1AS/LWP-109 Античное серебро/беж фарфор
+                                      Ручка раздельная Silvia 1AS/LWP-109 Античное серебро/беж фарфор
+                                    </div>
+                                  </a>
+                                  <div class="prod__foot">
+                                    <div class="prod__price_0 prod__price price rub">184</div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="swiper__item">
+                                <div data-id="2" class="prod_0 prod js-prod">
+                                  <a href="#" class="prod__link block-link clearfix">
+                                    <div class="prod__pic">
+                                      <img class="prod__img" src="assets/img/p0.jpg" alt=""/>
+                                    </div>
+                                    <div class="prod__name">
+                                      Ручка раздельная Silvia
+                                    </div>
+                                  </a>
+                                  <div class="prod__foot">
+                                    <div class="prod__price_0 prod__price price rub">9 999 184</div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="swiper__item">
+                                <div data-id="3" class="prod_0 prod js-prod">
+                                  <a href="#" class="prod__link block-link clearfix">
+                                    <div class="prod__pic">
+                                      <img class="prod__img" src="assets/img/p0.jpg" alt=""/>
+                                    </div>
+                                    <div class="prod__name">
+                                      Ручка раздельная Silvia 1AS/LWP-109 Античное серебро/беж фарфор
+                                    </div>
+                                  </a>
+                                  <div class="prod__foot">
+                                    <div class="prod__price_0 prod__price price rub">9 999 184</div>
+                                  </div>
+                                </div>
+
+                              </div>
+                              <div class="swiper__item">
+                                <div data-id="4" class="prod_0 prod js-prod">
+                                  <a href="#" class="prod__link block-link clearfix">
+                                    <div class="prod__pic">
+                                      <img class="prod__img" src="assets/img/p0.jpg" alt=""/>
+                                    </div>
+                                    <div class="prod__name">
+                                      Ручка раздельная
+                                    </div>
+                                  </a>
+                                  <div class="prod__foot">
+                                    <div class="prod__price_0 prod__price price rub">9 999 184</div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="padding-align-secondary prod-tabs__panel" id="tab_2">
+                            <h3 class="gap2 prod-tabs__hd hd_0">Спецпредложения</h3>
+                            <div class="link5"><a href="#">Показать все
+                              <span class="prod-tabs__all-add">спецпредложения</span></a></div>
+                            <div data-module="swiper" data-swiper-height="tallest" class="padding-align-secondary__undo prod-tabs__swiper swiper">
+                              <div class="swiper__item">
+                                <div data-id="1" class="prod_0 prod js-prod">
+                                  <a href="#" class="prod__link block-link clearfix">
+                                    <div class="prod__pic">
+                                      <img class="prod__img" src="assets/img/p0.jpg" alt=""/>
+                                    </div>
+                                    <div class="prod__name">
+                                      Ручка раздельная Silvia 1AS/LWP-109 Античное серебро/беж фарфор
+                                      Ручка раздельная Silvia 1AS/LWP-109 Античное серебро/беж фарфор
+                                    </div>
+                                  </a>
+                                  <div class="prod__foot">
+                                    <div class="prod__price_0 prod__price price rub">9 999 184</div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="swiper__item">
+                                <div data-id="5" class="prod_0 prod js-prod">
+                                  <a href="#" class="prod__link block-link clearfix">
+                                    <div class="prod__pic">
+                                      <img class="prod__img" src="assets/img/p0.jpg" alt=""/>
+                                    </div>
+                                    <div class="prod__name">
+                                      Ручка раздельная Silvia
+                                    </div>
+                                  </a>
+                                  <div class="prod__foot">
+                                    <div class="prod__price_0 prod__price price rub">9 999 184</div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="swiper__item">
+                                <div data-id="6" class="prod_0 prod js-prod">
+                                  <a href="#" class="prod__link block-link clearfix">
+                                    <div class="prod__pic">
+                                      <img class="prod__img" src="assets/img/p0.jpg" alt=""/>
+                                    </div>
+                                    <div class="prod__name">
+                                      Ручка раздельная Silvia 1AS/LWP-109 Античное серебро/беж фарфор
+                                    </div>
+                                  </a>
+                                  <div class="prod__foot">
+                                    <div class="prod__price_0 prod__price price rub">9 999 184</div>
+                                  </div>
+                                </div>
+
+                              </div>
+                              <div class="swiper__item">
+                                <div data-id="7" class="prod_0 prod js-prod">
+                                  <a href="#" class="prod__link block-link clearfix">
+                                    <div class="prod__pic">
+                                      <img class="prod__img" src="assets/img/p0.jpg" alt=""/>
+                                    </div>
+                                    <div class="prod__name">
+                                      Ручка раздельная
+                                    </div>
+                                  </a>
+                                  <div class="prod__foot">
+                                    <div class="prod__price_0 prod__price price rub">9 999 184</div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="banner-holder"></div>
+                <div class="gap20 padding-align-primary block1">
+                  <div data-slides="4" data-module="brand-carousel" class="car_adapt car">
+                    <div class="car__item">
+                      <a class="car__link" href="#"><img class="car__img" data-lazy="assets/img/br0.jpg" alt="" width="115" height="30"/></a>
+                    </div>
+                    <div class="car__item">
+                      <a class="car__link" href="#"><img class="car__img" data-lazy="assets/img/br1.jpg" alt="" width="154" height="30"/></a>
+                    </div>
+                    <div class="car__item">
+                      <a class="car__link" href="#"><img class="car__img" data-lazy="assets/img/br2.jpg" alt="" width="164" height="27"/></a>
+                    </div>
+                    <div class="car__item">
+                      <a class="car__link" href="#"><img class="car__img" data-lazy="assets/img/br3.jpg" alt="" width="131" height="32"/></a>
+                    </div>
+                    <div class="car__item">
+                      <a class="car__link" href="#"><img class="car__img" data-lazy="assets/img/br0.jpg" alt="" width="115" height="30"/></a>
+                    </div>
+                    <div class="car__item">
+                      <a class="car__link" href="#"><img class="car__img" data-lazy="assets/img/br1.jpg" alt="" width="154" height="30"/></a>
+                    </div>
+                    <div class="car__item">
+                      <a class="car__link" href="#"><img class="car__img" data-lazy="assets/img/br2.jpg" alt="" width="164" height="27"/></a>
+                    </div>
+                    <div class="car__item">
+                      <a class="car__link" href="#"><img class="car__img" data-lazy="assets/img/br3.jpg" alt="" width="131" height="32"/></a>
+                    </div>
+                  </div>
+                </div>
+                <div class="about-txt">
+                  <div class="aligned-row">
+                    <div class="about-container item">
+                      <h3 class="hd_0">Компания Trade Lock</h3>
+                      <div class="aligned-row">
+                        <div class="about-item item">
+                          <form action="#" class="js-validate-form">
+
+                            <div class="gap10 input_hinted input_num input_msg_t input">
+                              <div class="hint_bubble hint_custom-trigger hint">Введите число</div>
+                              <div class="hint">Count</div>
+                              <input data-min="1" class="numeric" required value="dd" name="aaa" id="aaa" type="text"/>
+                            </div>
+                            <div class="gap10 input_msg_t input_hinted input_skin_0 input">
+                              <div class="hint_bubble hint">Email</div>
+                              <input required name="aa0" id="aa0" type="email"/>
+                            </div>
+                            <div class="gap10 input_hinted input_skin_1 input">
+                              <div class="hint">Email</div>
+                              <input required name="aa1" id="aa1" type="email"/>
+                            </div>
+                            <div class="gap10 input_hinted input_skin_2 input">
+                              <div class="hint">Email</div>
+                              <input required name="aa2" id="aa2" type="email"/>
+                            </div>
+                            <div class="gap10 input_hinted input_skin_3 input">
+                              <div class="hint">Email</div>
+                              <input required name="aa3" id="aa3" type="email"/>
+                            </div>
+                            <div class="gap10 input_hinted input_skin_4 input">
+                              <div class="hint">Email</div>
+                              <input required name="aa4" id="aa4" type="email"/>
+                            </div>
+                            <div class="gap10 input_hinted input_skin_5 input">
+                              <div class="hint">Email</div>
+                              <input required name="aa5" id="aa5" type="email"/>
+                            </div>
+                            <div class="gap10 input_hinted input_skin_6 input">
+                              <div class="hint">Email</div>
+                              <input required name="aa6" id="aa6" type="email"/>
+                            </div>
+                            <div class="gap10">
+                              <div class="select validate-field_inline validate-field">
+                                <select required name="dd" id="dd" class="select__select">
+                                  <option disabled selected class="is-label" value="">Селект вваввва</option>
+                                  <option value="2">Селект</option>
+                                  <option value="3">Селект ui-select-nativeonly select</option>
+                                  <option value="3">Двери и фурнитура для них – по сути своей разные вещи</option>
+                                  <option value="3">Двери и фурнитура</option>
+                                </select>
+                              </div>
+                            </div>
+                            <div>
+                              Test
+                              <div data-autowidth="skip" class=" select validate-field">
+                                <select required name="d1d3" id="d1d3" class="select__select">
+                                  <option disabled selected class="is-label" value="">me</option>
+                                  <option value="3">wedwed</option>
+                                  <option value="3">wedwedwedwededwed</option>
+                                  <option value="3">3</option>
+                                  <option value="3">4</option>
+                                </select>
+                              </div>
+                              to find out
+                            </div>
+                            <div>
+                              Test
+                              <div data-autowidth="skip" class=" select validate-field">
+                                <select required name="d1d4" id="d1d4" class="select__select">
+                                  <option disabled class="is-label" value="">me</option>
+                                  <option value="2">1</option>
+                                  <option value="3">2</option>
+                                  <option value="3">wedwed</option>
+                                  <option selected value="3">wedwedwedwededwed</option>
+                                </select>
+                              </div>
+
+                              to find out
+                            </div>
+                            <div class="gap10 select_full select validate-field">
+                              <select required name="dd2" id="dd2" class="select__select">
+                                <option disabled selected class="is-label" value="">Селект вваввва</option>
+                                <option value="2">Селект</option>
+                                <option value="3">Селект ui-select-nativeonly select</option>
+                                <option value="3">Двери и фурнитура для них – по сути своей разные вещи</option>
+                                <option value="3">Двери и фурнитура</option>
+                              </select>
+                            </div>
+                            <div class="gap10 select_skin0 select validate-field">
+                              <select required name="dd22" id="dd22" class="select__select">
+                                <option disabled selected class="is-label" value="">1Селект вваввва</option>
+                                <option value="2">Селект</option>
+                                <option value="3">Селект ui-select-nativeonly select</option>
+                                <option value="3">Двери и фурнитура для них – по сути своей разные вещи</option>
+                                <option value="3">Двери и фурнитура</option>
+                              </select>
+                            </div>
+                            <div class="gap10 select_skin1 select validate-field">
+                              <select required name="dd220" id="dd220" class="select__select">
+                                <option disabled selected class="is-label" value="">1Селект вваввва</option>
+                                <option value="2">Селект</option>
+                                <option value="3">Селект ui-select-nativeonly select</option>
+                                <option value="3">Двери и фурнитура для них – по сути своей разные вещи</option>
+                                <option value="3">Двери и фурнитура</option>
+                              </select>
+                            </div>
+                            <div class="gap10 select_skin2 select validate-field">
+                              <select required name="dd221" id="dd221" class="select__select">
+                                <option disabled selected class="is-label" value="">1Селект вваввва</option>
+                                <option value="2">Селект</option>
+                                <option value="3">Селект ui-select-nativeonly select</option>
+                                <option value="3">Двери и фурнитура для них – по сути своей разные вещи</option>
+                                <option value="3">Двери и фурнитура</option>
+                              </select>
+                            </div>
+                            <div class="gap10 select_skin3 select validate-field">
+                              <select required name="dd222" id="dd222" class="select__select">
+                                <option disabled selected class="is-label" value="">1Селект вваввва</option>
+                                <option value="2">Селект</option>
+                                <option value="3">Селект ui-select-nativeonly select</option>
+                                <option value="3">Двери и фурнитура для них – по сути своей разные вещи</option>
+                                <option value="3">Двери и фурнитура</option>
+                              </select>
+                            </div>
+                            <div class="gap10 select_skin4 select validate-field">
+                              <select required name="dd223" id="dd223" class="select__select">
+                                <option disabled selected class="is-label" value="">1Селект вваввва</option>
+                                <option value="2">Селект</option>
+                                <option value="3">Селект ui-select-nativeonly select</option>
+                                <option value="3">Двери и фурнитура для них – по сути своей разные вещи</option>
+                                <option value="3">Двери и фурнитура</option>
+                              </select>
+                            </div>
+                            <div class="gap10 select_skin5 select validate-field">
+                              <select required name="dd224" id="dd224" class="select__select">
+                                <option disabled selected class="is-label" value="">1Селект вваввва</option>
+                                <option value="2">Селект</option>
+                                <option value="3">Селект ui-select-nativeonly select</option>
+                                <option value="3">Двери и фурнитура для них – по сути своей разные вещи</option>
+                                <option value="3">Двери и фурнитура</option>
+                              </select>
+                            </div>
+                            <div class="gap10 select_skin6 select validate-field">
+                              <select required name="dd252" id="dd225" class="select__select">
+                                <option disabled selected class="is-label" value="">1Селект вваввва</option>
+                                <option value="2">Селект</option>
+                                <option value="3">Селект ui-select-nativeonly select</option>
+                                <option value="3">Двери и фурнитура для них – по сути своей разные вещи</option>
+                                <option value="3">Двери и фурнитура</option>
+                              </select>
+                            </div>
+                            <div>
+                              My
+                              <div  data-autowidth="skip" class="gap10   select_skin3 select validate-field">
+                                <select required name="dd23" id="dd23" class="select__select">
+                                  <option disabled selected class="is-label" value="">1Селект вваввва</option>
+                                  <option value="2">Селект</option>
+                                  <option value="3">Селект ui-select-nativeonly select</option>
+                                  <option value="3">Двери и фурнитура для них – по сути своей разные вещи</option>
+                                  <option value="3">Двери и фурнитура</option>
+                                </select>
+                              </div>
+                              test
+                            </div>
+                            <div>
+                              Test cselect
+                              <div  data-autowidth="skip" class="gap10  select_skin3 select validate-field_inline validate-field_skin_6 validate-field">
+                                <select required name="show-c" id="show-c" class="select__select">
+                                  <option disabled selected class="is-label" value="">Селект вваввва</option>
+                                  <option value="1">15 товаров на странице</option>
+                                  <option value="1">25 товаров на странице</option>
+                                  <option value="1">15 товаров на странице</option>
+                                  <option value="1">25 товаров на странице</option>
+                                  <option value="1">15 товаров на странице</option>
+                                  <option value="1">25 товаров на странице</option>
+                                  <option value="1">15 товаров на странице</option>
+                                  <option value="1">25 товаров на странице</option>
+                                  <option value="1">15 товаров на странице</option>
+                                  <option value="1">25 товаров на странице</option>
+                                  <option value="1">15 товаров на странице</option>
+                                  <option value="1">25 товаров на странице</option>
+                                  <option value="1">15 товаров на странице</option>
+                                  <option value="1">25 товаров на странице</option>
+                                </select>
+                              </div>
+                              <button type="submit">Ок</button>
+                              <button class="reset" type="reset">Reset</button>
+                            </div>
+                          </form>
+                          <p>Двери и фурнитура для них – по сути своей разные вещи. Различные материалы, различные
+                            технологии, различные тенденции в каждой из отраслей. Рассуждать о том, что из них более
+                            значимо, всё равно как вести спор о том, что было раньше – курица или яйцо. Да, дверная
+                            фурнитура делается специально для дверей и ни для чего больше. Да двери немыслимы без
+                            фурнитуры, которая необходима для их функционирования</p>
+
+                          <p>Но всё немного меняется, если помимо функциональности принять во внимание ещё два важных
+                            аспекта, а именно качество и стиль. Всё меньше становится среди нас тех, кто станет
+                            довольствоваться ординарной ручкой для двери.</p>
+                        </div>
+                        <div class="about-item item">
+                          <form action="#" class="js-validate-form">
+                            <div class="gap10 input_textarea input_hinted input">
+                              <div class="hint">Ааиапи</div>
+                              <textarea rows="10" required name="bbb" id="bbb"></textarea>
+                            </div>
+                            <button type="submit">Ок</button>
+                          </form>
+
+                          <p>Двери и фурнитура для них – по сути своей разные вещи. Различные материалы, различные
+                            технологии, различные тенденции в каждой из отраслей. Рассуждать о том, что из них более
+                            значимо, всё равно как вести спор о том, что было раньше – курица или яйцо. Да, дверная
+                            фурнитура делается специально для дверей и ни для чего больше. Да двери немыслимы без
+                            фурнитуры, которая необходима для их функционирования.
+
+                            Но всё немного меняется, если помимо функциональности принять во внимание ещё два важных
+                            аспекта, а именно качество и стиль. Всё меньше становится среди нас тех, кто станет
+                            довольствоваться ординарной ручкой для двери, «самыми простыми» петлями или «обычным»
+                            замком. И рынок дверной фурнитуры не стоит на месте – с каждым годом появляется всё больше и
+                            больше новых, по-настоящему интересных изделий.</p>
+
+                        </div>
+                      </div>
+                      <!--<div class="aligned-row">
+                        <div class="about-item item">
+                          <form action="#" class="js-validate-form">
+
+                            <div class="gap10 input_msg_t input_hinted input">
+                              <div class="hint">Email</div>
+                              <input required name="aaa" id="aaa" type="email"/>
+                            </div>
+                            <div class="gap10 input_msg_r input_hinted input_skin_0 input">
+                              <div class="hint">Email</div>
+                              <input required name="aa0" id="aa0" type="email"/>
+                            </div>
+                            <div class="gap10 input_msg_b input_hinted input_skin_1 input">
+                              <div class="hint">Email</div>
+                              <input required name="aa1" id="aa1" type="email"/>
+                            </div>
+                            <div class="gap10 input_msg_l input_hinted input_skin_2 input">
+                              <div class="hint">Email</div>
+                              <input required name="aa2" id="aa2" type="email"/>
+                            </div>
+                            <div class="gap10 input_msg_r input_hinted input_skin_3 input">
+                              <div class="hint">Email</div>
+                              <input required name="aa3" id="aa3" type="email"/>
+                            </div>
+                            <div class="gap10 input_msg_r input_hinted input_skin_4 input">
+                              <div class="hint">Email</div>
+                              <input required name="aa4" id="aa4" type="email"/>
+                            </div>
+                            <div class="gap10 input_msg_r input_hinted input_skin_5 input">
+                              <div class="hint">Email</div>
+                              <input required name="aa5" id="aa5" type="email"/>
+                            </div>
+                            <div class="gap10 input_msg_r input_hinted input_skin_6 input">
+                              <div class="hint">Email</div>
+                              <input required name="aa6" id="aa6" type="email"/>
+                            </div>
+                            <div class="gap10">
+                              <div class="select validate-field_er_l validate-field_inline validate-field">
+                                <select required name="dd" id="dd" class="select__select">
+                                  <option disabled selected class="is-label" value="">Селект вваввва</option>
+                                  <option value="2">Селект</option>
+                                  <option value="3">Селект ui-select-nativeonly select</option>
+                                  <option value="3">Двери и фурнитура для них – по сути своей разные вещи</option>
+                                  <option value="3">Двери и фурнитура</option>
+                                </select>
+                              </div>
+                            </div>
+                            <div class="gap10 validate-field_er_r validate-field_inline validate-field">
+                              <select required name="dd1" id="dd1" class="select">
+                                <option disabled selected class="is-label" value="">Селект вваввва</option>
+                                <option value="2">Селект</option>
+                                <option value="3">Селект ui-select-nativeonly select</option>
+                                <option value="3">Двери и фурнитура для них – по сути своей разные вещи</option>
+                                <option value="3">Двери и фурнитура</option>
+                              </select>
+                            </div>
+                            <div
+                               data-autowidth="skip" class="gap10  select_skin6 select validate-field_er_b validate-field_inline validate-field_skin_6 validate-field">
+                              <select required name="show-c" id="show-c" class="select__select">
+                                <option disabled selected class="is-label" value="">Селект вваввва</option>
+                                <option value="1">15 товаров на странице</option>
+                                <option value="1">25 товаров на странице</option>
+                                <option value="1">15 товаров на странице</option>
+                                <option value="1">25 товаров на странице</option>
+                                <option value="1">15 товаров на странице</option>
+                                <option value="1">25 товаров на странице</option>
+                                <option value="1">15 товаров на странице</option>
+                                <option value="1">25 товаров на странице</option>
+                                <option value="1">15 товаров на странице</option>
+                                <option value="1">25 товаров на странице</option>
+                                <option value="1">15 товаров на странице</option>
+                                <option value="1">25 товаров на странице</option>
+                                <option value="1">15 товаров на странице</option>
+                                <option value="1">25 товаров на странице</option>
+                              </select>
+                            </div>
+                            <button type="submit">Ок</button>
+                          </form>
+                          <p>Двери и фурнитура для них – по сути своей разные вещи. Различные материалы, различные
+                            технологии, различные тенденции в каждой из отраслей. Рассуждать о том, что из них более
+                            значимо, всё равно как вести спор о том, что было раньше – курица или яйцо. Да, дверная
+                            фурнитура делается специально для дверей и ни для чего больше. Да двери немыслимы без
+                            фурнитуры, которая необходима для их функционирования</p>
+
+                          <p>Но всё немного меняется, если помимо функциональности принять во внимание ещё два важных
+                            аспекта, а именно качество и стиль. Всё меньше становится среди нас тех, кто станет
+                            довольствоваться ординарной ручкой для двери.</p>
+                        </div>
+                        <div class="about-item item">
+                          <form action="#" class="js-validate-form">
+                            <div class="gap10 input_textarea input_hinted input">
+                              <div class="hint">Ааиапи</div>
+                              <textarea rows="10" required name="bbb" id="bbb"></textarea>
+                            </div>
+                            <button type="submit">Ок</button>
+                          </form>
+
+                          <p>Двери и фурнитура для них – по сути своей разные вещи. Различные материалы, различные
+                            технологии, различные тенденции в каждой из отраслей. Рассуждать о том, что из них более
+                            значимо, всё равно как вести спор о том, что было раньше – курица или яйцо. Да, дверная
+                            фурнитура делается специально для дверей и ни для чего больше. Да двери немыслимы без
+                            фурнитуры, которая необходима для их функционирования.
+
+                            Но всё немного меняется, если помимо функциональности принять во внимание ещё два важных
+                            аспекта, а именно качество и стиль. Всё меньше становится среди нас тех, кто станет
+                            довольствоваться ординарной ручкой для двери, «самыми простыми» петлями или «обычным»
+                            замком. И рынок дверной фурнитуры не стоит на месте – с каждым годом появляется всё больше и
+                            больше новых, по-настоящему интересных изделий.</p>
+
+                        </div>
+                      </div>-->
+
+                    </div>
+                    <div class="office-holder item"></div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+        <footer data-module="footer" class="footer">
+          <div class="footer__top">
+            <div class="inner clearfix">
+              <div class="footer__top-slot_1 footer__top-slot">
+                <nav class="fnav clearfix">
+                  <div class="fnav__row aligned-row">
+                    <div class="fnav__row-item item">
+                      <ul class="fnav__list list">
+                        <li class="fnav__item dontsplit">
+                          <a href="#" class="fnav__txt"><span class="fnav__txt-i">Бренды</span></a></li>
+                        <li class="fnav__item dontsplit"><a href="#" class="fnav__txt"><span class="fnav__txt-i">Инструкции</span></a>
+                        </li>
+                        <li class="is-active fnav__item dontsplit"><span class="fnav__txt"><span class="fnav__txt-i">Сертификаты</span></span>
+                        </li>
+                        <li class="fnav__item dontsplit"><a href="#" class="fnav__txt"><span class="fnav__txt-i">Рекламные материалы</span></a>
+                        </li>
+                        <li class="fnav__item dontsplit"><a href="#" class="fnav__txt"><span class="fnav__txt-i">Выставки и конференции</span></a>
+                        </li>
+                        <li class="fnav__item dontsplit"><a href="#" class="fnav__txt"><span class="fnav__txt-i">О компании</span></a>
+                        </li>
+                        <li class="fnav__item dontsplit"><a href="#" class="fnav__txt"><span class="fnav__txt-i">Контакты</span></a>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="fnav__row-item item">
+                      <ul class="fnav__list list">
+                        <li class="fnav__item dontsplit">
+                          <a href="#" class="fnav__txt_dealer fnav__txt"><span class="fnav__txt-i">Для дилеров</span></a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </nav>
+              </div>
+              <div class="footer__top-slot_2 footer__top-slot">
+                <nav class="fcat_columnized fcat clearfix">
+                  <ul class="fcat__list list">
+                    <li class="fcat__item dontsplit"><a href="#" class="fcat__txt"><span class="fcat__txt-i">Замк эл-мех./аксессуары эл-мех./аксессуары</span></a>
+                    </li>
+                    <li class="fcat__item dontsplit"><a href="#" class="fcat__txt"><span class="fcat__txt-i">Заготовки ключей, ключи</span></a>
+                    </li>
+                    <li class="fcat__item dontsplit"><a href="#" class="fcat__txt"><span class="fcat__txt-i">Мех-мы секретности</span></a>
+                    </li>
+                    <li class="fcat__item dontsplit"><a href="#" class="fcat__txt"><span class="fcat__txt-i">Ручки дверные</span></a>
+                    </li>
+                    <li class="fcat__item dontsplit"><a href="#" class="fcat__txt"><span class="fcat__txt-i">Броненакладки и пластины</span></a>
+                    </li>
+                    <li class="fcat__item dontsplit"><a href="#" class="fcat__txt"><span class="fcat__txt-i">Замк эл-мех./аксессуары эл-мех./аксессуары</span></a>
+                    </li>
+                    <li class="fcat__item dontsplit"><a href="#" class="fcat__txt"><span class="fcat__txt-i">Заготовки ключей, ключи</span></a>
+                    </li>
+                    <li class="is-active fcat__item dontsplit"><span class="fcat__txt"><span class="fcat__txt-i">Мех-мы секретности</span></span>
+                    </li>
+                    <li class="fcat__item dontsplit"><a href="#" class="fcat__txt"><span class="fcat__txt-i">Ручки дверные</span></a>
+                    </li>
+                    <li class="fcat__item dontsplit"><a href="#" class="fcat__txt"><span class="fcat__txt-i">Броненакладки и пластины</span></a>
+                    </li>
+                    <li class="fcat__item dontsplit"><a href="#" class="fcat__txt"><span class="fcat__txt-i">Замк эл-мех./аксессуары эл-мех./аксессуары</span></a>
+                    </li>
+                    <li class="fcat__item dontsplit"><a href="#" class="fcat__txt"><span class="fcat__txt-i">Заготовки ключей, ключи</span></a>
+                    </li>
+                    <li class="fcat__item dontsplit"><a href="#" class="fcat__txt"><span class="fcat__txt-i">Мех-мы секретности</span></a>
+                    </li>
+                    <li class="fcat__item dontsplit"><a href="#" class="fcat__txt"><span class="fcat__txt-i">Ручки дверные</span></a>
+                    </li>
+                    <li class="fcat__item dontsplit"><a href="#" class="fcat__txt"><span class="fcat__txt-i">Броненакладки и пластины</span></a>
+                    </li>
+                    <li class="fcat__item dontsplit"><a href="#" class="fcat__txt"><span class="fcat__txt-i">Замк эл-мех./аксессуары эл-мех./аксессуары</span></a>
+                    </li>
+                    <li class="fcat__item dontsplit"><a href="#" class="fcat__txt"><span class="fcat__txt-i">Заготовки ключей, ключи</span></a>
+                    </li>
+                    <li class="fcat__item dontsplit"><a href="#" class="fcat__txt"><span class="fcat__txt-i">Мех-мы секретности</span></a>
+                    </li>
+                    <li class="fcat__item dontsplit"><a href="#" class="fcat__txt"><span class="fcat__txt-i">Ручки дверные</span></a>
+                    </li>
+                    <li class="fcat__item dontsplit"><a href="#" class="fcat__txt"><span class="fcat__txt-i">Броненакладки и пластины</span></a>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+            </div>
+          </div>
+          <div class="footer__bot">
+            <div class="inner clearfix">
+              <div class="aligned-row">
+                <div class="footer__bot-slot_1 footer__bot-slot item">
+                  <div class="copy">© 2008-2015 «TradeLock». Все права защищены.</div>
+                </div>
+                <div class="footer__bot-slot_2 footer__bot-slot item">
+                  <a href="#" class="design">
+                    <div class="design__txt">Разработка сайта – студия «Восхождение»</div>
+                    <img src="assets/img/design.png" alt="" width="34" height="19" class="design__logo"/>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </footer>
+      </div
+      ><div class="page__nav">
+        <button title="Закрыть" type="button" class="js-navigation__close page__nav-close btn">
+          <span class="page__nav-close__i">Закрыть</span></button>
+        <div class="nav-holder"></div>
+      </div>
+    </div>
+
+    <include src="partials/includes/modals_common.html"></include>
+    <include src="partials/includes/modals_logged-out.html"></include>
+
+    <script type="text/x-jquery-tmpl" id="buyed_msg">
+      <div class="buy-msg">
+        <div class="buy-msg__txt">
+          Товар
+          <div>ID <span class="buy-msg__id"><%= id %></span></div>
+            в корзине!
+          </div>
+          <div class="buy-msg__pic">
+            <img class="buy-msg__img" src="<%= boughtPic %>" alt=""/>
+        </div>
+      </div>
+
+    </script>
+
+  </body>
+</html>

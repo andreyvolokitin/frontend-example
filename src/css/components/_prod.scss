@@ -1,0 +1,352 @@
+/* stylelint-disable no-descending-specificity  */
+
+.prod__link,
+.prod__labels,
+.prod__id,
+.prod__foot {
+  padding-left: $horizontal-pad-secondary;
+  padding-right: $horizontal-pad-secondary;
+  }
+
+
+.prod {
+  position: relative;
+  z-index: 0;
+  }
+
+.prod__link {
+  padding-top: 48px;
+  }
+
+.prod_0 .prod__link {
+  padding-top: 15px;
+  }
+
+.prod__foot {
+  padding-bottom: 15px;
+  }
+
+.prod__id,
+.prod__labels,
+.prod__brand {
+  position: absolute;
+  z-index: 1;
+  }
+
+.prod_1 .prod__id,
+.prod_1 .prod__labels,
+.prod_1 .prod__brand {
+  position: static;
+  padding: 0;
+  }
+
+.prod__id,
+.prod__brand {
+  top: 17px;
+  }
+
+.prod__labels {
+  top: 41px;
+  top: calc(17px + 1.6em);
+  }
+
+.prod__labels,
+.prod__id {
+  left: 0;
+  font-weight: 100;
+  font-size: 0.933333333rem;
+  -webkit-font-smoothing: subpixel-antialiased;
+  }
+
+.prod__id {
+  color: #2d2d2d;
+  -ms-word-wrap: break-word;
+  word-wrap: break-word;
+  margin-bottom: 6px;
+  }
+
+.prod__spec {
+  margin-bottom: 5px;
+  line-height: 1.1;
+  }
+
+.prod__spec-i {
+  color: #fff;
+  padding: 0.214285714em 0.571428571em;
+  display: inline-block;
+  }
+
+.prod__spec_new .prod__spec-i {
+  background-color: #5cc149;
+  }
+
+.prod__spec_sale .prod__spec-i {
+  background-color: #f3b00e;
+  }
+
+.prod_1 .prod__spec {
+  display: inline;
+  margin-right: 12px;
+  }
+
+.prod_1 .prod__spec:last-child {
+  margin-right: 0;
+  }
+
+.prod_1 .prod__spec-i {
+  background: none;
+  padding: 0;
+  }
+
+.prod_1 .prod__spec_new .prod__spec-i {
+  color: #5cc149;
+  }
+
+.prod_1 .prod__spec_sale .prod__spec-i {
+  color: #f3b00e;
+  }
+
+.prod__brand {
+  right: $horizontal-pad-secondary;
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  }
+
+.prod__brand-im {
+  opacity: 0;
+  display: block;
+  }
+
+.prod__link:hover .prod__brand,
+.prod__link:focus .prod__brand,
+.prod:hover .prod__brand,
+.prod:focus .prod__brand {
+  background-position: 0 100%;
+  }
+
+.prod__link:hover .prod__brand-im,
+.prod__link:focus .prod__brand-im,
+.prod:hover .prod__brand-im,
+.prod:focus .prod__brand-im {
+  opacity: 1;
+  }
+
+.prod__pic {
+  position: relative;
+  z-index: 0;
+  height: 0;
+  padding-bottom: 54.736842105%;
+  margin: 0 -15px 10px;
+  }
+
+.prod__img {
+  max-width: 100%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) scale(.67407407);
+  transition: transform .2s;
+
+  /* -webkit-font-smoothing: subpixel-antialiased; */
+
+  /* -webkit-transform: translateZ(0px); */
+  -webkit-backface-visibility: hidden;
+  }
+
+.prod__link:hover .prod__img,
+.prod__link:focus .prod__img {
+  transform: translate(-50%, -50%) scale(1);
+  }
+
+.prod__name {
+  color: #2d2d2d;
+  font-weight: 100;
+  line-height: 1.3;
+  height: 2.6em;
+  overflow: hidden;
+  margin-bottom: 2px;
+  }
+
+.prod__comp,
+.prod__price,
+.prod__buy {
+  padding-top: 6px;
+  }
+
+.prod_1 .prod__comp,
+.prod_1 .prod__price,
+.prod_1 .prod__buy {
+  padding-top: 0;
+  }
+
+.prod__comp,
+.prod__price {
+  margin-right: 12px;
+  }
+
+.prod_1 .prod__comp,
+.prod_1 .prod__price {
+  margin-right: 0;
+  }
+
+.prod__price {
+  font-size: 1.266666667rem;
+  line-height: 1.2;
+  margin-top: 4px;
+  color: #000;
+  position: relative;
+  }
+
+.prod__price_0 {
+  font-size: 1.533333333rem;
+  }
+
+.ie9 .prod__buy {
+  width: 38px;
+  }
+
+
+
+
+.flexwrap .fgrid__item .prod,
+.flexwrap .fgrid__item-i.prod > * {
+  width: 100%;
+  -webkit-flex-shrink: 1;
+  -ms-flex-negative: 1;
+  flex-shrink: 1;
+  }
+
+.opera .fgrid__item .prod,
+.opera .fgrid__item-i.prod > * {
+  width: auto;
+  }
+
+
+.flexwrap .fgrid__item-i.prod {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+
+  }
+
+.opera .fgrid__item-i.prod {
+  display: block;
+  }
+
+.flexwrap .fgrid__item-i.prod .prod__foot {
+  margin-top: auto;
+  }
+
+.fgrid_prods .prod__name {
+  height: auto;
+  }
+
+
+.card__labels .prod__spec {
+  display: inline-block;
+  }
+
+
+
+
+
+@media screen and (max-width: bp(bp1050px)) {
+  .prod__brand {
+    right: $horizontal-pad-secondary_lte-bp1050px;
+    }
+  .prod__link,
+  .prod__labels,
+  .prod__id,
+  .prod__foot {
+    padding-left: $horizontal-pad-secondary_lte-bp1050px;
+    padding-right: $horizontal-pad-secondary_lte-bp1050px;
+    }
+
+  .prod-tabs__panels .prod__brand {
+    right: $horizontal-pad-secondary;
+    }
+  .prod-tabs__panels .prod__link,
+  .prod-tabs__panels .prod__labels,
+  .prod-tabs__panels .prod__id,
+  .prod-tabs__panels .prod__foot {
+    padding-left: $horizontal-pad-secondary;
+    padding-right: $horizontal-pad-secondary;
+    }
+  }
+
+@media screen and (max-width: bp(bp840px)) {
+  .prod__link,
+  .prod__labels,
+  .prod__id,
+  .prod__foot,
+  .prod-tabs__panels .prod__link,
+  .prod-tabs__panels .prod__labels,
+  .prod-tabs__panels .prod__id,
+  .prod-tabs__panels .prod__foot {
+    padding-left: $horizontal-pad-secondary_lte-bp840px;
+    padding-right: $horizontal-pad-secondary_lte-bp840px;
+    }
+
+  .prod__brand,
+  .prod-tabs__panels .prod__brand {
+    right: $horizontal-pad-secondary_lte-bp840px;
+    }
+  }
+@media screen and (max-width: bp(bp540px)) {
+  .prod__comp,
+  .prod__foot-slot0,
+  .plist__compare {
+    display: none;
+    }
+  .prod__foot-slot1 {
+    display: block;
+    }
+  }
+@media screen and (max-width: bp(bp532px)) {
+  .fgrid .prod__labels {
+    position: static;
+    padding: 0;
+    margin-bottom: 4px;
+    }
+
+  .fgrid .prod__pic {
+    width: 33%;
+    float: left;
+    margin: 0 11.5% 0 0;
+    padding-bottom: 0;
+    height: auto;
+    }
+
+  .fgrid .prod__txt {
+    overflow: hidden;
+    }
+
+  .no-flexwrap .fgrid_prods .prod__name,
+  .opera .fgrid_prods .prod__name {
+    height: auto;
+    }
+
+  .fgrid .prod__img,
+  .fgrid .prod:hover .prod__img,
+  .fgrid .prod:focus .prod__img {
+    position: static;
+    left: auto;
+    top: auto;
+    transform: translate(0, 0) scale(1);
+    }
+
+  .fgrid .prod__spec {
+    display: inline-block;
+    margin-right: -2px;
+    }
+
+  .fgrid .prod__foot {
+    padding-top: 6px;
+    }
+  }

@@ -1,0 +1,108 @@
+/* stylelint-disable no-descending-specificity  */
+
+.table {
+  width: 100%;
+  }
+
+.table td,
+.table th {
+  padding: 0;
+  vertical-align: top;
+  }
+
+.table_0 {
+  font-weight: 100;
+  font-size: .933333333em;
+  line-height: 1.3;
+  background: #fff;
+  color: #2d2d2d;
+  }
+
+.table_0 > thead > tr > th,
+.table_0 > thead > tr > td,
+.table_0 > tbody > tr > td,
+.table_0 > tfoot > tr > td {
+  padding-left: 12px;
+  padding-right: 12px;
+  }
+
+.table_0 > thead > tr > th,
+.table_0 > thead > tr > td {
+  text-align: left;
+  padding-top: 1.285714286em;
+  padding-bottom: 1.285714286em;
+  font-weight: normal;
+  }
+
+.table_0 > tbody > tr > td,
+.table_0 > tfoot > tr > td {
+  padding-top: 1.142857143em;
+  padding-bottom: 1.142857143em;
+  position: relative;
+  }
+
+
+.table_0 > tbody > tr:first-child > td {
+  background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pg0KPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHZpZXdCb3g9IjAgMCAzMzIgMTQxIiBwcmVzZXJ2ZUFzcGVjdFJhdGlvPSJub25lIj48bGluZWFyR3JhZGllbnQgaWQ9ImhhdDAiIGdyYWRpZW50VW5pdHM9Im9iamVjdEJvdW5kaW5nQm94IiB4MT0iNTAlIiB5MT0iMTAwJSIgeDI9IjUwJSIgeTI9Ii0xLjQyMTA4NTQ3MTUyMDJlLTE0JSI+DQo8c3RvcCBvZmZzZXQ9IjgwJSIgc3RvcC1jb2xvcj0iIzIzMWYxZiIgc3RvcC1vcGFjaXR5PSIwIi8+DQo8c3RvcCBvZmZzZXQ9IjgwJSIgc3RvcC1jb2xvcj0iIzIzMWYxZiIgc3RvcC1vcGFjaXR5PSIwIi8+DQo8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMyMzFmMWYiIHN0b3Atb3BhY2l0eT0iMC4wOSIvPg0KICAgPC9saW5lYXJHcmFkaWVudD4NCg0KPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjMzMiIgaGVpZ2h0PSIxNDEiIGZpbGw9InVybCgjaGF0MCkiIC8+DQo8L3N2Zz4=);
+  background-image: linear-gradient(to top, rgba(35, 31, 32, 0) 80%, rgba(35, 31, 32, .09) 100%);
+  }
+
+.table_0 > tbody > tr:nth-child(2n) > td {
+  background: #f3f3f3;
+  }
+
+.table_0a > tbody > tr > td,
+.table_0a > tfoot > tr > td {
+  padding-top: 0.928571429em;
+  padding-bottom: 0.928571429em;
+  }
+
+.table_0a > tbody > tr:first-child > td {
+  background-image: none;
+  }
+
+.table_0b > thead > tr > th,
+.table_0b > thead > tr > td {
+  vertical-align: middle;
+  height: 1.9em;
+  }
+
+.table_0b > tbody > tr > td,
+.table_0b > tfoot > tr > td {
+  padding-top: 1.3em;
+  padding-bottom: 1.3em;
+  }
+
+
+.table_1 > tbody > tr > th {
+  font-weight: normal;
+  text-align: left;
+  padding-right: 30px;
+  }
+
+.table_1 > tbody > tr > th,
+.table_1 > tbody > tr > td {
+  padding-top: .54em;
+  padding-bottom: .54em;
+  border-bottom: 1px solid #d9d9d9;
+  }
+
+.table_1 > tbody > tr > td:last-child {
+  text-align: right;
+  }
+
+@media screen and (max-width: bp(bp1050px)) {
+  .table_0 > thead > tr > th,
+  .table_0 > thead > tr > td,
+  .table_0 > tbody > tr > td,
+  .table_0 > tfoot > tr > td {
+    padding-left: 11px;
+    padding-right: 11px;
+    }
+  }
+
+@media screen and (max-width: bp(bp660px)) {
+  .table_0 > tbody > tr:nth-child(2n) {
+    background: #f3f3f3;
+    }
+  }

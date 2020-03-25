@@ -1,0 +1,316 @@
+/* stylelint-disable no-descending-specificity  */
+
+// Some info: https://adrianroselli.com/2017/05/under-engineered-custom-radio-buttons-and-checkboxen.html
+// TODO: https://adrianroselli.com/2019/03/under-engineered-toggles.html
+
+$_celem-checkbox-width: 0.733333333em;
+$_celem-checkbox-height: 0.733333333em;
+$_celem-radio-width: 0.933333333em;
+$_celem-radio-height: 0.933333333em;
+$_celem-box-gap: 0.666666667em;
+
+.celem {
+  display: inline-block;
+  position: relative;
+  -webkit-touch-callout: none;
+  user-select: none;
+	transition: color .2s;
+}
+.celem__input,
+.celem__label,
+.celem__box {
+  cursor: pointer;
+  }
+.celem__label {
+  display: block;
+  line-height: 1.3;
+  padding-left: $_celem-checkbox-width + $_celem-box-gap;
+  min-height: $_celem-checkbox-height;
+  }
+@include rtl('.celem__label', (
+  padding-left: 0,
+  padding-right: $_celem-checkbox-width + $_celem-box-gap
+  ));
+.celem_notxt .celem__label {
+  line-height: 0;
+  }
+.celem_notxt .celem__label,
+.celem_noicon .celem__label {
+  padding-left: 0;
+  }
+@include rtl('.celem_notxt .celem__label, .celem_noicon .celem__label', (
+  padding-right: 0
+  ));
+
+
+.celem__input {
+	appearance: none;
+	opacity: .00001;
+	position: absolute;
+	z-index: 2;
+  }
+.celem__box,
+.celem__box::before,
+.celem__box::after {
+  position: absolute;
+  z-index: 0;
+  box-sizing: border-box;
+	transition:
+		border-color .2s,
+		background-color .2s,
+		box-shadow .2s,
+		transform .2s;
+  }
+.celem__box::before,
+.celem__box::after {
+	content: " ";
+}
+.celem__box::after {
+  display: none;
+  }
+
+.celem__box,
+.celem__input {
+  left: 0;
+}
+.celem__box,
+.celem__label {
+  box-shadow: 0 0 4px transparent;
+}
+.celem__box {
+  display: block;
+	border: 1px solid #d0d0d0;
+  background-color: #fff;
+}
+
+.celem__input[type="checkbox"],
+.celem__input[type="checkbox"] ~ .celem__box {
+	height: $_celem-checkbox-height;
+	width: $_celem-checkbox-width;
+	top: .2em;
+  }
+.celem__input[type="checkbox"] ~ .celem__box::before {
+  background: url(assets/img/i17.png) -2000px 50% no-repeat at-2x;
+  left: 50%;
+  bottom: 0;
+  transform: translate(-50%, 0);
+  width: 15px;
+  height: 11px;
+  margin-left: 1px;
+  }
+
+.celem_notxt .celem__box {
+  position: relative;
+  }
+.celem_noicon .celem__box {
+  display: none;
+  }
+
+.celem:hover .celem__box,
+.celem__input:focus ~ .celem__box,
+.celem_noicon .celem__input:focus ~ .celem__label {
+  box-shadow: 0 0 4px #38c;
+  }
+
+
+.celem__input[type="checkbox"]:checked ~ .celem__box::before {
+  background-position: 50% 50%;
+}
+.celem__input[type="radio"]:checked,
+.celem__input[type="radio"]:checked ~ .celem__label,
+.celem__input[type="radio"]:checked ~ .celem__box,
+.celem__input[disabled],
+.celem__input[disabled] ~ .celem__label,
+.celem__input[disabled] ~ .celem__box {
+  cursor: default;
+}
+
+.celem__input[disabled] ~ .celem__label,
+.celem__input[disabled] ~ .celem__box {
+	opacity: .6;
+}
+
+
+
+.celem__input[type="radio"],
+.celem__input[type="radio"] ~ .celem__box {
+	height: $_celem-radio-width;
+	width: $_celem-radio-width;
+	top: .1em;
+  }
+.celem__input[type="radio"] ~ .celem__box,
+.celem__input[type="radio"] ~ .celem__box::before {
+  border-radius: 100px;
+  }
+
+/* For bullet color change SVG `fill` inline */
+.celem__input[type="radio"] ~ .celem__box::before {
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  display: none;
+  background: url("data:image/svg+xml,%3Csvg viewBox='0 0 12 12' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle fill='%232B6999' cx='6' cy='6' r='3'/%3E%3C/svg%3E") 50% 50% no-repeat;
+  }
+.celem__input[type="radio"]:checked ~ .celem__box::before {
+  display: block;
+  }
+
+
+
+
+
+
+.celem_0 {
+  font-size: 1rem;
+  }
+.celem_0 .celem__input[type="radio"] ~ .celem__label {
+  padding-left: 0.866666667em;
+  }
+@include rtl('.celem_0 .celem__input[type="radio"] ~ .celem__label', (
+  padding-left: 0,
+  padding-right: 0.866666667em
+  ));
+
+.celem_0 .celem__input[type="radio"],
+.celem_0 .celem__input[type="radio"] ~ .celem__box {
+  width: 0.333333333em;
+  height: 0.333333333em;
+  top: .46em;
+  }
+.celem_0 .celem__input[type="radio"] ~ .celem__box {
+  background: #c9c9c9;
+  border: none;
+  }
+
+.celem_0:hover .celem__input[type="radio"] ~ .celem__box,
+.celem_0 .celem__input[type="radio"]:focus ~ .celem__box,
+.celem_0.celem_noicon .celem__input[type="radio"]:focus ~ .celem__label {
+  box-shadow: none;
+  }
+
+.celem_0:hover,
+.celem_0 .celem__input:focus ~ .celem__label,
+.celem_0 .celem__input:checked ~ .celem__label {
+  color: #064569;
+  }
+
+.celem_0:hover .celem__input[type="radio"] ~ .celem__box,
+.celem_0 .celem__input[type="radio"]:focus ~ .celem__box,
+.celem_0 .celem__input[type="radio"]:checked ~ .celem__box {
+  background: $brand-color;
+  }
+
+.celem_0 .celem__input[type="radio"] ~ .celem__box,
+.celem_0 .celem__input[type="radio"] ~ .celem__box::before {
+  border-radius: 0;
+  }
+
+
+
+.celem_1 .celem__label,
+.celem_1a .celem__label {
+  @include check;
+  }
+.celem_1 .celem__label {
+  padding: 0.3em 0.466666667em;
+  }
+.celem_1a .celem__label {
+  @include check_1a;
+  }
+.celem_1 .celem__input:checked ~ .celem__box,
+.celem_1a .celem__input:checked ~ .celem__box,
+.celem_1.celem_noicon .celem__input:checked ~ .celem__label,
+.celem_1a.celem_noicon .celem__input:checked ~ .celem__label {
+  @include check_checked;
+  }
+
+
+.celem_2 {
+  font-size: 0.933333333rem;
+  }
+.celem_2 .celem__label {
+  padding-left: 1.642857143em;
+  }
+@include rtl('.celem_2 .celem__label', (
+  padding-left: 0,
+  padding-right: 1.642857143em
+  ));
+.celem_2.special_new {
+  color: #38b317;
+  }
+.celem_2.special_sale {
+  color: #eca700;
+  }
+.celem_2.celem .celem__input,
+.celem_2.celem .celem__box {
+  width: 1.142857143em;
+  height: 1.142857143em;
+  top: 0;
+  }
+.celem_2 .celem__box {
+  background: $brand-color;
+  border: 1px solid #dadada;
+  box-shadow: inset 0 0 0 1px #4d768d;
+  }
+
+.celem_2 .celem__input[type="checkbox"] ~ .celem__box::before {
+  background-image: url(assets/img/i33.png) at-2x;
+  bottom: auto;
+  top: 0;
+  margin-left: 2px;
+  }
+.celem_2.special_new .celem__input[type="checkbox"] ~ .celem__box::before {
+  background-image: url(assets/img/i28.png) at-2x;
+  }
+.celem_2.special_sale .celem__input[type="checkbox"] ~ .celem__box::before {
+  background-image: url(assets/img/i29.png) at-2x;
+  }
+
+.celem_2 .celem__input[type="radio"] ~ .celem__box::before {
+  background-color: #fff;
+  }
+.celem_2.special_new .celem__input[type="radio"] ~ .celem__box::before  {
+  background-color: #38b317;
+  }
+.celem_2.special_sale .celem__input[type="radio"] ~ .celem__box::before  {
+  background-color: #eca700;
+  }
+.celem_3 .celem__input:checked ~ .celem__label {
+  color: #2b6999;
+  }
+
+
+.celem_4 .celem__label,
+.celem_4.celem_noicon .celem__label {
+  padding: 11px 19px;
+
+  @media screen and (max-width: bp(bp660px)) {
+    padding-left: 8px;
+    padding-right: 8px;
+    }
+  }
+
+.celem_4 .celem__input:checked ~ .celem__label {
+  background: $brand-color;
+  color: #fff;
+  }
+
+
+.celem__input[disabled] ~ .celem__box,
+.celem.celem_noicon .celem__input[disabled] ~ .celem__label {
+	box-shadow: none;
+}
+
+
+
+// TODO: high contrast mode, print mode, `intermediate` styling
+//@media screen and (-ms-high-contrast: active) {
+//	.celem > input:checked ~ .celem__label::before {
+//		background: window;
+//		border: 6px solid buttonface;
+//		box-shadow: none;
+//	}
+//}
+

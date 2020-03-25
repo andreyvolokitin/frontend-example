@@ -1,0 +1,12 @@
+.deletable__empty-msg,
+.deletable.is-empty .deletable__content {
+  display: none;
+  }
+
+.deletable.is-empty .deletable__empty-msg {
+  display: block;
+  }
+
+.deletable__item {
+  position: relative;
+  }

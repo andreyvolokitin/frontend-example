@@ -1,0 +1,73 @@
+
+.logo {
+  white-space: nowrap;
+  }
+
+.logo__img {
+  display: block;
+  opacity: 0;
+  }
+
+.logo__pic,
+.logo__txt {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  vertical-align: middle;
+  }
+
+.logo__pic {
+  margin-right: 4.4%;
+  width: 35.67251462%;
+  background: url(assets/img/logo.png) 0 0 no-repeat;
+  background-size: contain;
+  }
+@media (-webkit-min-device-pixel-ratio: 1.5),
+  (min--moz-device-pixel-ratio: 1.5),
+  (-o-min-device-pixel-ratio: 3/2),
+  (min-resolution: 1.5dppx) {
+    .logo__pic {
+      background-image: url(assets/img/logo@2x.png);
+      }
+    }
+
+.logo__txt {
+  white-space: normal;
+  font-size: 19px;
+  font-weight: bold;
+  color: $brand-color;
+  line-height: 1.1;
+  letter-spacing: 1px;
+  }
+
+.logo__txt1 {
+  font-size: 25px;
+  text-transform: uppercase;
+  }
+@media screen and (max-width: bp(bp1250px)) {
+  .logo__pic {
+    margin-right: 2.777777778%;
+    }
+
+  .logo__txt {
+    font-size: 16px;
+    }
+
+  .logo__txt1 {
+    font-size: 20px;
+    }
+  }
+@media screen and (max-width: bp(bp1050px)) {
+  .logo__pic {
+    width: 32.35%;
+    }
+  }
+@media screen and (max-width: bp(bp980px)) {
+  .logo__txt {
+    display: none;
+    }
+  .logo__pic {
+    display: block;
+    width: auto;
+    }
+  }

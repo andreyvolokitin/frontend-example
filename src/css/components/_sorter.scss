@@ -1,0 +1,49 @@
+.sorter {
+  @include check;
+
+  cursor: pointer;
+  position: relative;
+  display: inline-block;
+  padding: 0.37em 22px 0.37em 0.466666667em;
+  }
+.sorter.is-active {
+  @include check_checked;
+  }
+
+.sorter_0,
+.sorter_0.is-active {
+  background: none;
+  color: $brand-color;
+  }
+
+.sorter::after {
+  content: '';
+  position: absolute;
+  background-image: url(assets/img/i32.png) at-2x;
+  background-repeat: no-repeat;
+  width: 7px;
+  height: 14px;
+  right: 7px;
+  top: 50%;
+  transform: translate(0, -50%);
+  display: none;
+  }
+.sorter_0::after {
+  background-image: url(assets/img/i43.png) at-2x;
+  }
+
+.sorter.is-active::after {
+  display: block;
+  }
+
+.sorter[data-order="asc"]::after {
+  background-position: 0 0;
+  }
+.sorter[data-order="desc"]::after {
+  background-position: 0 100%;
+  }
+
+
+
+
+

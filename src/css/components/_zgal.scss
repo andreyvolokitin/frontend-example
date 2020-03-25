@@ -1,0 +1,54 @@
+/* stylelint-disable no-descending-specificity  */
+
+.zgal__link {
+  display: block;
+  position: relative;
+  }
+
+.zgal__link::before,
+.zgal__link::after {
+  content: '';
+  position: absolute;
+  opacity: 0;
+  }
+
+.fame__item .zgal__link::before,
+.fame__item .zgal__link::after {
+  display: none;
+  }
+
+.fame__item.slick-center .zgal__link::before,
+.fame__item.slick-center .zgal__link::after,
+.is-narrow .fame__item .zgal__link::before,
+.is-narrow .fame__item .zgal__link::after {
+  display: block;
+  }
+
+.zgal__link::before {
+  width: 42px;
+  height: 42px;
+  background: #ececec;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  }
+
+.zgal__link::after {
+  background: url("assets/img/i38.png") 0 0 no-repeat at-2x;
+  right: 10px;
+  bottom: 8px;
+  z-index: 2;
+  width: 20px;
+  height: 24px;
+  }
+
+.zgal__link:hover::before,
+.zgal__link:focus::before,
+.zgal__link:hover::after,
+.zgal__link:focus::after,
+  /*.touchevents*/
+.zgal__link::before,
+  /*.touchevents*/
+.zgal__link::after {
+  opacity: 1;
+  }

@@ -1,0 +1,177 @@
+<header class="header">
+  <if condition="loggedIn === 'true'">
+    <div class="header__pane">
+      <div class="inner clearfix">
+        <div class="header__pane-slot1">
+          <div class="row">
+            <div data-type="basket" data-module="product-badge" class="header-cart item">
+              <a href="#" class="header__pane-elem collect_basket block-link collect">
+                <div class="js-product-badge__val collect__size">48</div>
+              </a>
+            </div>
+            <div data-type="compare" data-module="product-badge" class="header-comp item">
+              <a href="#" class="header__pane-elem collect_compare block-link collect">
+                <div class="js-product-badge__val collect__size">12</div>
+              </a>
+            </div>
+            <div class="header-downl item">
+              <a href="#" class="header__pane-elem file_0 block-link file">
+                <div class="block-link__pseudolink file__desc">Скачать каталог</div>
+                <div class="file__info">Excel, 1 Мб</div>
+              </a>
+            </div>
+            <div class="header-logout item">
+              <button title="Выйти" type="button" class="header__pane-elem logout btn">Выйти</button>
+            </div>
+          </div>
+        </div>
+        <div class="header__pane-slot2">
+          <a title="Константинопольский Ф.В - профиль" href="#" class="header__pane-elem user link1 block-link">
+            <span class="user__name block-link__pseudolink">
+                Константинопольский Ф.В
+            </span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </if>
+  <div class="header__inner">
+    <div class="header__top">
+      <div class="inner clearfix">
+        <div class="header__top-slot1">
+          <div class="aligned-row">
+            <div class="header-region item">
+              <button data-modal-trigger="region" type="button" class="btn region">
+                <span class="region__label">Ваш регион - </span>
+                <span class="region__val">Петропавловск-Камчатский</span>
+              </button>
+            </div>
+            <div class="header-contact item">
+              <div class="contact">
+                <div class="contact__phone">
+                  +7 (495) 787-54-14
+                </div>
+                <div class="contact__schedule">
+                  Будни, 9:30–18:30
+                  <div class="hinfo-holder"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="header__top-section1 aligned-row row_m">
+          <div class="header__top-slot3 item">
+            <div class="logo">
+              <a href="#" class="logo__pic">
+                <img src="assets/img/logo.png" alt="" width="244" height="69" class="logo__img"/>
+              </a>
+              <div class="logo__txt">
+                <div class="logo__txt1">Замки и дверная фурнитура</div>
+                <div class="logo__txt2">от ведущих производителей оптом</div>
+              </div>
+            </div>
+          </div>
+          <div class="header__top-slot2 item">
+            <if condition="loggedIn === 'false'">
+              <button data-modal-trigger="login" type="button" class="button_header-trigger_personal button_header-trigger button_2 button">
+                  <span class="button__icon_pers button__icon"></span>
+                  <span class="button__text">Личный кабинет</span>
+              </button>
+            </if>
+            <button type="button"
+                    class="js-navigation__trigger button_header-trigger_nav button_header-trigger button_2 button">
+              <span class="button__icon_nav button__icon"></span>
+              <span class="button__text">Показать меню</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="header__bot">
+      <div class="inner clearfix">
+        <div data-module="navigation" class="nav-block clearfix">
+          <div class="nav-block__side">
+            <div data-module="hinfo" class="hinfo">
+              <ul class="list">
+                <li class="hinfo__item">
+                  <span class="hinfo__currency">
+                      <span class="hinfo__currency-lbl">USD</span>
+                      <span
+                        class="hinfo__currency-lbl_mini hinfo__currency-lbl">$</span>
+                  </span> - 56.95
+                </li>
+                <li class="hinfo__item">
+                  <span class="hinfo__currency">
+                      <span class="hinfo__currency-lbl">EUR</span>
+                      <span
+                        class="hinfo__currency-lbl_mini hinfo__currency-lbl">€</span>
+                  </span> - 62.90
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="nav-block__nav">
+            <div class="nav-block__nav__i">
+              <nav class="nav">
+                <ul class="nav__list clearfix list">
+                  <li class="nav__item_more nav__item">
+                    <button title="Показать больше" data-title-toggled="Скрыть" type="button"
+                            class="js-navigation__expand nav__more button_toggle btn">
+                      <span class="button__text-off">Показать ещё</span>
+                      <span class="button__text-on">Скрыть меню</span>
+                    </button>
+                  </li>
+                  <li class="nav__item"><a href="#" class="needsclick nav__txt">Каталог</a></li>
+                  <li class="nav__item"><span class="needsclick nav__txt">Бренды</span></li>
+
+                  <li class="nav__item_drop nav__item">
+                    <a href="#" class="needsclick nav__txt">Контакты</a>
+                    <ul class="nav__drop list">
+                      <li class="nav__drop-item"><a href="#" class="nav__drop-txt">Дилеры</a></li>
+                      <li class="nav__drop-item"><a href="#" class="nav__drop-txt">Филиалы</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav__item"><a href="#" class="needsclick nav__txt">О компании</a></li>
+
+                  <li class="is-active nav__item_drop nav__item">
+                    <span class="needsclick nav__txt">Рекламные материалы</span>
+                    <ul class="nav__drop list">
+                      <li class="nav__drop-item"><a href="#" class="nav__drop-txt">Реклама Реклама Реклама
+                        Реклама</a></li>
+                      <li class="is-active nav__drop-item"><span class="nav__drop-txt">Реклама</span></li>
+                      <li class="nav__drop-item"><a href="#" class="nav__drop-txt">Реклама</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav__item"><a href="#" class="needsclick nav__txt">Инструкции</a></li>
+                  <li class="nav__item"><a href="#" class="needsclick nav__txt">События</a></li>
+                  <li class="nav__item"><a href="#" class="needsclick nav__txt">Сертификаты</a></li>
+
+                </ul>
+                <ul class="nav__list_drop nav__list clearfix list"></ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+        <div class="cat-h aligned-row">
+          <div class="cat-h__trigger item">
+            <button title="Показать каталог" data-title-toggled="Скрыть каталог" type="button"
+                    class="js-catalog-menu__trigger button_7a button_7c button_7 button_toggle button">
+              <span class="button__icon_cat button__icon"></span>
+              <span class="button__text">
+                          <span class="button__text-off">Каталог <span
+                            class="cat-h__trigger-optional-word">продукции</span></span>
+                          <span class="button__text-on">Скрыть <span class="cat-h__trigger-optional-word">каталог</span></span>
+                      </span>
+            </button>
+          </div>
+          <div class="cat-h__search item">
+            <div class="hinfo-holder1"></div>
+            <button type="button" class="js-catalog-menu__search button_7a button_7 button">
+              <span class="button__icon_search button__icon"></span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>

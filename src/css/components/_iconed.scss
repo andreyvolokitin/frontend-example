@@ -1,0 +1,14 @@
+.iconed {
+  line-height: 1.3;
+  }
+
+.iconed__icon {
+  padding-right: 15px;
+  line-height: 0;
+  }
+
+.iconed__icon,
+.iconed__txt {
+  display: table-cell;
+  vertical-align: middle;
+  }

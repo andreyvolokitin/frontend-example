@@ -1,0 +1,337 @@
+/* stylelint-disable no-descending-specificity */
+
+// https://bugs.chromium.org/p/chromium/issues/detail?id=1051013&can=2&q=select%20align
+// https://bugs.webkit.org/show_bug.cgi?id=207549
+
+/**
+ * Based on filamentgroup CSS-customized select: https://github.com/filamentgroup/select-css#notes-on-the-css
+ */
+
+/* class applies to select element itself, not a wrapper element */
+$_select-gap-arrow: $common-select-arrow-gap;
+// Horizontal select spacing differs browser-to-browser when `padding-left: 0`:
+// os x chrome, safari = 0px; ie 10+ = 2px; edge 17 = 3px; os x ff, android 4.4 = 4px;
+// To calculate a final select horizontal gap we need to compensate for this:
+$_select-gaps-x: (
+  'default': $_field-gap-x,
+  'ff': calc(#{$_field-gap-x} - 4px),
+  'edge': calc(#{$_field-gap-x} - 3px),
+  'ie': calc(#{$_field-gap-x} - 2px)
+);
+
+.select {
+  display: inline-block;
+  max-width: 100%;
+  position: relative;
+  line-height: 0;
+  }
+
+ /* Safari 6.2,7.1+ (Not iOS): fix vertical alignment for `.select`  */
+//_:-webkit-full-screen, _::-webkit-full-page-media, _:future, :root .select {
+//    top: -1px;
+//  }
+.select__select {
+  @include field;
+  @include field__field(true);
+
+  padding-left: get-select-gap-x($_select-gaps-x, 'ff');
+  padding-right: calc(#{$_select-gap-arrow} + #{$_field-gap-x});
+  max-width: 100%;
+  box-sizing: border-box;
+  margin: 0;
+  border-radius: 0;
+  appearance: none;
+  background-image: linear-gradient(to bottom, $_field-bg-color 0%, $_field-bg-color 100%);
+  background-repeat: repeat;
+  background-position: 0 0;
+  background-size: 100%;
+  white-space: nowrap;
+  }
+.select_full,
+.select_full .select__select {
+  width: 100%;
+  }
+@include patch-select-left-gap($_select-gaps-x);
+
+@include rtl('.select__select', (
+  background-position: (left 1em top 50%, 0 0),
+  padding-left: calc(#{$_select-gap-arrow} + #{$_field-gap-x}),
+  padding-right: get-select-gap-x($_select-gaps-x, 'ff')
+));
+
+@include patch-select-left-gap-rtl($_select-gaps-x);
+@include patch-select-vertical-gaps($_field-gap-y);
+
+/* Hide arrow icon in IE browsers */
+.select__select::-ms-expand {
+  display: none;
+  }
+
+/* Focus style */
+.select__select:focus {
+  @include field_focused;
+
+  outline: none;
+  }
+
+/* Firefox: remove inner focus border */
+.select__select:-moz-focusring {
+  color: transparent;
+  }
+
+/* IE: revert focus styles back to normal */
+.select__select:focus::-ms-value {
+  background-color: transparent;
+  }
+@include patch-select-focus-color($text-color);
+
+
+.select::after {
+  @include field__label;
+  @include field__label_borderized;
+
+  content: attr(data-label);
+  pointer-events: none;
+  color: $_field-placeholder-color;
+  z-index: 1;
+  margin-right: $_select-gap-arrow;
+  opacity: 0;
+  overflow: visible; //chrome keeps cutting half-letter off in `autowidth` selects
+  }
+.select_labeled::after {
+  opacity: 1;
+  }
+.select_labeled.error::after {
+  opacity: 0;
+  }
+
+.select::before {
+  @include field__label_borderized;
+
+  content: '';
+  position: absolute;
+  pointer-events: none;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: $_select-gap-arrow;
+  z-index: 0;
+  background: url(assets/img/i20.png) 50% 50% no-repeat at-2x;
+  background-clip: padding-box;
+  }
+
+.validate-field .select__select ~ .error {
+  @include field__label_borderized;
+
+  margin-right: $_select-gap-arrow;
+  }
+
+@include rtl('.select::before', (
+  right: auto,
+  left: 0
+));
+@include rtl('.select::after, .validate-field .select__select ~ .error', (
+  margin-right: 0,
+  margin-left: $_select-gap-arrow
+));
+
+
+.select__select option {
+  white-space: normal;
+  color: $text-color;
+  }
+
+.select__select:disabled, .select__select[aria-disabled='true'] {
+  opacity: .6;
+  }
+
+
+.select_skin0 .select__select {
+  @include field_skin0;
+  @include field__field_skin0(true);
+  }
+.select_skin0::after,
+.select_skin0 .select__select ~ .error {
+  @include field__label_skin0;
+  }
+.select_skin0 .select__select ~ .error,
+.select_skin0::before,
+.select_skin0::after {
+  @include field__label_borderized_skin0;
+  }
+
+
+.select_skin1 .select__select {
+  @include field_skin1;
+  @include field__field_skin1(true);
+  }
+.select_skin1::after {
+  color: $_field-placeholder-color_skin1;
+  }
+.select_skin1 .select__select ~ .error,
+.select_skin1::before,
+.select_skin1::after {
+  @include field__label_borderized_skin1;
+  }
+@include patch-select-vertical-gaps($_field-gap-y_skin1, '.select_skin1');
+
+
+$_select-gaps-x_skin2: (
+  'default': $_field-gap-x_skin2,
+  'ff': calc(#{$_field-gap-x_skin2} - 4px),
+  'edge': calc(#{$_field-gap-x_skin2} - 3px),
+  'ie': calc(#{$_field-gap-x_skin2} - 2px)
+);
+.select_skin2 .select__select {
+  @include field_skin2;
+  @include field__field_skin2;
+
+  padding-left: get-select-gap-x($_select-gaps-x_skin2, 'ff');
+  padding-right: calc(#{$_select-gap-arrow} + #{$_field-gap-x_skin2});
+  }
+.select_skin2 .select__select:focus {
+  @include field_focused_skin2;
+  }
+.select_skin2::after,
+.select_skin2 .select__select ~ .error {
+  @include field__label_skin2;
+  }
+.select_skin2 .select__select ~ .error,
+.select_skin2::before,
+.select_skin2::after {
+  @include field__label_borderized_skin2;
+  }
+@include patch-select-left-gap($_select-gaps-x_skin2, '.select_skin2');
+@include rtl('.select_skin2 .select__select', (
+  padding-left: calc(#{$_select-gap-arrow} + #{$_field-gap-x_skin2}),
+  padding-right: get-select-gap-x($_select-gaps-x_skin2, 'ff')
+));
+@include patch-select-left-gap-rtl($_select-gaps-x_skin2, '.select_skin2');
+
+
+$_select-gap-arrow_skin3: 2.333333333em;
+.select_skin3::after,
+.select_skin3 .select__select ~ .error {
+  left: 0;
+  right: 0;
+  margin-right: $_select-gap-arrow_skin3;
+  }
+.select_skin3.select .select__select {
+  border: none;
+  box-shadow: none;
+  background: none;
+  padding-left: 0;
+  padding-right: $_select-gap-arrow_skin3;
+  }
+.select_skin3 .select__select:focus {
+  @include field_focused;
+  }
+.select_skin3::before {
+  width: 1.333333em;
+  height: 1.4em;
+  background-color: #fff;
+  top: 50%;
+  transform: translate(0, -50%);
+  }
+
+@include rtl('.select_skin3 .select__select', (
+  padding-left: $_select-gap-arrow_skin3,
+  padding-right: 0
+));
+@include rtl('.select_skin3::after, .select_skin3 .select__select ~ .error', (
+  margin-right: 0,
+  margin-left: $_select-gap-arrow_skin3
+));
+
+
+.select_skin4 .select__select,
+.select_skin4 .select__select ~ .error,
+.select_skin4::before,
+.select_skin4::after {
+  @include field__content_skin4;
+  }
+.select_skin4 .select__select {
+  @include field_skin4;
+  @include field__field_skin4(true);
+  }
+@include patch-select-vertical-gaps($_field-gap-y_skin4, '.select_skin4');
+
+
+.select_skin5 .select__select,
+.select_skin5 .select__select ~ .error,
+.select_skin5::before,
+.select_skin5::after {
+  @include field_skin5;
+  @include field__content_skin5;
+  }
+.select_skin5 .select__select {
+  @include field__field_skin5;
+  }
+.select_skin5::after {
+  color: $_field-placeholder-color_skin5;
+  }
+@include patch-select-vertical-gaps($_field-gap-y_skin5, '.select_skin5');
+@include patch-select-focus-color($_field-color_skin5, '.select_skin5');
+
+
+.select_skin6 .select__select {
+  @include field_skin6;
+  }
+
+
+.error .select__select {
+  @include field_invalid;
+  }
+
+
+.select_labeled .select__select {
+  color: rgba(0, 0, 0, 0);
+  }
+.select_labeled .select__select:focus::-ms-value {
+  color: rgba(0, 0, 0, 0);
+  }
+@include only-ff('.select_labeled .select__select', (
+  text-shadow: none,
+));
+
+
+.ie10 .select__select {
+  background-image: url(assets/img/i20.png), linear-gradient(to bottom, $_field-bg-color 0%, $_field-bg-color 100%);
+  background-repeat: no-repeat, repeat;
+  background-position: right .9em top 50%, 0 0;
+  background-size: auto auto, 100%;
+  }
+.ie10 .select::before,
+.ie10 .select::after {
+  display: none;
+  }
+.ie10 .select_labeled .select__select {
+  color: $_field-placeholder-color;
+  }
+.ie10 .select_labeled .select__select:focus::-ms-value {
+  color: $_field-placeholder-color;
+  }
+
+.ie10 .select_skin1.select_labeled .select__select {
+  color: $_field-placeholder-color_skin1;
+  }
+.ie10 .select_skin1.select_labeled .select__select:focus::-ms-value {
+  color: $_field-placeholder-color_skin1;
+  }
+
+.ie10 .select_skin5 .select__select {
+  color: $_field-color_skin5;
+  }
+.ie10 .select_skin5.select_labeled .select__select {
+  color: $_field-placeholder-color_skin5;
+  }
+.ie10 .select_skin5.select_labeled .select__select:focus::-ms-value {
+  color: $_field-placeholder-color_skin5;
+  }
+
+.select_ghost {
+  position: absolute !important;
+  left: 0 !important;
+  top: -200px !important;
+  z-index: 999 !important;
+  }

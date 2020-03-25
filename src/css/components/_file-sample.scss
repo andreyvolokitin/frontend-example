@@ -1,0 +1,22 @@
+.file-sample,
+a.file-sample-trg:link, a.file-sample-trg:visited {
+  color: #2d2d2d;
+  }
+
+.file-sample {
+  font-size: 0.933333333rem;
+  padding-top: 2px;
+  font-weight: 100;
+  display: inline;
+  position: relative;
+  z-index: 2;
+  }
+
+a.file-sample-trg:link, a.file-sample-trg:visited {
+  border-bottom: 1px dotted currentColor;
+  text-decoration: none;
+  }
+
+a.file-sample-trg:hover, a.file-sample-trg:focus {
+  border-bottom-color: transparent;
+  }

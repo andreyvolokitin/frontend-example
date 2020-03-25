@@ -1,0 +1,7 @@
+.shortver {
+  display: none;
+
+  @media screen and (max-width: bp(bp660px)) {
+    display: inline;
+    }
+  }

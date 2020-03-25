@@ -1,0 +1,39 @@
+.related .slick-dots li:not(.slick-active) button {
+  background-color: #fff; /* a3a3a3 */
+  }
+.related {
+  position: static;
+  }
+.related__item::after {
+  content: '';
+  position: absolute;
+  width: 1px;
+  background: #ebebeb;
+  top: 0;
+  bottom: 0;
+  }
+
+.related:not(.slick-initialized) {
+  white-space: nowrap;
+  overflow: hidden;
+  visibility: hidden;
+  }
+.related:not(.slick-initialized) .related__item {
+  display: inline-block;
+  }
+
+.slick-active .related__item::after {
+  margin-left: -1.4px;
+  }
+.slick-active ~ .slick-active .related__item::after {
+  margin-left: 0;
+  }
+.slick-slide > div + div > .related__item {
+  border-top: 1px solid #ebebeb;
+  }
+
+@media screen and (max-width: bp(bp660px)) {
+  .related .slick-dots li:not(.slick-active) button {
+    background: #a3a3a3;
+    }
+  }

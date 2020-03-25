@@ -1,0 +1,31 @@
+/*
+  Simple "grid" for a specific use-case. Not a general grid
+*/
+
+.grid {
+  @include grid;
+  }
+.no-flexwrap .grid,
+.opera .grid {
+  @include grid_legacy;
+  }
+.grid__i {
+  @include grid__i;
+  }
+.grid__item {
+  @include grid__item;
+
+  float: left;
+  border-color: #e6e6e6;
+  }
+.grid_4 .grid__item {
+  width: 25%;
+
+  @media screen and (max-width: bp(bp1050px)) {
+    width: 33.33333%;
+    }
+  @media screen and (max-width: bp(bp600px)) {
+    width: 50%;
+    border-color: #d1d1d1;
+    }
+  }

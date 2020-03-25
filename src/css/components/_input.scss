@@ -1,0 +1,399 @@
+/* stylelint-disable no-descending-specificity */
+
+/**
+ * Input
+ */
+
+.input {
+  @include field;
+  @include field_validatable;
+
+  max-width: 100%;
+  box-sizing: border-box;
+  }
+.input_focused {
+  @include field_focused;
+
+  outline: none;
+  }
+.input.error {
+  @include field_invalid;
+  }
+
+.input input:-webkit-autofill,
+.input input:-webkit-autofill:hover,
+.input input:-webkit-autofill:focus,
+.input textarea:-webkit-autofill,
+.input textarea:-webkit-autofill:hover,
+.input textarea:-webkit-autofill:focus {
+  /* autocomplete styles */
+  }
+
+.input > input,
+.input > textarea,
+.input > .hint,
+.input > .error {
+  cursor: text;
+  }
+
+.input > input,
+.input > textarea {
+  @include field__field;
+
+  width: 100%;
+  box-sizing: border-box;
+  background: url(assets/img/t1.png);
+  padding-top: 0;
+  padding-bottom: 0;
+  display: block;
+  border: none;
+  color: #212121;
+  }
+.input.error input,
+.input.error .hint {
+  @include field__content_invalid;
+  }
+.input.error textarea {
+  color: transparent;
+  }
+
+.input_inline input,
+.input_inline textarea {
+  display: inline-block;
+  }
+
+.input .hint,
+.input .error {
+  @include field__label;
+  }
+
+.input .hint {
+  color: $_field-placeholder-color;
+  z-index: 0;
+  }
+
+.input_textarea .hint,
+.input_textarea .error {
+  padding-top: $_field-gap-y;
+  line-height: 1.091;
+  display: block;
+  }
+
+.hint.is-hidden,
+.hint.hint_bubble,
+.no-js .input .hint {
+  display: none;
+  }
+.hint.is-visible {
+  display: flex;
+  }
+.input_textarea .hint.is-visible {
+  display: block;
+  }
+
+.input textarea {
+  padding-top: $_field-gap-y;
+  padding-bottom: $_field-gap-y;
+  height: auto;
+  line-height: 1.3;
+  }
+
+//.input__label {
+//  text-align: center;
+//  padding-left: 8px;
+//  padding-right: 8px;
+//  white-space: nowrap;
+//  position: relative;
+//  z-index: 1;
+//  }
+//.input__label::after {
+//  right: 0;
+//  left: -3px;
+//  top: 0;
+//  z-index: -1;
+//  bottom: 0;
+//  }
+
+
+.input_skin_0 {
+  @include field_skin0;
+  }
+.input_skin_0 > .hint,
+.input_skin_0 > .error {
+  @include field__label_skin0;
+  }
+.input_skin_0.input_textarea .hint,
+.input_skin_0.input_textarea .error {
+  padding-top: $_field-gap-y_skin0;
+  }
+.input_skin_0 textarea {
+  padding-top: $_field-gap-y_skin0;
+  padding-bottom: $_field-gap-y_skin0;
+  }
+
+.input_skin_1 {
+  @include field_skin1;
+  }
+.input_skin_1 > input,
+.input_skin_1 > textarea {
+  @include field__field_skin1;
+  }
+.input_skin_1 textarea {
+  padding-top: $_field-gap-y_skin1;
+  padding-bottom: $_field-gap-y_skin1;
+  }
+.input_skin_1 .hint {
+  color: $_field-placeholder-color_skin1;
+  }
+.input_skin_1.input_textarea .hint,
+.input_skin_1.input_textarea .error {
+  padding-top: $_field-gap-y_skin1;
+  }
+
+.input_skin_2 {
+  @include field_skin2;
+  }
+.input_skin_2.input_focused {
+  @include field_focused_skin2;
+  }
+.input_skin_2 > input,
+.input_skin_2 > textarea {
+  @include field__field_skin2;
+  }
+.input_skin_2 > textarea {
+  padding-top: $_field-gap-y_skin2;
+  padding-bottom: $_field-gap-y_skin2;
+  }
+.input_skin_2 > .hint,
+.input_skin_2 > .error {
+  @include field__label_skin2;
+  }
+.input_skin_2.input_textarea .hint,
+.input_skin_2.input_textarea .error {
+  padding-top: $_field-gap-y_skin2;
+  }
+
+.input_skin_4 {
+  @include field_skin4;
+  }
+.input_skin_4 > input,
+.input_skin_4 > textarea,
+.input_skin_4 > .hint,
+.input_skin_4 > .error {
+  @include field__content_skin4;
+  }
+.input_skin_4 > input,
+.input_skin_4 > textarea {
+  @include field__field_skin4;
+  }
+.input_skin_4 textarea {
+  padding-top: $_field-gap-y_skin4;
+  padding-bottom: $_field-gap-y_skin4;
+  }
+.input_skin_4.input_textarea .hint,
+.input_skin_4.input_textarea .error {
+  padding-top: $_field-gap-y_skin4;
+  }
+
+.input_skin_5 {
+  @include field_skin5;
+  }
+.input_skin_5 > input,
+.input_skin_5 > textarea,
+.input_skin_5 > .hint,
+.input_skin_5 > .error {
+  @include field__content_skin5;
+  }
+.input_skin_5 > input,
+.input_skin_5 > textarea {
+  @include field__field_skin5;
+  }
+.input_skin_5 textarea {
+  padding-top: $_field-gap-y_skin5;
+  padding-bottom: $_field-gap-y_skin5;
+  }
+.input_skin_5 .hint {
+  color: $_field-placeholder-color_skin5;
+  }
+.input_skin_5.input_textarea .hint,
+.input_skin_5.input_textarea .error {
+  padding-top: $_field-gap-y_skin5;
+  }
+
+.input_skin_6 {
+  @include field_skin6;
+  }
+
+
+.input .error {
+  @include field__error;
+  }
+
+
+.input_er_t.error > input,
+.input_er_t.error > textarea,
+.input_er_t.error > .hint,
+.input_er_r.error > input,
+.input_er_r.error > textarea,
+.input_er_r.error > .hint,
+.input_er_l.error > input,
+.input_er_l.error > textarea,
+.input_er_l.error > .hint,
+.input_er_b.error > input,
+.input_er_b.error > textarea,
+.input_er_b.error > .hint {
+  @include field__content_invalid-with-bubble-error;
+  }
+
+.input > .hint_bubble,
+.input_er_t > .error,
+.input_er_r > .error,
+.input_er_l > .error,
+.input_er_b > .error,
+.input_msg_t > .error,
+.input_msg_r > .error,
+.input_msg_l > .error,
+.input_msg_b > .error {
+  @include field__error_bubble;
+  }
+
+.input > .hint_bubble::before,
+.input_er_t > .error::before,
+.input_er_r > .error::before,
+.input_er_l > .error::before,
+.input_er_b > .error::before,
+.input_msg_t > .error::before,
+.input_msg_r > .error::before,
+.input_msg_l > .error::before,
+.input_msg_b > .error::before {
+  @include field__error_bubble-arrow;
+  }
+
+
+.is-darkbg.input > .hint_bubble,
+.is-darkbg.input_er_t > .error,
+.is-darkbg.input_er_r > .error,
+.is-darkbg.input_er_l > .error,
+.is-darkbg.input_er_b > .error,
+.is-darkbg.input_msg_t > .error,
+.is-darkbg.input_msg_r > .error,
+.is-darkbg.input_msg_l > .error,
+.is-darkbg.input_msg_b > .error {
+  @include field__error_bubble-light;
+  }
+
+.is-darkbg.input > .hint_bubble::before,
+.is-darkbg.input_er_t > .error::before,
+.is-darkbg.input_er_r > .error::before,
+.is-darkbg.input_er_l > .error::before,
+.is-darkbg.input_er_b > .error::before,
+.is-darkbg.input_msg_t > .error::before,
+.is-darkbg.input_msg_r > .error::before,
+.is-darkbg.input_msg_l > .error::before,
+.is-darkbg.input_msg_b > .error::before {
+  @include field__error_bubble-light-arrow;
+  }
+
+
+.input_er_r > .error,
+.input_er_l > .error,
+.input_hint_r > .hint_bubble,
+.input_hint_l > .hint_bubble,
+.input_msg_r > .error,
+.input_msg_l > .error,
+.input_msg_r > .hint_bubble,
+.input_msg_l > .hint_bubble {
+  @include field__error_bubble-horizontal;
+  }
+
+.input_er_r > .error::before,
+.input_er_l > .error::before,
+.input_hint_r > .hint_bubble::before,
+.input_hint_l > .hint_bubble::before,
+.input_msg_r > .error::before,
+.input_msg_l > .error::before,
+.input_msg_r > .hint_bubble::before,
+.input_msg_l > .hint_bubble::before {
+  @include field__error_bubble-horizontal-arrow;
+  }
+
+.input_er_r > .error,
+.input_hint_r > .hint_bubble,
+.input_msg_r > .error,
+.input_msg_r > .hint_bubble {
+  @include field__error_bubble-right;
+  }
+
+.input_er_r > .error::before,
+.input_hint_r > .hint_bubble::before,
+.input_msg_r > .error::before,
+.input_msg_r > .hint_bubble::before {
+  @include field__error_bubble-right-arrow;
+  }
+
+.input_er_l > .error,
+.input_hint_l > .hint_bubble,
+.input_msg_l > .error,
+.input_msg_l > .hint_bubble {
+  @include field__error_bubble-left;
+  }
+
+.input_er_l > .error::before,
+.input_hint_l > .hint_bubble::before,
+.input_msg_l > .error::before,
+.input_msg_l > .hint_bubble::before {
+  @include field__error_bubble-left-arrow;
+  }
+
+
+.input_er_t > .error::before,
+.input_er_b > .error::before,
+.input_hint_t > .hint_bubble::before,
+.input_hint_b > .hint_bubble::before,
+.input_msg_t > .error::before,
+.input_msg_b > .error::before,
+.input_msg_t > .hint_bubble::before,
+.input_msg_b > .hint_bubble::before {
+  @include field__error_bubble-vertical-arrow;
+  }
+
+.input_er_t > .error,
+.input_hint_t > .hint_bubble,
+.input_msg_t > .error,
+.input_msg_t > .hint_bubble {
+  @include field__error_bubble-top;
+  }
+
+.input_er_t > .error::before,
+.input_hint_t > .hint_bubble::before,
+.input_msg_t > .error::before,
+.input_msg_t > .hint_bubble::before {
+  @include field__error_bubble-top-arrow;
+  }
+
+
+.input_er_b > .error,
+.input_hint_b > .hint_bubble,
+.input_msg_b > .error,
+.input_msg_b > .hint_bubble {
+  @include field__error_bubble-bottom;
+  }
+
+.input_er_b > .error::before,
+.input_hint_b > .hint_bubble::before,
+.input_msg_b > .error::before,
+.input_msg_b > .hint_bubble::before {
+  @include field__error_bubble-bottom-arrow;
+  }
+
+
+.input > .hint_bubble {
+  overflow: visible;
+  }
+
+/* For password inputs with readability toggler */
+.input_password ::-ms-reveal,
+.input_password ::-ms-clear {
+  display: none;
+  }
+

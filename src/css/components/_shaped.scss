@@ -1,0 +1,36 @@
+.shaped {
+  position: relative;
+  z-index: 0;
+  padding-top: 26px;
+  padding-bottom: 47px;
+  background-color: #fff;
+  margin-top: 3.4%;
+  margin-bottom: 2.2%;
+  }
+
+.shaped::before,
+.shaped::after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  right: 0;
+  height: 0;
+  background-image: url('data:image/svg+xml;utf8,<svg id="Слой_1" data-name="Слой 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 931 338" width="931" height="338"><title>myshape</title><path d="M0,0S231.78,31,464,31C697.28,31,931,0,931,0V338s-233.1-21-466-21C232.4,317,0,338,0,338V0Z" fill="%23fff"/></svg>');
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: 100% auto;
+  }
+
+.shaped::before {
+  top: 0;
+  margin-top: -3.4%;
+  padding-bottom: 3.7%;
+  }
+
+.shaped::after {
+  bottom: 0;
+  margin-bottom: -2.2%;
+  padding-bottom: 2.5%;
+  background-position: 0 100%;
+  }

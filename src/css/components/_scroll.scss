@@ -1,0 +1,158 @@
+// stylelint-disable no-descending-specificity
+$_scroll-track-width: 7px;
+$_scroll-touch-area-shift: 17px;
+$_scroll-track-space: (2 * $_scroll-touch-area-shift + $_scroll-track-width);
+$_scroll-content-gap: 0;
+$_scroll-bar-width: $_scroll-track-width;
+.scroll {
+  position: relative;
+  overflow: hidden;
+  }
+.scroll_v {
+  margin-right: -$_scroll-touch-area-shift;
+  }
+.scroll_overflow.scroll_v {
+  margin-right: 0;
+  }
+.scroll_overflow.scroll_h {
+  margin-bottom: $_scroll-touch-area-shift;
+  }
+.scroll__scroller {
+  overflow: scroll;
+  -ms-overflow-style: none;
+  margin: 0;
+  border: 0;
+  padding: 0;
+
+  /* remove line to customize scrollbar in iOs */
+  -webkit-overflow-scrolling: touch;
+  box-sizing: border-box;
+  }
+.scroll__scroller::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  }
+.scroll__scroller > * {
+  -ms-overflow-style: auto;
+  }
+.scroll_h > .scroll__scroller {
+  overflow-x: scroll;
+  overflow-y: hidden;
+  width: 100%;
+  }
+.scroll_v > .scroll__scroller {
+  overflow-y: scroll;
+  overflow-x: hidden;
+  height: 100%;
+  }
+._scrollbar-h > .scroll__content,
+._scrollbar-h > .scroll__scroller > .scroll__content,
+
+.scroll_h > ._scrollbar > .scroll__content,
+.scroll_h._scrollbar > .scroll__scroller > .scroll__content {
+  padding-bottom: $_scroll-content-gap + (2 * $_scroll-touch-area-shift + $_scroll-track-width);
+  }
+._scrollbar-v > .scroll__content,
+._scrollbar-v > .scroll__scroller > .scroll__content,
+
+.scroll_v > ._scrollbar > .scroll__content,
+.scroll_v._scrollbar > .scroll__scroller > .scroll__content {
+  padding-right: $_scroll-content-gap + (2 * $_scroll-touch-area-shift + $_scroll-track-width);
+  }
+.scroll_overflow > ._scrollbar-h > .scroll__content,
+.scroll_overflow._scrollbar-h > .scroll__scroller > .scroll__content,
+
+.scroll_overflow.scroll_h > ._scrollbar > .scroll__content,
+.scroll_overflow.scroll_h._scrollbar > .scroll__scroller > .scroll__content {
+  padding-bottom: $_scroll-content-gap + ($_scroll-touch-area-shift + $_scroll-track-width);
+  }
+.scroll_overflow > ._scrollbar-v > .scroll__content,
+.scroll_overflow._scrollbar-v > .scroll__scroller > .scroll__content,
+
+.scroll_overflow.scroll_v > ._scrollbar > .scroll__content,
+.scroll_overflow.scroll_v._scrollbar > .scroll__scroller > .scroll__content {
+  padding-right: $_scroll-content-gap + ($_scroll-touch-area-shift + $_scroll-track-width);
+  }
+
+.scroll__track {
+  visibility: hidden;
+  position: absolute;
+  background: #d7d7d7;
+  }
+.scroll_darkbg > .scroll__track {
+  background: #fff;
+  }
+
+.scroll__track._h {
+  height: $_scroll-track-width;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  }
+.scroll > .scroll__track._h,
+.scroll__scroller > .scroll__track._h {
+  bottom: $_scroll-touch-area-shift;
+  }
+.scroll_overflow.scroll > .scroll__track._h,
+.scroll_overflow .scroll__scroller > .scroll__track._h {
+  bottom: 0;
+  }
+.scroll__track._v {
+  width: $_scroll-track-width;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  }
+.scroll > .scroll__track._v,
+.scroll__scroller > .scroll__track._v {
+  right: $_scroll-touch-area-shift;
+  }
+.scroll_overflow.scroll > .scroll__track._v,
+.scroll_overflow .scroll__scroller > .scroll__track._v {
+  right: 0;
+  }
+
+._scrollbar-h > .scroll__track._h,
+
+.scroll_h > ._scrollbar > .scroll__track._h,
+.scroll_h._scrollbar > .scroll__track._h,
+
+._scrollbar-v > .scroll__track._v,
+
+.scroll_v > ._scrollbar > .scroll__track._v,
+.scroll_v._scrollbar > .scroll__track._v {
+  visibility: visible;
+  }
+
+
+.scroll__bar {
+  position: absolute;
+  z-index: 1;
+  background: $brand-color;
+  }
+
+.scroll__bar._h {
+  height: $_scroll-bar-width;
+  top: 0;
+  }
+.scroll__bar._h::before {
+  content: '';
+  position: absolute;
+  top: -$_scroll-touch-area-shift;
+  bottom: -$_scroll-touch-area-shift;
+  left: 0;
+  right: 0;
+  }
+
+.scroll__bar._v {
+  width: $_scroll-bar-width;
+  left: 0;
+  }
+.scroll__bar._v::before {
+  content: '';
+  position: absolute;
+  left: -$_scroll-touch-area-shift;
+  right: -$_scroll-touch-area-shift;
+  top: 0;
+  bottom: 0;
+  }

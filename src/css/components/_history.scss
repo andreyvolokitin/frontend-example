@@ -1,0 +1,11 @@
+.history {
+  padding-top: 12.446351931%;
+  background: url(assets/img/mm.png) 50% 0 no-repeat;
+  background-size: contain;
+  margin-bottom: 50px;
+  box-sizing: border-box;
+
+  @media screen and (max-width: bp(bp500px)) {
+    text-align: center;
+    }
+  }

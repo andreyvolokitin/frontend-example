@@ -1,0 +1,17 @@
+.info {
+  line-height: 1.3;
+  }
+.info__pic {
+  width: 40%;
+  max-width: 157px;
+  }
+.info__desc {
+  font-weight: 100;
+  }
+
+@media screen and (max-width: bp(bp840px)) {
+  .block2 .info__pic {
+    margin-left: -$horizontal-pad-secondary_lte-bp840px;
+    width: 50%;
+    }
+  }

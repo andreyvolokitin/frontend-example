@@ -1,0 +1,11 @@
+/*
+  Form with ajax submit
+*/
+.ajax-form__content_2,
+.ajax-form.is-successful .ajax-form__content_1 {
+  display: none;
+  }
+
+.ajax-form.is-successful .ajax-form__content_2 {
+  display: block;
+  }

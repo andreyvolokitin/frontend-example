@@ -1,0 +1,34 @@
+
+.upload__btn {
+  color: $brand-color;
+  padding-left: 24px;
+  background: url(assets/img/i37.png) 0 0 no-repeat at-2x;
+  min-height: 23px;
+  line-height: 1.3;
+  box-sizing: border-box;
+  padding-top: .17em;
+  }
+
+
+.upload.is-focused .upload__btn {
+  text-decoration: underline;
+  }
+
+.upload__btn-txt {
+  display: inline;
+  }
+
+.upload__progress {
+  display: none;
+  }
+
+.upload__progress.is-visible {
+  display: block;
+  }
+
+.upload__progress-bar {
+  display: block;
+  height: 10px;
+  background: $brand-color;
+  width: 0;
+  }

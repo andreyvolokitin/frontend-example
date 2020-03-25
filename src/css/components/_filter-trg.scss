@@ -1,0 +1,12 @@
+.filter-trg {
+  height: 43px;
+  line-height: 43;
+  }
+
+body .filter-trg.button {
+  text-align: right;
+
+  @media screen and (max-width: bp(bp660px)) {
+    text-align: center;
+    }
+  }

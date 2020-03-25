@@ -1,0 +1,42 @@
+/* stylelint-disable no-descending-specificity  */
+
+.fame__item,
+.fame__item.slick-slide {
+  @include carousel__item;
+  }
+.fame__item {
+  text-align: center;
+  height: 407px;
+  line-height: 407px;
+  cursor: pointer;
+  }
+.fame__pic {
+  transition: opacity .2s, transform .3s;
+  transform: scale(.4);
+  vertical-align: middle;
+  opacity: .37;
+  }
+.fame__pic::before {
+  opacity: 0;
+  transition: opacity .2s;
+  }
+.slick-center .fame__pic::before,
+.fame__pic:hover,
+.fame__item:hover .fame__pic,
+.slick-center .fame__pic,
+.is-narrow .fame__pic,
+.is-narrow .fame__pic::before {
+  opacity: 1;
+  }
+.slick-center .fame__pic,
+.is-narrow .fame__pic {
+  transform: scale(1);
+  }
+.is-narrow .fame__item {
+  line-height: 1.3;
+  min-height: 0;
+  height: auto;
+  }
+.is-narrow .fame__pic {
+  vertical-align: baseline;
+  }

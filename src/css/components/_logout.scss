@@ -1,0 +1,17 @@
+.logout {
+  width: 2.2em;
+  height: 0;
+  padding-top: 3.466666667em;
+  overflow: hidden;
+  line-height: 1.3;
+  background: #3c86bb url("assets/img/i4.png") 50% 50% no-repeat at-2x;
+
+  @media screen and (max-width: bp(bp660px)) {
+    width: 2.05em;
+    padding-top: 2.5em;
+    }
+  }
+
+.logout:hover, .logout:focus {
+  background-color: #409dd6;
+  }

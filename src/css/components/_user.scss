@@ -1,0 +1,37 @@
+.user,
+.user.block-link,
+.user__name {
+  display: inline-block;
+  max-width: 100%;
+  }
+.user {
+  padding-left: 38px;
+  background: url(assets/img/i0.png) 0 0 no-repeat at-2x;
+  min-height: 25px;
+  font-size: 1.066666667rem;
+  vertical-align: top;
+  box-sizing: border-box;
+
+  @media screen and (max-width: bp(bp660px)) {
+    padding-left: 0;
+    //background: none;
+    background-position: -100px 0;  // https://github.com/simonsmith/postcss-at2x/issues/17
+    min-height: 0;
+    line-height: 1;
+    }
+  @media screen and (max-width: bp(bp400px)) {
+    padding-left: 38px;
+    background: url(assets/img/i0.png) 0 0 no-repeat at-2x;
+    height: 25px;
+    }
+  }
+.user__name {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  @media screen and (max-width: bp(bp400px)) {
+    display: none;
+    }
+  }
+

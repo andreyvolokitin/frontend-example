@@ -1,0 +1,32 @@
+html:not(.opera) .event-block {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  }
+
+.event-block__pic,
+body .event-block__pic {
+  margin-right: 40px;
+  }
+
+.event-block__info {
+  margin-top: auto;
+  margin-bottom: auto;
+  padding-bottom: 40px;
+  -webkit-flex-shrink: 1;
+  -ms-flex-negative: 1;
+  flex-shrink: 1;
+
+  }
+
+.no-flexwrap .event-block__info {
+  overflow: hidden;
+  }
+
+@media screen and (max-width: bp(bp660px)) {
+  html:not(.opera) .event-block {
+    display: block;
+    }
+  }

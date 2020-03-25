@@ -1,0 +1,20 @@
+
+.personal-data {
+  border-collapse: collapse;
+  -ms-word-wrap: break-word;
+  word-wrap: break-word;
+  color: #2d2d2d;
+  font-size: 0.933333333rem;
+  }
+
+.personal-data > tbody {
+  border-bottom: 3px solid #fff;
+  }
+
+.personal-data > tbody:last-child {
+  border-bottom: none;
+  }
+
+.personal-data .form__cell_label {
+  font-weight: 100;
+  }

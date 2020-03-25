@@ -1,0 +1,37 @@
+
+.lookup {
+  padding-left: 43px;
+  background: url(assets/img/i34.png) 0 0 no-repeat at-2x;
+  min-height: 23px;
+  }
+
+.lookup__link {
+  position: relative;
+  margin-right: 20px;
+  }
+
+.lookup__link::after {
+  content: '';
+  position: absolute;
+  background: url(assets/img/i35.png) 0 0 no-repeat at-2x;
+  width: 17px;
+  height: 13px;
+  right: -20px;
+  }
+
+@media screen and (max-width: bp(bp660px)) {
+  .lookup {
+    padding-left: 0;
+    padding-top: 34px;
+    background-position: 50% 0;
+    text-align: center;
+    }
+
+  .lookup__link {
+    margin-right: 0;
+    }
+
+  .lookup__link::after {
+    display: none;
+    }
+  }

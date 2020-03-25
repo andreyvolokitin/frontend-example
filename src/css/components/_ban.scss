@@ -1,0 +1,106 @@
+
+
+.ban {
+  background-size: cover;
+  background-position: 50% 50%;
+  }
+
+a.ban__link:link, a.ban__link:visited {
+  color: #fff;
+  padding: 0 2.823920266%;
+  box-sizing: border-box;
+  }
+
+.ban__wrap {
+  display: table;
+  width: 100%;
+  border-collapse: separate;
+  }
+
+.ban__side,
+.ban__desc {
+  display: table-cell;
+  vertical-align: middle;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  }
+
+.ban__side {
+  width: 1%;
+  }
+
+.ban__logo {
+  background: #fff;
+  padding: 12px 10px;
+  }
+
+.ban__logo-img {
+  display: block;
+  max-width: none;
+  }
+
+.ban__desc {
+  padding-left: 39.5%;
+  font: normal 17px/1.4 'pt_sans', 'Arial', sans-serif;
+  }
+
+.ban__txt,
+.ban__more,
+.ban__logo {
+  margin-top: 4px;
+  margin-bottom: 4px;
+  }
+
+.ban__txt,
+.ban__txt.item {
+  margin-right: 7%;
+  line-height: 1.4;
+  }
+
+.ban__head {
+  margin: 0 0 3px;
+  font-weight: bold;
+  font-size: 31px;
+  line-height: 1.1;
+  }
+
+@media screen and (max-width: bp(bp1015px)) {
+  a.ban__link:link, a.ban__link:visited {
+    padding-left: $horizontal-pad-primary_lte-bp840px;
+    padding-right: $horizontal-pad-primary_lte-bp840px;
+    }
+  }
+
+@media screen and (max-width: bp(bp900px)) {
+  .ban__logo {
+    display: none;
+    }
+  .ban__desc {
+    padding-left: 51%;
+    }
+  }
+@media screen and (max-width: bp(bp600px)) {
+  .ban {
+    margin-left: -$horizontal-pad-primary_lte-bp840px;
+    margin-right: -$horizontal-pad-primary_lte-bp840px;
+    background-position: 54% 50%;
+    }
+
+  .ban__txt,
+  .ban__txt.item {
+    margin-right: 0;
+    }
+
+  .ban__more {
+    display: none;
+    }
+
+  .ban__desc {
+    padding-left: 30%;
+    font-size: 15px;
+    }
+
+  .ban__head {
+    font-size: 25px;
+    }
+  }

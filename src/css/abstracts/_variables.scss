@@ -1,0 +1,123 @@
+// -----------------------------------------------------------------------------
+// This file contains all application-wide variables.
+// -----------------------------------------------------------------------------
+
+/// Variable names may contain a suffix like `bp1213px`. Such suffix means
+/// that starting from this breakpoint this variable is applied in the code (inside media queries)
+/// instead of a variable with original name (without suffix).
+/// I.e. `$my-variable_lte-bp1213px` instead of `$my-variable`.
+///
+/// `lte-` and `gre-`, in the variable name means "less/greater than, or equal",
+/// and describes screen widths for which the variable applies. This depends on the design order
+/// (desktop-first, or mobile-first), i.e. the variable changed inside 500px breakpoint should be named:
+/// - "lte-bp1000px" for desktop-first (@media screen and (max-width: 500px));
+/// - "gte-bp1000px" for mobile-first (@media screen and (min-width: 500px)).
+
+
+/// Font stacks
+$text-font-stack: 'Arial', sans-serif !default;
+$text-font-stack-custom: 'pf_dindisplay_pro', 'Arial', sans-serif !default;
+$font-stack-custom-1: 'pt_sans', 'Arial', sans-serif !default;
+
+/// Font properties
+$font-size-primary: 15px;
+$font-size-primary_lte-bp736px: 16px;
+$line-height-primary: 1.6;
+$page__nav-font-size: 19px;
+
+/// Unified horizontal padding to align different blocks
+$horizontal-pad-primary: 20px;
+$horizontal-pad-primary_lte-bp840px: 14px;
+
+$horizontal-pad-secondary: 25px;
+$horizontal-pad-secondary_lte-bp1050px: 17px;
+$horizontal-pad-secondary_lte-bp840px: $horizontal-pad-primary_lte-bp840px;
+
+$inner-pad-x: 30px;
+$inner-pad-x_lte-bp1050px: 15px;
+
+$common-select-arrow-gap: 2.538461538rem;
+
+/// Colors
+$selection-color: #b3d4fc !default;
+$text-color: #727272 !default;
+$text-muted-color: #878889 !default;
+$brand-color: #054569 !default;
+$error-color: #f51717 !default;
+$navbar-bg: darken(desaturate($brand-color, 7.58), 2.75);
+
+/// Misc
+$footer-min-height: 240px;
+
+
+
+
+
+
+
+
+/// Breakpoints map. Values are content-based and sorted in design order
+/// (desktop-first, or mobile-first).
+///
+/// Due to a large amount of breakpoints it is impossible to give all
+/// of them meaningful names. Instead breakpoints are named with the
+/// breakpoint value prefixed with a "bp", i.e. "bp1280px". Breakpoint values
+/// are used in the code via `bp()` function like so:
+/// `@media screen and (max-width: bp(bp1150px))`.
+///
+/// To refactor a breakpoint you should change its value and then use a global
+/// "Find and replace" search in the IDE/code editor to search and edit breakpoint name
+/// (i.e. search `bp1213px` and change it to `bp1300px`). This will also affect
+/// global variable names, because they may contain a suffix like `bp1213px`
+/// which also should be edited. Such suffix means that starting from this breakpoint
+/// this variable is applied in the code (inside media queries) instead of a variable
+/// with original name (without suffix). I.e. `$my-variable_lte-bp1213px` instead of `$my-variable`.
+///
+/// `lte-` and `gte-`, in the variable name means "less/greater than, or equal",
+/// and describes screen widths for which the variable applies. This depends on the design order
+/// (desktop-first, or mobile-first), i.e. the variable changed inside 500px breakpoint should be named:
+/// - "lte-bp1000px" for desktop-first (@media screen and (max-width: 500px));
+/// - "gte-bp1000px" for mobile-first (@media screen and (min-width: 500px)).
+///
+/// This mechanism should not be abused because it has limited applicability — it works only for
+/// simple media queries like single max/min-width. Ranges or combined queries are not supported.
+$breakpoints: (
+  bp1280px: 1280px,
+  bp1250px: 1250px,
+  bp1213px: 1213px,
+  bp1150px: 1150px,
+  bp1095px: 1095px,
+  bp1050px: 1050px,
+  bp1015px: 1015px,
+  bp984px: 984px,
+  bp980px: 980px,
+  bp925px: 925px,
+  bp900px: 900px,
+  bp840px: 840px,
+  bp793px: 793px,
+  bp736px: 736px,
+  bp680px: 680px,
+  bp660px: 660px,
+  bp603px: 603px,
+  bp600px: 600px,
+  bp566px: 566px,
+  bp540px: 540px,
+  bp534px: 534px,
+  bp532px: 532px,
+  bp500px: 500px,
+  bp414px: 414px,
+  bp400px: 400px,
+  bp360px: 360px,
+  bp300px: 300px,
+  bp240px: 240px,
+) !default;
+
+
+
+
+/// Not: it's not used in the project, it's here just for example
+/// Relative or absolute URL where all assets are served from
+/// @type String
+/// @example scss - When using a CDN
+///   $base-url: 'http://cdn.example.com/assets/';
+$base-url: '/assets/' !default;

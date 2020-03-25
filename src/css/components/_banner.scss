@@ -1,0 +1,57 @@
+
+.banner,
+.banner .hd_0 {
+  color: #fff;
+  }
+
+.banner {
+  @include bg1;
+
+  padding-top: 12px;
+  padding-bottom: 15px;
+  line-height: 1.3;
+  }
+
+.banner__txt {
+  color: #bbd9ef;
+  margin-bottom: 20px;
+  }
+
+@media screen and (max-width: bp(bp840px)) {
+  .banner_adapt .banner__head,
+  .banner_adapt .banner__txt,
+  .banner_adapt .banner__more {
+    width: 33.333%;
+    padding-left: 30px;
+    box-sizing: border-box;
+    }
+  .banner_adapt .banner__head {
+    float: left;
+    margin-top: -.2em;
+    padding-left: 0;
+    }
+  .banner_adapt .banner__txt {
+    float: left;
+    }
+  .banner_adapt .banner__more {
+    float: right;
+    text-align: right;
+    }
+  }
+
+@media screen and (max-width: bp(bp600px)) {
+  .banner_adapt .banner__head,
+  .banner_adapt .banner__txt,
+  .banner_adapt .banner__more {
+    width: auto;
+    float: none;
+    padding-left: 0;
+    text-align: center;
+    }
+  .banner_adapt .banner__head {
+    margin: 0 0 6px;
+    }
+  .banner_adapt .banner__txt {
+    margin-bottom: 25px;
+    }
+  }

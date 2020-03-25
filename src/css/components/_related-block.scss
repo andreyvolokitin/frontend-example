@@ -1,0 +1,21 @@
+.related-block {
+  position: relative;
+  }
+
+.related-block .slick-dots {
+  position: absolute;
+  right: 0;
+  top: 5px;
+  width: auto;
+  }
+@media screen and (max-width: bp(bp660px)) {
+  .related-block {
+    margin-bottom: 65px;
+    }
+  .related-block .slick-dots {
+    top: auto;
+    right: auto;
+    bottom: -65px;
+    width: 100%;
+    }
+  }

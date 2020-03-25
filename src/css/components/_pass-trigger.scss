@@ -1,0 +1,35 @@
+/*
+  Password input readability trigger
+*/
+$_pass-trigger-width: 40px;
+
+.input_password input {
+  padding-right: $_pass-trigger-width + 10px;
+  }
+.pass-trigger {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: $_pass-trigger-width;
+  background: url(assets/img/t0.png) 0 0 no-repeat;
+  }
+
+.pass-trigger:focus {
+  outline: thin dotted;
+  }
+
+.pass-trigger::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background: url(assets/img/i45.png) 0 100% no-repeat at-2x;
+  width: 21px;
+  height: 11px;
+  }
+.pass-trigger.is-toggled::before {
+  background-position: 0 0;
+  margin-top: -2px;
+  }

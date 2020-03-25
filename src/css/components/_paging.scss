@@ -1,0 +1,57 @@
+
+.paging {
+  margin-top: 28px;
+  margin-bottom: -.4em;
+  font-size: 1.4rem;
+  }
+
+.paging__item {
+  float: left;
+  margin: 0 2px .4em 0;
+  }
+
+.paging__item:last-child {
+  margin-right: 0;
+  }
+
+.paging__txt {
+  display: block;
+  line-height: 1.2;
+  padding: 0.405em 0.428571429em;
+  min-width: 1.904761905em;
+  box-sizing: border-box;
+  text-align: center;
+  position: relative;
+  }
+
+a.paging__txt:link, a.paging__txt:visited {
+  color: #202427;
+  background-color: #fff;
+  text-decoration: none;
+  }
+
+a.paging__txt:hover, a.paging__txt:focus {
+  background-color: $brand-color;
+  color: #fff;
+  }
+
+.paging__txt_current {
+  background-color: transparent;
+  }
+
+.paging__item_prev .paging__txt::before,
+.paging__item_next .paging__txt::before {
+  @include pill__pseudo;
+  }
+.paging__item_prev .paging__txt::before {
+  @include pill__pseudo_prev;
+  }
+.paging__item_next .paging__txt::before {
+  @include pill__pseudo_next;
+  }
+.paging__item_prev .paging__txt:hover::before,
+.paging__item_next .paging__txt:hover::before,
+.paging__item_prev .paging__txt:focus::before,
+.paging__item_next .paging__txt:focus::before {
+  @include pill__pseudo_hovered;
+  }

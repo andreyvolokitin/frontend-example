@@ -1,0 +1,25 @@
+/*
+  Studio design label
+*/
+
+.design,
+a.design:link, a.design:visited {
+  color: $text-muted-color;
+  text-decoration: none;
+  }
+.design {
+  display: block;
+  }
+.design__txt,
+.design__logo {
+  display: inline-block;
+  vertical-align: middle;
+  }
+.design__txt {
+  margin-right: 10px;
+
+  @media screen and (max-width: bp(bp680px)) {
+    display: none;
+    }
+  }
+

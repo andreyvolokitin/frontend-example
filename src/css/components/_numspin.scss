@@ -1,0 +1,64 @@
+
+.numspin {
+  display: inline-block;
+  position: relative;
+  }
+
+.numspin_block {
+  display: block;
+  }
+
+.numspin__input-w {
+  width: 5.15em;
+  }
+
+.numspin_block .numspin__input-w {
+  width: auto;
+  }
+
+.numspin__control {
+  cursor: pointer;
+  position: absolute;
+  text-align: center;
+  width: 1.67em;
+  top: 0;
+  bottom: 0;
+  box-sizing: border-box;
+  -webkit-touch-callout: none;
+  user-select: none;
+  }
+
+.numspin__control_dec {
+  left: 0;
+  }
+
+.numspin__control_inc {
+  right: 0;
+  }
+
+.numspin__control::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  color: #000;
+  font: normal 19px/1.2 $font-stack-custom-1;
+  }
+
+.numspin__control_dec::before {
+  content: '-';
+  }
+
+.numspin__control_inc::before {
+  content: '+';
+  }
+
+.numspin .input {
+  z-index: 1;
+  padding: 0 1.67em;
+  }
+
+.numspin .numspin__input {
+  padding: 0;
+  }

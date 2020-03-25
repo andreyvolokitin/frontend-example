@@ -1,0 +1,780 @@
+/* stylelint-disable no-descending-specificity  */
+
+// -----------------------------------------------------------------------------
+// This file contains CSS helper classes which are placed after all other styles.
+// -----------------------------------------------------------------------------
+
+/**
+ * Helpers (applied at the end to be able to overwrite previous styles)
+ * ---------------------------------
+ */
+
+/**
+  Horizontal padding align.
+ */
+.padding-align-primary {
+  padding-left: $horizontal-pad-primary;
+  padding-right: $horizontal-pad-primary;
+  }
+.padding-align-primary__undo {
+  margin-left: -$horizontal-pad-primary;
+  margin-right: -$horizontal-pad-primary;
+  }
+
+.padding-align-secondary {
+  padding-left: $horizontal-pad-secondary;
+  padding-right: $horizontal-pad-secondary;
+  }
+.padding-align-secondary__undo {
+  margin-left: -$horizontal-pad-secondary;
+  margin-right: -$horizontal-pad-secondary;
+  }
+
+.padding-align-primary > thead > tr > th:first-child,
+.padding-align-primary > thead > tr > td:first-child,
+.padding-align-primary > tbody > tr > td:first-child,
+.padding-align-primary > tfoot > tr > td:first-child {
+  padding-left: $horizontal-pad-primary;
+  }
+
+.padding-align-primary > thead > tr > th:last-child,
+.padding-align-primary > thead > tr > td:last-child,
+.padding-align-primary > tbody > tr > td:last-child,
+.padding-align-primary > tfoot > tr > td:last-child {
+  padding-right: $horizontal-pad-primary;
+  }
+
+.padding-align-secondary > thead > tr > th:first-child,
+.padding-align-secondary > thead > tr > td:first-child,
+.padding-align-secondary > tbody > tr > td:first-child,
+.padding-align-secondary > tfoot > tr > td:first-child {
+  padding-left: $horizontal-pad-secondary;
+  }
+
+.padding-align-secondary > thead > tr > th:last-child,
+.padding-align-secondary > thead > tr > td:last-child,
+.padding-align-secondary > tbody > tr > td:last-child,
+.padding-align-secondary > tfoot > tr > td:last-child {
+  padding-right: $horizontal-pad-secondary;
+  }
+table.padding-align-primary,
+table.padding-align-secondary {
+  padding-left: 0;
+  padding-right: 0;
+  }
+
+
+@media screen and (max-width: bp(bp1050px)) {
+  .padding-align-secondary {
+    padding-left: $horizontal-pad-secondary_lte-bp1050px;
+    padding-right: $horizontal-pad-secondary_lte-bp1050px;
+    }
+  .padding-align-secondary__undo {
+    margin-left: -$horizontal-pad-secondary_lte-bp1050px;
+    margin-right: -$horizontal-pad-secondary_lte-bp1050px;
+    }
+
+  .padding-align-secondary > thead > tr > th:first-child,
+  .padding-align-secondary > thead > tr > td:first-child,
+  .padding-align-secondary > tbody > tr > td:first-child,
+  .padding-align-secondary > tfoot > tr > td:first-child {
+    padding-left: $horizontal-pad-secondary_lte-bp1050px;
+    }
+  .padding-align-secondary > thead > tr > th:last-child,
+  .padding-align-secondary > thead > tr > td:last-child,
+  .padding-align-secondary > tbody > tr > td:last-child,
+  .padding-align-secondary > tfoot > tr > td:last-child {
+    padding-right: $horizontal-pad-secondary_lte-bp1050px;
+    }
+  }
+
+@media screen and (max-width: bp(bp840px)) {
+  .padding-align-primary {
+    padding-left: $horizontal-pad-primary_lte-bp840px;
+    padding-right: $horizontal-pad-primary_lte-bp840px;
+    }
+  .padding-align-primary__undo {
+    margin-left: -$horizontal-pad-primary_lte-bp840px;
+    margin-right: -$horizontal-pad-primary_lte-bp840px;
+    }
+
+  .padding-align-secondary {
+    padding-left: $horizontal-pad-secondary_lte-bp840px;
+    padding-right: $horizontal-pad-secondary_lte-bp840px;
+    }
+  .padding-align-secondary__undo {
+    margin-left: -$horizontal-pad-secondary_lte-bp840px;
+    margin-right: -$horizontal-pad-secondary_lte-bp840px;
+    }
+
+  .padding-align-primary > thead > tr > th:first-child,
+  .padding-align-primary > thead > tr > td:first-child,
+  .padding-align-primary > tbody > tr > td:first-child,
+  .padding-align-primary > tfoot > tr > td:first-child {
+    padding-left: $horizontal-pad-primary_lte-bp840px;
+    }
+  .padding-align-primary > thead > tr > th:last-child,
+  .padding-align-primary > thead > tr > td:last-child,
+  .padding-align-primary > tbody > tr > td:last-child,
+  .padding-align-primary > tfoot > tr > td:last-child {
+    padding-right: $horizontal-pad-primary_lte-bp840px;
+    }
+
+  .padding-align-secondary > thead > tr > th:first-child,
+  .padding-align-secondary > thead > tr > td:first-child,
+  .padding-align-secondary > tbody > tr > td:first-child,
+  .padding-align-secondary > tfoot > tr > td:first-child {
+    padding-left: $horizontal-pad-secondary_lte-bp840px;
+    }
+  .padding-align-secondary > thead > tr > th:last-child,
+  .padding-align-secondary > thead > tr > td:last-child,
+  .padding-align-secondary > tbody > tr > td:last-child,
+  .padding-align-secondary > tfoot > tr > td:last-child {
+    padding-right: $horizontal-pad-secondary_lte-bp840px;
+    }
+
+  }
+
+
+
+.dib {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  }
+
+.vam,
+.table .vam {
+  vertical-align: middle !important;
+  }
+
+.vat,
+.table .vat {
+  vertical-align: top !important;
+  }
+
+.vab,
+.table .vab {
+  vertical-align: bottom !important;
+  }
+
+
+/*
+  Reset <dt> elements
+*/
+
+.dl, .dt, .dd {
+  margin: 0;
+  padding: 0;
+  }
+
+/*
+  Generic margins
+*/
+
+.shift1 {
+  margin-left: -14px;
+  margin-right: -14px;
+  }
+
+
+.shift_section {
+  margin-top: -2em;
+  margin-bottom: -2em;
+  }
+
+.shift_section + .shift_section {
+  margin-top: 1.538461538em;
+  }
+
+.shift_element {
+  margin-top: -0.3125em;
+  margin-bottom: -0.3125em;
+  }
+
+.shift_element + .shift_element {
+  margin-top: 0.625em;
+  }
+
+.shift_label {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  margin-top: .6em;
+  }
+
+@media screen and (max-width: bp(bp660px)) {
+  .shift_section,
+  .shift_section + .shift_section,
+  .shift_element,
+  .shift_element + .shift_element {
+    /* margin-top: 0; */
+
+    /* margin-bottom: 0; */
+    }
+  }
+
+/*
+  Generic <label>
+*/
+
+.label {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  }
+
+
+/*
+  generic color highlights
+*/
+
+.spec0 {
+  color: #828282;
+  }
+
+.spec1 {
+  color: #202427;
+  }
+
+.spec2 {
+  color: #2d2d2d;
+  }
+
+.spec3 {
+  color: #fff;
+  }
+
+.spec4 {
+  font-style: italic;
+  color: #e71717;
+  }
+
+.spec5 {
+  color: #a9a9a9;
+  }
+
+
+
+.block-link {
+  display: block;
+  text-decoration: none !important;
+  }
+
+.fl-l {
+  float: left;
+  }
+
+.fl-r {
+  float: right;
+  }
+
+.temporary-visible-offscreen {
+  display: block !important;
+  visibility: hidden !important;
+  position: absolute !important;
+  left: -9999px !important;
+  top: -9999px !important;
+  }
+
+.notrs {
+  transition: none !important;
+  }
+
+
+body .gap0 {
+  margin-bottom: 3px;
+  }
+
+.blocks > .gap0 {
+  margin-top: 3px;
+  margin-bottom: 0;
+  }
+
+.blocks > .gap0:first-child {
+  margin-top: 0;
+  }
+
+tr.gap0 > td {
+  padding-bottom: 3px;
+  }
+
+body .gap2 {
+  margin-bottom: 4px;
+  }
+
+.blocks > .gap2 {
+  margin-top: 4px;
+  margin-bottom: 0;
+  }
+
+.blocks > .gap2:first-child {
+  margin-top: 0;
+  }
+
+tr.gap2 > td {
+  padding-bottom: 4px;
+  }
+
+body .gap3 {
+  margin-bottom: 6px;
+  }
+
+.blocks > .gap3 {
+  margin-top: 6px;
+  margin-bottom: 0;
+  }
+
+.blocks > .gap3:first-child {
+  margin-top: 0;
+  }
+
+tr.gap3 > td {
+  padding-bottom: 6px;
+  }
+
+body .gap4 {
+  margin-bottom: 8px;
+  }
+
+.blocks > .gap4 {
+  margin-top: 8px;
+  margin-bottom: 0;
+  }
+
+.blocks > .gap4:first-child {
+  margin-top: 0;
+  }
+
+tr.gap4 > td {
+  padding-bottom: 8px;
+  }
+
+body .gap5 {
+  margin-bottom: 10px;
+  }
+
+.blocks > .gap5 {
+  margin-top: 10px;
+  margin-bottom: 0;
+  }
+
+.blocks > .gap5:first-child {
+  margin-top: 0;
+  }
+
+tr.gap5 > td {
+  padding-bottom: 10px;
+  }
+
+
+body .gap6 {
+  margin-bottom: 12px;
+  }
+
+.blocks > .gap6 {
+  margin-top: 12px;
+  margin-bottom: 0;
+  }
+
+.blocks > .gap6:first-child {
+  margin-top: 0;
+  }
+
+tr.gap6 > td {
+  padding-bottom: 12px;
+  }
+
+body .gap7 {
+  margin-bottom: 14px;
+  }
+
+.blocks > .gap7 {
+  margin-top: 14px;
+  margin-bottom: 0;
+  }
+
+.blocks > .gap7:first-child {
+  margin-top: 0;
+  }
+
+tr.gap7 > td {
+  padding-bottom: 14px;
+  }
+
+body .gap8 {
+  margin-bottom: 16px;
+  }
+
+.blocks > .gap8 {
+  margin-top: 16px;
+  margin-bottom: 0;
+  }
+
+.blocks > .gap8:first-child {
+  margin-top: 0;
+  }
+
+tr.gap8 > td {
+  padding-bottom: 16px;
+  }
+
+body .gap10 {
+  margin-bottom: 20px;
+  }
+
+.blocks > .gap10 {
+  margin-top: 20px;
+  margin-bottom: 0;
+  }
+
+.blocks > .gap10:first-child {
+  margin-top: 0;
+  }
+
+tr.gap10 > td {
+  padding-bottom: 20px;
+  }
+
+body .gap12 {
+  margin-bottom: 24px;
+  }
+
+.blocks > .gap12 {
+  margin-top: 24px;
+  margin-bottom: 0;
+  }
+
+.blocks > .gap12:first-child {
+  margin-top: 0;
+  }
+
+tr.gap12 > td {
+  padding-bottom: 24px;
+  }
+
+body .gap13 {
+  margin-bottom: 26px;
+  }
+
+.blocks > .gap13 {
+  margin-top: 26px;
+  margin-bottom: 0;
+  }
+
+.blocks > .gap13:first-child {
+  margin-top: 0;
+  }
+
+tr.gap13 > td {
+  padding-bottom: 26px;
+  }
+
+body .gap14 {
+  margin-bottom: 28px;
+  }
+
+.blocks > .gap14 {
+  margin-top: 28px;
+  margin-bottom: 0;
+  }
+
+.blocks > .gap14:first-child {
+  margin-top: 0;
+  }
+
+tr.gap14 > td {
+  padding-bottom: 28px;
+  }
+
+body .gap15 {
+  margin-bottom: 30px;
+  }
+
+.blocks > .gap15 {
+  margin-top: 30px;
+  margin-bottom: 0;
+  }
+
+.blocks > .gap15:first-child {
+  margin-top: 0;
+  }
+
+tr.gap15 > td {
+  padding-bottom: 30px;
+  }
+
+body .gap17 {
+  margin-bottom: 34px;
+  }
+
+.blocks > .gap17 {
+  margin-top: 34px;
+  margin-bottom: 0;
+  }
+
+.blocks > .gap17:first-child {
+  margin-top: 0;
+  }
+
+tr.gap17 > td {
+  padding-bottom: 34px;
+  }
+
+body .gap18 {
+  margin-bottom: 36px;
+  }
+
+.blocks > .gap18 {
+  margin-top: 36px;
+  margin-bottom: 0;
+  }
+
+.blocks > .gap18:first-child {
+  margin-top: 0;
+  }
+
+.js table > tbody > tr.gap18 > td,
+.no-js table > tbody > tr.gap18 > td {
+  padding-bottom: 36px;
+  }
+
+body .gap20 {
+  margin-bottom: 40px;
+  }
+
+.blocks > .gap20 {
+  margin-top: 40px;
+  margin-bottom: 0;
+  }
+
+.blocks > .gap20:first-child {
+  margin-top: 0;
+  }
+
+tr.gap20 > td {
+  padding-bottom: 40px;
+  }
+
+body .gap22 {
+  margin-bottom: 44px;
+  }
+
+.blocks > .gap22 {
+  margin-top: 44px;
+  margin-bottom: 0;
+  }
+
+.blocks > .gap22:first-child {
+  margin-top: 0;
+  }
+
+tr.gap22 > td {
+  padding-bottom: 44px;
+  }
+
+body .gap25 {
+  margin-bottom: 50px;
+  }
+
+.blocks > .gap25 {
+  margin-top: 50px;
+  margin-bottom: 0;
+  }
+
+.blocks > .gap25:first-child {
+  margin-top: 0;
+  }
+
+tr.gap25 > td {
+  padding-bottom: 50px;
+  }
+
+body .gap27 {
+  margin-bottom: 54px;
+  }
+
+.blocks > .gap27 {
+  margin-top: 54px;
+  margin-bottom: 0;
+  }
+
+.blocks > .gap27:first-child {
+  margin-top: 0;
+  }
+
+tr.gap27 > td {
+  padding-bottom: 54px;
+  }
+
+body .gap30 {
+  margin-bottom: 60px;
+  }
+
+.blocks > .gap30 {
+  margin-top: 60px;
+  margin-bottom: 0;
+  }
+
+.blocks > .gap30:first-child {
+  margin-top: 0;
+  }
+
+tr.gap30 > td {
+  padding-bottom: 60px;
+  }
+
+body .gap33 {
+  margin-bottom: 66px;
+  }
+
+.blocks > .gap33 {
+  margin-top: 66px;
+  margin-bottom: 0;
+  }
+
+.blocks > .gap33:first-child {
+  margin-top: 0;
+  }
+
+.js table tr.gap33 > td,
+.no-js table tr.gap33 > td {
+  padding-bottom: 66px;
+  }
+
+body .gap39 {
+  margin-bottom: 78px;
+  }
+
+.blocks > .gap39 {
+  margin-top: 78px;
+  margin-bottom: 0;
+  }
+
+.blocks > .gap39:first-child {
+  margin-top: 0;
+  }
+
+.js table tr.gap39 > td,
+.no-js table tr.gap39 > td {
+  padding-bottom: 78px;
+  }
+
+.noLh {
+  line-height: 0 !important;
+  }
+
+.tar,
+.tar > input {
+  text-align: right !important;
+  }
+
+.tar > input {
+  *text-align: left !important;
+  }
+
+.tac {
+  text-align: center !important;
+  }
+
+.tal {
+  text-align: left !important;
+  }
+
+.nowrap {
+  white-space: nowrap;
+  }
+
+.nowrap_ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  }
+
+.bw {
+  -ms-word-wrap: break-word;
+  word-wrap: break-word;
+  }
+
+.gap-gen {
+  margin-bottom: 20px;
+  }
+
+
+
+
+/*
+ * Hide visually and from screen readers
+ */
+
+.hidden {
+  display: none !important;
+}
+
+/*
+* Hide only visually, but have it available for screen readers:
+* https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+*
+* 1. For long content, line feeds are not interpreted as spaces and small width
+*    causes content to wrap 1 word per line:
+*    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+*/
+
+.sr-only {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px; /* 1 */
+}
+
+/*
+* Extends the .sr-only class to allow the element
+* to be focusable when navigated to via the keyboard:
+* https://www.drupal.org/node/897638
+*/
+
+.sr-only.focusable:active,
+.sr-only.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  white-space: inherit;
+  width: auto;
+}
+
+/*
+* Hide visually and from screen readers, but maintain layout
+*/
+
+.invisible {
+  visibility: hidden;
+}
+
+/*
+* Clearfix: contain floats
+*
+* For modern browsers
+* 1. The space content is one way to avoid an Opera bug when the
+*    `contenteditable` attribute is included anywhere else in the document.
+*    Otherwise it causes space to appear at the top and bottom of elements
+*    that receive the `clearfix` class.
+* 2. The use of `table` rather than `block` is only necessary if using
+*    `:before` to contain the top-margins of child elements.
+*/
+
+.clearfix::before,
+.clearfix::after {
+  content: " "; /* 1 */
+  display: table; /* 2 */
+}
+
+.clearfix::after {
+  clear: both;
+}

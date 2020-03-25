@@ -1,0 +1,17 @@
+<script type="text/x-jquery-tmpl" id="prod_adjuster">
+    <div data-id="<%= id %>" class="js-prod js-prod-adjuster prod-adjuster">
+        <button title="Закрыть" type="button" class="js-tippy-close tippy-close btn prod-adjuster__close"></button>
+        <div class="prod-adjuster__desc">В корзине:</div>
+        <div class="prod-adjuster__handler">
+            <div class="numspin_block numspin">
+                <div class="numspin__input-w input_num input_msg_t input_hinted input_skin_4 input">
+                    <div class="hint_bubble hint_custom-trigger hint">Введите число</div>
+                    <button type="button" title="уменьшить" class="btn numspin__control numspin__control_dec"></button>
+                    <input data-min="1" title="введите количество товара" value="<%= quantity %>" autocomplete="off" type="text" class="tac js-prod__counter numeric numspin__input">
+                    <button type="button" title="увеличить" class="btn numspin__control numspin__control_inc"></button>
+                </div>
+            </div>
+        </div>
+        (<span class="js-prod__vol"><%= Math.round(quantity / unitVol * 100) / 100 %></span> упак.)
+    </div>
+</script>

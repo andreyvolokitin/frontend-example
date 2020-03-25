@@ -1,0 +1,15 @@
+.fullscreen,
+.fotorama--fullscreen,
+.fotorama--fullscreen .fotorama__nav,
+.fotorama--fullscreen .fotorama__stage {
+  background: #fff;
+  }
+
+/* stylelint-disable-next-line selector-type-no-unknown */
+_:-ms-fullscreen, :root .fotorama__stage__frame {
+  display: none;
+  }
+/* stylelint-disable-next-line selector-type-no-unknown */
+_:-ms-fullscreen, :root .fotorama__stage__frame.fotorama__loaded {
+  display: block;
+  }

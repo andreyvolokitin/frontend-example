@@ -1,0 +1,31 @@
+/* stylelint-disable no-descending-specificity  */
+
+.nav-handl {
+  width: 40px;
+  height: 42px;
+  position: relative;
+  background: #fff;
+  }
+
+a:hover .nav-handl,
+a:focus .nav-handl,
+.nav-handl:hover,
+.nav-handl:focus {
+  background-color: $brand-color;
+  }
+
+.nav-handl::before {
+  @include pill__pseudo;
+  }
+.nav-handl_prev::before {
+  @include pill__pseudo_prev;
+  }
+.nav-handl_next::before {
+  @include pill__pseudo_next;
+  }
+a:hover .nav-handl::before,
+a:focus .nav-handl::before,
+.nav-handl:hover::before,
+.nav-handl:focus::before {
+  @include pill__pseudo_hovered;
+  }

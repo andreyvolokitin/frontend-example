@@ -1,0 +1,63 @@
+/* stylelint-disable no-descending-specificity  */
+.list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  }
+
+.list_0 {
+  line-height: 1.3;
+  }
+
+.list_0 > li {
+  margin-bottom: 3px;
+  }
+
+.list_0 > li:last-child {
+  margin-bottom: 0;
+  }
+
+.list_1 {
+  line-height: 1.3;
+  }
+
+.list_1 > li {
+  margin-bottom: 25px;
+  }
+
+.list_1 > li:last-child {
+  margin-bottom: 0;
+  }
+
+
+.list_2 > li {
+  margin-bottom: 20px;
+  }
+
+.list_2 > li:last-child {
+  margin-bottom: 0;
+  }
+
+.list_3 > li {
+  margin-bottom: 8px;
+  }
+
+.list_3 > li:last-child {
+  margin-bottom: 0;
+  }
+
+.list_4 > li {
+  margin-bottom: 28px;
+  }
+
+.list_4 > li:last-child {
+  margin-bottom: 0;
+  }
+
+.list_5 > li {
+  margin-bottom: 17px;
+  }
+
+.list_5 > li:last-child {
+  margin-bottom: 0;
+  }

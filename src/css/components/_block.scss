@@ -1,0 +1,145 @@
+/**
+  Styled blocks.
+ */
+
+.block0 {
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  padding-top: 33px;
+  }
+
+.block0::before,
+.block0::after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  background: #f4f4f4;
+  }
+
+.block0::before {
+  width: 200%;
+  height: 170px;
+  left: 50%;
+  top: 0;
+  transform: translate(-50%, 0);
+  border-radius: 50% / 100%;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  }
+
+.block0::after {
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 160px;
+  }
+
+
+.block1,
+.block2 {
+  background-color: white;
+  box-shadow: 0 0 4px rgba(35, 31, 32, 0.16);
+  }
+
+.block1 {
+  padding: 20px;
+  }
+.block1__hshift {
+  margin-left: -20px;
+  margin-right: -20px;
+  }
+.block1__fshift {
+  margin: -20px;
+  }
+
+.block2 {
+  padding: 28px 25px;
+  }
+.block2__hshift {
+  margin-left: -25px;
+  margin-right: -25px;
+  }
+.block2__fshift {
+  margin: -28px -25px;
+  }
+
+.block2_a {
+  background-color: transparent;
+  box-shadow: none;
+  }
+
+.block2_b {
+  box-shadow: none;
+  }
+
+@media screen and (max-width: bp(bp1050px)) {
+  .block2:not(.prod-tabs__panels) {
+    padding-top: $horizontal-pad-primary;
+    padding-bottom: $horizontal-pad-primary;
+    }
+  .block2__fshift {
+    margin: -$horizontal-pad-primary (-$horizontal-pad-secondary_lte-bp1050px);
+    }
+  }
+@media screen and (max-width: bp(bp840px)) {
+  .block1 {
+    padding-left: $horizontal-pad-primary_lte-bp840px;
+    padding-right: $horizontal-pad-primary_lte-bp840px;
+    }
+  .block2 {
+    padding-left: $horizontal-pad-secondary_lte-bp840px;
+    padding-right: $horizontal-pad-secondary_lte-bp840px;
+    }
+  .block1__fshift {
+    margin-left: -$horizontal-pad-primary_lte-bp840px;
+    margin-right: -$horizontal-pad-primary_lte-bp840px;
+    }
+  .block2__fshift {
+    margin-left: -$horizontal-pad-secondary_lte-bp840px;
+    margin-right: -$horizontal-pad-secondary_lte-bp840px;
+    }
+  }
+
+
+
+.block3 {
+  padding-bottom: 36px;
+  border-bottom: 1px solid #ececec;
+  }
+
+.block3 + .block3 {
+  margin-top: 28px;
+  }
+
+.block3:last-child {
+  padding-bottom: 0;
+  border-bottom: none;
+  }
+
+.block5 {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background: #f3f3f3;
+  }
+
+.block6 {
+  width: 78%;
+  position: relative;
+  text-align: center;
+  padding-top: 18px;
+  margin-left: auto;
+  margin-right: auto;
+  }
+
+.block6::before {
+  content: '';
+  position: absolute;
+  width: 51px;
+  height: 1px;
+  background-color: #b5b5b5;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+  }
+

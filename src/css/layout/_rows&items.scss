@@ -1,0 +1,377 @@
+/* stylelint-disable no-descending-specificity  */
+
+/**
+  Very simple "grid"-like styles. Not really a grid
+ */
+
+.row {
+  white-space: nowrap !important;
+  }
+
+.row_wrap {
+  white-space: normal !important;
+  }
+
+.item > * {
+  white-space: normal;
+  }
+
+.item {
+  display: inline-block;
+  zoom: 1;
+  vertical-align: top;
+  margin-left: -4px;
+  max-width: 100%;
+  }
+
+.row_type_fl > .item {
+  float: left;
+  margin-left: 0;
+  }
+
+.item_element {
+  margin: 0.3125em 26px 0.3125em 0;
+  }
+
+.item_section {
+  margin: 2em 40px 2em 0;
+  }
+
+.item_0 {
+  margin-left: 0;
+  margin-right: 24px;
+  }
+
+.item_1 {
+  margin-right: 19.002375297%;
+  }
+
+.item_2,
+body .aligned > .item_2,
+body .aligned-row > .item_2,
+body .row > .item_2 {
+  margin-left: 14px;
+  margin-right: 14px;
+  }
+
+.item_4 {
+  margin-right: 6px;
+  }
+
+.item_5 {
+  margin-right: 11px;
+  }
+
+.item_fake {
+  height: 0 !important;
+  border: none !important;
+  background: none !important;
+  margin-bottom: 0 !important;
+  }
+
+.item:first-child {
+  margin-left: 0;
+  padding-left: 0;
+  border-left: none;
+  }
+
+.item:last-child,
+[class~='item']:last-of-type {
+  margin-right: 0;
+  }
+
+
+.aligned > .item,
+.aligned-row > .item {
+  font-size: $font-size-primary;
+  line-height: $line-height-primary;
+
+  @media screen and (max-width: bp(bp736px)) {
+      font-size: $font-size-primary_lte-bp736px;
+    }
+  }
+
+.aligned-row > .item {
+  overflow: visible;
+  text-align: left;
+  position: relative;
+  margin-left: 0;
+  }
+
+.aligned-row,
+body .aligned-row.item {
+  position: relative;
+  text-align: justify;
+  line-height: 0;
+  font-size: 1px;
+  }
+
+/* Chrome 37+ (and Opera 24+) */
+@supports (-webkit-appearance:none) and (shape-outside:none) {
+  .aligned-row,
+  body .aligned-row.item {
+    font-size: 0;
+    }
+  }
+
+/* stylelint-disable-next-line selector-type-no-unknown */
+_:-ms-input-placeholder, :root .aligned-row,
+body .aligned-row.item {
+  text-align-last: justify;
+  }
+
+.ie9 .aligned-row,
+.ie9 body .aligned-row.item {
+  text-align-last: justify;
+  }
+
+.aligned-row::after {
+  content: "";
+  display: inline-block;
+  width: 100%;
+  height: 0;
+  line-height: 0;
+  overflow: hidden;
+  }
+
+.aligned {
+  width: 100%;
+  text-align: justify;
+  white-space: normal;
+  overflow: visible;
+  word-spacing: 0;
+  letter-spacing: 0;
+  line-height: 0;
+  font-size: 1px;
+
+  }
+
+.aligned__under {
+  display: inline-block;
+  width: 100%;
+  height: 0;
+  line-height: 0;
+  }
+
+.aligned > .item {
+  position: relative;
+  text-align: left;
+  margin-left: 0;
+  word-spacing: normal;
+  letter-spacing: normal;
+  }
+
+/* stylelint-disable-next-line selector-type-no-unknown */
+doesnotexist:-o-prefocus, .aligned, .aligned-row {
+  line-height: 3px;
+  font-size: 3px;
+  }
+
+
+.row_bl > .item {
+  vertical-align: baseline;
+  }
+
+.row_m > .item {
+  vertical-align: middle;
+  }
+
+.row_b > .item {
+  vertical-align: bottom;
+  }
+
+.row_t > .item {
+  vertical-align: top;
+  }
+
+/**
+  For `.item` with fixed width — do not exceed a screen width
+  (relevant for narrow screens).
+ */
+
+.limited {
+  max-width: 100%;
+  }
+
+/*
+  Specific items
+*/
+
+.info-item {
+  width: 45%;
+  }
+
+.cabinet-history {
+  width: 370px;
+  margin-right: 100px;
+  }
+
+.cabinet-personal {
+  width: 380px;
+  }
+
+.cabinet-personal_splashed {
+  margin: 50px auto;
+  }
+
+.plus-item {
+  width: 45%;
+  }
+
+.plus-item,
+.plus-item.item_section {
+  margin-right: 4%;
+  }
+
+.contact-item {
+  width: 21%;
+  min-width: 190px;
+  margin: 0 30px 30px 0;
+  }
+
+.about-item {
+  width: 47%;
+
+  @media screen and (max-width: bp(bp1150px)) {
+    display: block;
+    width: auto;
+    }
+  }
+
+.content-item {
+  width: 294px;
+  max-width: 42%;
+  max-width: calc(50% - 40px);
+  margin-right: 40px;
+  }
+
+.adv-item {
+  width: 240px;
+  margin-right: 27px;
+  }
+
+.brand-info {
+  max-width: 60%;
+  margin-right: 9%;
+  }
+
+.brand-logo {
+  max-width: 30%;
+  min-width: 65px;
+  }
+
+.char-item {
+  width: 45%;
+  }
+
+.pdesc-item1 {
+  width: 60%;
+
+  @media screen and (max-width: bp(bp980px)) {
+    width: 50%;
+    }
+  }
+
+.pdesc-item2 {
+  width: 33%;
+
+  @media screen and (max-width: bp(bp980px)) {
+    width: 40%;
+    }
+  }
+
+.branch-item {
+  width: 290px;
+  margin-right: 28px;
+
+  @media screen and (max-width: bp(bp660px)) {
+    display: block;
+    margin: 0 0 28px;
+    width: auto;
+
+    &:last-child {
+      margin-bottom: 0;
+      }
+    }
+  }
+
+.dealer-item {
+  width: 28.571428571%;
+  margin-bottom: 50px;
+  }
+
+.about-container {
+  @media screen and (max-width: bp(bp1150px)) {
+    display: block;
+    width: auto;
+    }
+  @media screen and (max-width: bp(bp840px)) {
+    display: inline-block;
+    width: 59.722222222%;
+    }
+  @media screen and (max-width: bp(bp660px)) {
+    display: block;
+    width: auto;
+    margin-bottom: 36px;
+
+    & .hd_0 {
+      text-align: center;
+      }
+    }
+  }
+
+
+.paging-item {
+  margin-right: 10px;
+  }
+
+
+@media screen and (max-width: bp(bp660px)) {
+  .limited {
+    display: block;
+    width: auto !important;
+    min-width: 0;
+    max-width: none;
+    margin-right: 0;
+    margin-left: 0;
+    }
+
+  .item_element:not(.item_element-half),
+  .item_section {
+    display: block;
+    }
+
+  .item_element {
+    margin-left: 0;
+    margin-right: 0;
+
+    /* margin: 0.5em 0; */
+    }
+
+  .item_section {
+    margin-left: 0;
+    margin-right: 0;
+
+    /* margin: 1.25em 0; */
+    }
+
+  .item_element:first-child,
+  .item_section:first-child,
+  .item_element:first-of-type,
+  .item_section:first-of-type {
+    /* margin-top: 0; */
+    }
+
+  .item_element:last-child,
+  .item_section:last-child,
+  .item_element:last-of-type,
+  .item_section:last-of-type {
+    /* margin-bottom: 0; */
+    }
+
+  .item_element-half {
+    width: 48%;
+    margin-right: 3%;
+    margin-right: calc(4% - 5px);
+    }
+  }

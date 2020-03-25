@@ -1,0 +1,15 @@
+.branded-head {
+  padding-top: 78px;
+  position: relative;
+  }
+
+.branded-head::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: url(assets/img/logo.png) 0 0 no-repeat at-2x;
+  background-size: contain;
+  width: 104px;
+  height: 60px;
+  }

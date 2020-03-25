@@ -1,0 +1,19 @@
+.cat-h {
+  display: none;
+
+  @media screen and (max-width: bp(bp660px)) {
+    display: block;
+    }
+  }
+@media screen and (max-width: bp(bp660px)) {
+  .cat-h__search,
+  .cat-h__search.item {
+    margin-right: -1em;
+    }
+  }
+@media screen and (max-width: bp(bp500px)) {
+  .cat-h__trigger-optional-word {
+    display: none;
+    }
+  }
+

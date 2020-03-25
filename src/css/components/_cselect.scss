@@ -1,0 +1,283 @@
+/* stylelint-disable no-descending-specificity */
+
+
+/**
+ * Custom select
+ */
+$_cselect-gap-arrow: $common-select-arrow-gap;
+
+.ui-select {
+  margin-top: 0;
+  margin-bottom: 0;
+  max-width: 100%;
+  }
+.ui-select .ui-btn.ui-state-disabled {
+  opacity: .6;
+  }
+
+.opera .ui-select .ui-btn.ui-select-nativeonly select {
+  opacity: 0;
+  display: inline-block;
+  }
+
+.ui-select .ui-btn,
+.opera .ui-select .ui-btn {
+  @include field;
+  }
+.ui-select .ui-btn.ui-focus,
+.opera .ui-select .ui-btn.ui-focus {
+  @include field_focused;
+
+  outline: none;
+  }
+.ui-btn {
+  @include field__field;
+
+  font-size: inherit;
+  text-align: left;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+  }
+.ui-mini {
+  font-size: 0.961538462rem;
+  }
+.ui-btn-icon-left {
+  padding-left: $_cselect-gap-arrow;
+  }
+.ui-btn.ui-btn-icon-right {
+  padding-right: $_cselect-gap-arrow;
+  }
+.ui-btn-icon-top {
+  padding-top: $_cselect-gap-arrow;
+  }
+.ui-btn-icon-bottom {
+  padding-bottom: $_cselect-gap-arrow;
+  }
+
+.ui-btn-icon-left::after,
+.ui-btn-icon-right::after,
+.ui-btn-icon-top::after,
+.ui-btn-icon-bottom::after,
+.ui-btn-icon-notext::after {
+  width: $_cselect-gap-arrow;
+  height: 100%;
+  background: url(assets/img/i20.png) 50% 50% no-repeat at-2x;
+
+  //@include at2x {
+  //  background-image: url(assets/img/i20@2x.png);
+  //  }
+  }
+.ui-btn-icon-notext::after,
+.ui-btn-icon-left::after,
+.ui-btn-icon-right::after {
+  top: 0;
+  margin-top: 0;
+  }
+.ui-btn-icon-left::after {
+  left: 0;
+  }
+.ui-btn-icon-right::after {
+  right: 0;
+  }
+
+.js .error .ui-selectmenu,
+.error .ui-select .ui-btn,
+.opera .error .ui-select .ui-btn {
+  @include field_invalid;
+  }
+.validate-field.error .ui-select span.cselect,
+.validate-field.error .ui-selectmenu .ui-selectmenu-text {
+  @include field__content_invalid;
+  }
+.validate-field_er_t.error .ui-select span.cselect,
+.validate-field_er_t.error .ui-selectmenu .ui-selectmenu-text,
+.validate-field_er_r.error .ui-select span.cselect,
+.validate-field_er_r.error .ui-selectmenu .ui-selectmenu-text,
+.validate-field_er_b.error .ui-select span.cselect,
+.validate-field_er_b.error .ui-selectmenu .ui-selectmenu-text,
+.validate-field_er_l.error .ui-select span.cselect,
+.validate-field_er_l.error .ui-selectmenu .ui-selectmenu-text {
+  @include field__content_invalid-with-bubble-error;
+  }
+.ui-select .ui-btn > .is-label {
+  color: $_field-placeholder-color;
+  }
+
+.ui-select .ui-btn > span:not(.ui-li-count) {
+  @include field__label;
+
+  position: relative;
+  padding-left: 0;
+  padding-right: 0;
+  height: 100%;
+  }
+
+@-moz-document url-prefix() {
+  .ui-btn-inline .ui-btn > span:not(.ui-li-count)::before {
+    height: 0.62em;
+    }
+  }
+
+.ui-select .ui-btn-t0,
+.opera .ui-select .ui-btn-t0 {
+  @include field_skin0;
+  }
+.ui-select .ui-btn-t0 > span.is-label {
+  @include field__label_skin0;
+  }
+
+@-moz-document url-prefix() {
+  .ui-btn-inline .ui-btn-t0 > span.is-label::before {
+    height: 0.71em;
+    }
+  }
+
+.ui-select .ui-btn-t1,
+.opera .ui-select .ui-btn-t1 {
+  @include field_skin1;
+  }
+.ui-btn-t1 {
+  @include field__field_skin1;
+  }
+.ui-select .ui-btn-t1 > .is-label {
+  color: $_field-placeholder-color_skin1;
+  }
+@-moz-document url-prefix() {
+  .ui-btn-inline .ui-btn-t1 > span:not(.ui-li-count)::before {
+    height: 0.5em;
+    }
+  }
+
+
+
+.ui-select .ui-btn-t2,
+.opera .ui-select .ui-btn-t2 {
+  @include field_skin2;
+  }
+.ui-select .ui-btn-t2.ui-focus {
+  @include field_focused_skin2;
+  }
+.ui-btn-t2 {
+  @include field__field_skin2;
+  }
+.ui-select .ui-btn-t2 > span.is-label {
+  @include field__label_skin2;
+  }
+@-moz-document url-prefix() {
+  .ui-btn-inline .ui-btn-t2 > span:not(.ui-li-count)::before {
+    height: .56em;
+    }
+  .ui-btn-inline .ui-btn-t2 > span.is-label::before {
+    height: .64em;
+    }
+  }
+
+.ui-select .ui-btn-t3,
+.opera .ui-select .ui-btn-t3 {
+  border: none;
+  box-shadow: none;
+  background: none;
+  padding-left: 0;
+  }
+.ui-btn-t3.ui-btn-icon-right {
+  padding-right: 2.333333333em;
+  }
+.ui-btn-t3.ui-btn-icon-left::after,
+.ui-btn-t3.ui-btn-icon-right::after,
+.ui-btn-t3.ui-btn-icon-top::after,
+.ui-btn-t3.ui-btn-icon-bottom::after,
+.ui-btn-t3.ui-btn-icon-notext::after {
+  width: 1.333333em;
+  height: 1.4em;
+  background-color: #fff;
+  }
+.ui-btn-t3.ui-btn-icon-left::after,
+.ui-btn-t3.ui-btn-icon-right::after,
+.ui-btn-t3.ui-btn-icon-notext::after {
+  top: 50%;
+  transform: translate(0, -50%);
+  }
+.ui-select .ui-btn-t3 > span:not(.ui-li-count),
+.ui-select .ui-btn-t3 > .error {
+  left: 0;
+  }
+
+.ui-select .ui-btn-t4,
+.opera .ui-select .ui-btn-t4 {
+  @include field_skin4;
+  }
+.ui-btn-t4 {
+  @include field__content_skin4;
+  @include field__field_skin4;
+  }
+@-moz-document url-prefix() {
+  .ui-btn-inline .ui-btn-t4 > span:not(.ui-li-count)::before {
+    height: 0.63em;
+    }
+  }
+
+.ui-select .ui-btn-t5,
+.opera .ui-select .ui-btn-t5 {
+  @include field_skin5;
+  }
+.ui-btn-t5 {
+  @include field__content_skin5;
+  @include field__field_skin5;
+  }
+.ui-select .ui-btn-t5 > .is-label {
+  color: $_field-placeholder-color_skin5;
+  }
+@-moz-document url-prefix() {
+  .ui-btn-inline .ui-btn-t5 > span:not(.ui-li-count)::before {
+    height: 0.6em;
+    }
+  }
+
+.ui-select .ui-btn-t6,
+.opera .ui-select .ui-btn-t6 {
+  @include field_skin6;
+  }
+
+
+.ui-btn-inline:last-child {
+  margin-right: 0;
+  }
+.ui-btn-inline {
+  overflow: visible;
+  z-index: 1;
+
+  /*
+  display: -ms-inline-flexbox;
+  display: -webkit-inline-flex;
+  */
+  display: inline-flex;
+
+  /* Fixing Opera issue */
+
+  /* flex-direction: column; */
+
+  vertical-align: baseline;
+  }
+.ui-btn-inline .ui-btn {
+  /* Fixing IE issue */
+  -ms-flex-negative: 1;
+  }
+@-moz-document url-prefix() {
+  /* Fixing Fx issue */
+  .ui-btn-inline .ui-btn > span:not(.ui-li-count) {
+    padding-top: 0;
+    }
+  .ui-btn-inline .ui-btn > span:not(.ui-li-count)::before {
+    content: "";
+    display: block;
+    }
+  }
+.ie9 .ui-btn-inline {
+  vertical-align: middle;
+  top: -.1em;
+  }
+
+
+

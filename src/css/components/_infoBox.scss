@@ -1,0 +1,49 @@
+.infoBox {
+  font-family: $text-font-stack;
+  max-width: 100%;
+  width: 328px;
+  padding: 22px 20px 20px 58px;
+  box-sizing: border-box;
+  background: white url("assets/img/i49.png") 24px 20px no-repeat at-2x;
+  box-shadow: 0 1px 1px rgba(35, 31, 32, 0.35);
+  z-index: 1;
+  }
+.wf-active .infoBox {
+  font-family: $text-font-stack-custom;
+  }
+
+.infoBox > img {
+  width: 15px;
+  height: 15px;
+  background: url(assets/img/i24.png) 0 0 no-repeat at-2x;
+  position: absolute !important;
+  right: 0;
+  top: 0;
+  }
+
+.infoBox::before,
+.infoBox::after {
+  content: '';
+  position: absolute;
+  }
+
+.infoBox::after {
+  width: 0;
+  height: 0;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-top: 8px solid #fff;
+  bottom: -8px;
+  left: 22px;
+  z-index: -1;
+  }
+
+.infoBox::before {
+  z-index: -2;
+  background: url(assets/img/bg4.png) 0 0 no-repeat;
+  width: 38px;
+  height: 11px;
+  bottom: -12px;
+  left: 6px;
+  display: none;
+  }

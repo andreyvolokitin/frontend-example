@@ -1,0 +1,154 @@
+{
+  "discountPercentage": 8.5,
+  "offpageBasket": {
+    "total": 0,
+    "quantity": 0
+  },
+  "offpageCompare": 0,
+  "onpageProducts": {
+    "1": {
+      "id": "1",
+      "boughtPic": "assets/img/badge.jpg",
+      "price": 12343,
+      "quantity": 24,
+      "unitVol": 24,
+      "compared": true
+    },
+    "2": {
+      "id": "2",
+      "boughtPic": "assets/img/badge.jpg",
+      "price": 100,
+      "quantity": 24,
+      "unitVol": 24,
+      "compared": false
+    },
+    "3": {
+      "id": "3",
+      "boughtPic": "assets/img/badge.jpg",
+      "price": 999999,
+      "quantity": 0,
+      "unitVol": 24,
+      "compared": false
+    },
+    "4": {
+      "id": "4",
+      "boughtPic": "assets/img/badge.jpg",
+      "price": 3434,
+      "quantity": 0,
+      "unitVol": 24,
+      "compared": false
+    },
+    "5": {
+      "id": "5",
+      "boughtPic": "assets/img/badge.jpg",
+      "price": 2322,
+      "quantity": 0,
+      "unitVol": 24,
+      "compared": false
+    },
+    "6": {
+      "id": "6",
+      "boughtPic": "assets/img/badge.jpg",
+      "price": 4545,
+      "quantity": 0,
+      "unitVol": 24,
+      "compared": false
+    },
+    "7": {
+      "id": "7",
+      "boughtPic": "assets/img/badge.jpg",
+      "price": 122,
+      "quantity": 0,
+      "unitVol": 24,
+      "compared": false
+    },
+    "9": {
+      "id": "9",
+      "boughtPic": "assets/img/badge.jpg",
+      "price": 100,
+      "quantity": 0,
+      "unitVol": 24,
+      "compared": true
+    },
+    "10": {
+      "id": "10",
+      "boughtPic": "assets/img/badge.jpg",
+      "price": 999999,
+      "quantity": 0,
+      "unitVol": 24,
+      "compared": true
+    },
+    "11": {
+      "id": "11",
+      "boughtPic": "assets/img/badge.jpg",
+      "price": 3434,
+      "quantity": 0,
+      "unitVol": 24,
+      "compared": true
+    },
+    "12": {
+      "id": "12",
+      "boughtPic": "assets/img/badge.jpg",
+      "price": 2322,
+      "quantity": 0,
+      "unitVol": 24,
+      "compared": true
+    },
+    "13": {
+      "id": "13",
+      "boughtPic": "assets/img/badge.jpg",
+      "price": 4545,
+      "quantity": 0,
+      "unitVol": 24,
+      "compared": true
+    },
+    "14": {
+      "id": "14",
+      "boughtPic": "assets/img/badge.jpg",
+      "price": 122,
+      "quantity": 0,
+      "unitVol": 24,
+      "compared": true
+    },
+    "15": {
+      "id": "15",
+      "boughtPic": "assets/img/badge.jpg",
+      "price": 122,
+      "quantity": 0,
+      "unitVol": 24,
+      "compared": true
+    },
+    "16": {
+      "id": "16",
+      "boughtPic": "assets/img/badge.jpg",
+      "price": 122,
+      "quantity": 0,
+      "unitVol": 24,
+      "compared": true
+    },
+    "17": {
+      "id": "17",
+      "boughtPic": "assets/img/badge.jpg",
+      "price": 122,
+      "quantity": 0,
+      "unitVol": 24,
+      "compared": true
+    },
+    "18": {
+      "id": "18",
+      "boughtPic": "assets/img/badge.jpg",
+      "price": 122,
+      "quantity": 0,
+      "unitVol": 24,
+      "compared": true
+    },
+    "19": {
+      "id": "19",
+      "boughtPic": "assets/img/badge.jpg",
+      "price": 122,
+      "quantity": 0,
+      "unitVol": 24,
+      "compared": true
+    }
+  }
+}

@@ -1,0 +1,31 @@
+.apply {
+  float: right;
+  margin-bottom: 44px;
+  width: 32%;
+  margin-left: 10%;
+  }
+@media screen and (max-width: 1050px) {
+  .apply {
+    float: none;
+    width: auto;
+    margin-left: 0;
+    }
+  .apply__item {
+    float: left;
+    width: 43%;
+    margin-right: 6.502890173%;
+    }
+  }
+
+@media screen and (max-width: bp(bp840px)) {
+  .apply__item {
+    width: 38.150289017%;
+    }
+  }
+@media screen and (max-width: bp(bp660px)) {
+  .apply__item {
+    width: auto;
+    margin-right: 0;
+    float: none;
+    }
+  }

@@ -1,0 +1,16 @@
+.dl, .dt, .dd {
+  margin: 0;
+  padding: 0;
+  }
+
+.dt, .dd {
+  display: inline;
+  }
+
+.dl_skin_0 > .dd::after {
+  content: '\A';
+  white-space: pre;
+  display: block;
+  line-height: 5px;
+  height: 5px;
+  }

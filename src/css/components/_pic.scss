@@ -1,0 +1,76 @@
+/* stylelint-disable no-descending-specificity  */
+
+.pic {
+  display: inline-block;
+  max-width: 100%;
+  }
+
+.pic_0,
+.pic_1 {
+  position: relative;
+  }
+
+.pic_0 {
+  padding-bottom: 15px;
+  }
+
+.pic_1 {
+  padding-bottom: 30px;
+  }
+
+.pic_0::before,
+.pic_1::before {
+  content: '';
+  position: absolute;
+  z-index: 0;
+  left: 50%;
+  bottom: 3px;
+  width: 70%;
+  height: 2px;
+  border-radius: 50%;
+  }
+
+.opera .pic_0::before,
+.opera .pic_1::before {
+  display: none;
+  }
+
+.pic_0::before {
+  background: rgba(0, 0, 0, 0.12);
+  box-shadow: 0 0 25px 4px rgba(0, 0, 0, 0.35);
+  transform: scale(1, 0.35) translate(-50%, 0);
+  }
+
+.pic_1::before {
+  width: 95%;
+  background: rgba(0, 0, 0, 0.12);
+  box-shadow: 0 0 30px 4px rgba(0, 0, 0, 0.2);
+  transform: scale(1, 0.45) translate(-50%, 0);
+  bottom: 5px;
+  }
+
+.csstransforms3d .pic_0::before,
+.csstransforms3d .pic_1::before {
+  width: 92%;
+  }
+
+.csstransforms3d .pic_0::before {
+  background: rgba(0, 0, 0, 0.12);
+  box-shadow: 0 0 25px 4px rgba(0, 0, 0, 0.31);
+  transform: rotateX(70deg) translate(-50%, 0);
+  }
+
+.csstransforms3d .pic_1::before {
+  background: rgba(0, 0, 0, 0.15);
+  box-shadow: 0 0 30px 4px rgba(0, 0, 0, 0.15);
+  transform: rotateX(62deg) translate(-50%, 0);
+  }
+
+@-moz-document url-prefix() {
+  .csstransforms3d .pic_0::before {
+    box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.31);
+    }
+  .csstransforms3d .pic_1::before {
+    box-shadow: 0 0 20px 4px rgba(0, 0, 0, 0.15);
+    }
+  }
