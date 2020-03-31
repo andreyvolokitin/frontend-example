@@ -25,20 +25,19 @@ function setDisabled(elem, disabled) {
 
 /**
  * Designate request state with a spinner, class names and events on target element(s)
- * @param fn {Function} - function with request code, can handle request promise (for early handling without synthetic delay),
+ * @param fn {Function} - function with request code, can handle request promise (for early handling without `minimalRequestDelay`),
  * should return initial request object.
  * @param opts:
  *  target {HTMLElement} - element associated with request, which will receive class names and events regarding request state
  *  spinTarget {HTMLElement|Boolean} - optional element to append the spinner, will receive class names regarding request state. "False" for no spinner
  *  allowConcurrent {Boolean} - allow concurrent requests while there is already pending request for the same target
- *  allowSubsequent {Boolean} - always allow requests for the same target
+ *  allowSubsequent {Boolean} - always allow requests for the same target (as opposed to allowing only one successful request)
  *  spinner {Object} - spinner options (`spin.js`)
  * @returns {Promise} - initial request object
  */
 function request(fn, opts) {
   const defaults = {
     target: document.documentElement,
-    // don't use getters because they can't be extended with $.extend, and additional polyfills (like Object.assign) are unwelcome
     spinTarget() {
       return this.target.querySelector('button[type="submit"]') || this.target;
     },
