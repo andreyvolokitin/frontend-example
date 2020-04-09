@@ -29,8 +29,7 @@ module.exports = ({ file, options, env }) => ({
       },
     }),
 
-    // Replace URLs inside `ajax` folder in order to resolve them later with `html-loader`.
-    // `html-loader` will process and replace these URLs in the final output.
+    // Replace URLs inside inline styles
     require('posthtml-postcss')(
       [
         require('postcss-urlrewrite')({

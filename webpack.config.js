@@ -1,4 +1,4 @@
-require('dotenv').config();
+require('dotenv').config(); // https://github.com/kentcdodds/cross-env/issues/56
 require('core-js/stable');
 require('regenerator-runtime/runtime');
 
