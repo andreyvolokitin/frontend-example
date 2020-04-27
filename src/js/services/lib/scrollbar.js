@@ -67,7 +67,8 @@ function initCustomScrollbars($scrollElements) {
     }
 
     $(scroll).data('baron', baronData);
-    root.classList.remove(overflownXKlass, overflownYKlass);
+    root.classList.remove(overflownXKlass);
+    root.classList.remove(overflownYKlass);
   });
 }
 $(window).on(
