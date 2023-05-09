@@ -81,7 +81,7 @@
     "mini-css-extract-plugin": "^0.9.0",
     "node-sass": "^4.13.1",
     "nodemon": "^2.0.3",
-    "postcss-at2x": "^4.0.3",
+    "postcss-at2x": "^5.0.1",
     "postcss-easysprites": "^1.0.0",
     "postcss-em-media-query": "^2.0.0",
     "postcss-filter-stream": "0.0.6",
