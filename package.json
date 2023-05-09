@@ -21,7 +21,7 @@
     "gmaps": "^0.4.25",
     "google-maps-infobox": "^2.0.0",
     "is-safe-integer": "^2.0.0",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "jquery-columnizer": "^1.6.3",
     "jquery-menu-aim": "^1.1.0",
     "jquery-ui": "^1.12.1",
